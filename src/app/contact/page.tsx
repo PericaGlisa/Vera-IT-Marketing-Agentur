@@ -104,18 +104,17 @@ export default function ContactPage() {
               <h3 className="text-lg sm:text-xl font-heading font-semibold mb-4">Unser Standort</h3>
               <div className="w-full h-48 sm:h-64 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2369.8!2d9.8!3d53.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDI0JzAwLjAiTiA5wrA0OCcwMC4wIkU!5e0!3m2!1sde!2sde!4v1234567890123!5m2!1sde!2sde&q=Rehrstieg+16d,+21147+Hamburg,+Deutschland"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2369.4!2d9.8847!3d53.4205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18f0b8c8c8c8d%3A0x1234567890abcdef!2sRehrstieg%2016d%2C%2021147%20Hamburg%2C%20Deutschland!5e0!3m2!1sde!2sde!4v1640995200000!5m2!1sde!2sde"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Vera IT Standort"
+                  title="Standort"
                 ></iframe>
               </div>
               <div className="mt-4 text-sm text-gray-400">
-                <p className="font-medium text-white mb-1">Vera IT</p>
                 <p>Rehrstieg 16d, 21147</p>
                 <p>20095 Hamburg, Deutschland</p>
               </div>

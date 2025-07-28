@@ -262,7 +262,7 @@ export function Footer() {
 
         <div className="border-t border-gray-700 mt-8 sm:mt-12 pt-6 sm:pt-8 flex flex-col-reverse sm:flex-row justify-between items-center space-y-reverse space-y-4 sm:space-y-0">
           <p className="text-gray-400 text-sm text-center sm:text-left">
-            © 2025 Vera IT. Made with ❤ in Hamburg
+            © 2025 Vera IT. Mit ❤ in Hamburg gemacht
           </p>
           <div className="flex flex-wrap justify-center sm:justify-end space-x-4 sm:space-x-6">
             <Link href="/legal/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">

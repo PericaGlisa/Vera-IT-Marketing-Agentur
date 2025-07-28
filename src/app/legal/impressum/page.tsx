@@ -35,7 +35,7 @@ export default function ImpressumPage() {
             <section>
               <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">Vertreten durch</h2>
               <div className="bg-zinc-800/50 border border-zinc-700 p-4 sm:p-6 rounded-lg">
-                <p className="text-gray-300 text-sm sm:text-base"><strong className="text-white">Geschäftsführer:</strong> Max Mustermann</p>
+                <p className="text-gray-300 text-sm sm:text-base"><strong className="text-white">Geschäftsführer:</strong> Jovica Mihajlovic</p>
                 <p className="text-gray-300 text-sm sm:text-base"><strong className="text-white">Handelsregister:</strong> HRB 123456</p>
                 <p className="text-gray-300 text-sm sm:text-base"><strong className="text-white">Registergericht:</strong> Amtsgericht Hamburg</p>
               </div>
@@ -64,7 +64,7 @@ export default function ImpressumPage() {
             <section>
               <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">Redaktionell verantwortlich</h2>
               <div className="bg-zinc-800/50 border border-zinc-700 p-4 sm:p-6 rounded-lg">
-                <p className="text-white font-medium text-sm sm:text-base">Max Mustermann</p>
+                <p className="text-white font-medium text-sm sm:text-base">Jovica Mihajlovic</p>
                 <p className="text-gray-300 text-sm sm:text-base">Rehrstieg 16d, 21147</p>
                  <p className="text-gray-300 text-sm sm:text-base">20095 Hamburg, Deutschland</p>
               </div>
