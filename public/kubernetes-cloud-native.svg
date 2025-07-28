@@ -1,0 +1,255 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c4a6e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0369a1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0284c7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="k8sGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#326ce5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="containerGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cloudGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f9ff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#e0f2fe;stop-opacity:0.7" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bgGradient)"/>
+  
+  <!-- Cloud background pattern -->
+  <g opacity="0.1">
+    <path d="M50 80 Q70 60 90 80 Q110 60 130 80 Q150 100 130 120 Q110 140 90 120 Q70 140 50 120 Q30 100 50 80" fill="white"/>
+    <path d="M450 60 Q470 40 490 60 Q510 40 530 60 Q550 80 530 100 Q510 120 490 100 Q470 120 450 100 Q430 80 450 60" fill="white"/>
+    <path d="M200 300 Q220 280 240 300 Q260 280 280 300 Q300 320 280 340 Q260 360 240 340 Q220 360 200 340 Q180 320 200 300" fill="white"/>
+    <path d="M400 320 Q420 300 440 320 Q460 300 480 320 Q500 340 480 360 Q460 380 440 360 Q420 380 400 360 Q380 340 400 320" fill="white"/>
+  </g>
+  
+  <!-- Central Kubernetes logo/wheel -->
+  <g transform="translate(300, 200)">
+    <!-- Kubernetes wheel -->
+    <circle cx="0" cy="0" r="50" fill="url(#k8sGradient)" filter="url(#glow)">
+      <animate attributeName="r" values="48;52;48" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Kubernetes spokes -->
+    <g transform="rotate(0)">
+      <rect x="-2" y="-45" width="4" height="90" fill="white" rx="2">
+        <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="0;360" dur="20s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <g transform="rotate(45)">
+      <rect x="-2" y="-45" width="4" height="90" fill="white" rx="2">
+        <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="45;405" dur="20s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <g transform="rotate(90)">
+      <rect x="-2" y="-45" width="4" height="90" fill="white" rx="2">
+        <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="90;450" dur="20s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <g transform="rotate(135)">
+      <rect x="-2" y="-45" width="4" height="90" fill="white" rx="2">
+        <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="135;495" dur="20s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    
+    <!-- Center circle -->
+    <circle cx="0" cy="0" r="15" fill="white"/>
+    <text x="0" y="-5" text-anchor="middle" fill="#326ce5" font-size="8" font-weight="bold">K8s</text>
+    <text x="0" y="5" text-anchor="middle" fill="#326ce5" font-size="6">CTRL</text>
+  </g>
+  
+  <!-- Container pods around the wheel -->
+  <!-- Pod 1 -->
+  <g transform="translate(200, 120)">
+    <rect x="-15" y="-10" width="30" height="20" fill="url(#containerGradient)" rx="4" filter="url(#shadow)">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="-12" y="-7" width="8" height="6" fill="rgba(255,255,255,0.8)" rx="1"/>
+    <rect x="-2" y="-7" width="8" height="6" fill="rgba(255,255,255,0.8)" rx="1"/>
+    <rect x="8" y="-7" width="8" height="6" fill="rgba(255,255,255,0.8)" rx="1"/>
+    <rect x="-12" y="2" width="24" height="4" fill="rgba(255,255,255,0.6)" rx="1"/>
+    <text x="0" y="-15" text-anchor="middle" fill="#10b981" font-size="8" font-weight="bold">Pod-1</text>
+  </g>
+  
+  <!-- Pod 2 -->
+  <g transform="translate(400, 120)">
+    <rect x="-15" y="-10" width="30" height="20" fill="url(#containerGradient)" rx="4" filter="url(#shadow)">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="-12" y="-7" width="8" height="6" fill="rgba(255,255,255,0.8)" rx="1"/>
+    <rect x="-2" y="-7" width="8" height="6" fill="rgba(255,255,255,0.8)" rx="1"/>
+    <rect x="8" y="-7" width="8" height="6" fill="rgba(255,255,255,0.8)" rx="1"/>
+    <rect x="-12" y="2" width="24" height="4" fill="rgba(255,255,255,0.6)" rx="1"/>
+    <text x="0" y="-15" text-anchor="middle" fill="#10b981" font-size="8" font-weight="bold">Pod-2</text>
+  </g>
+  
+  <!-- Pod 3 -->
+  <g transform="translate(200, 280)">
+    <rect x="-15" y="-10" width="30" height="20" fill="url(#containerGradient)" rx="4" filter="url(#shadow)">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" begin="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="-12" y="-7" width="8" height="6" fill="rgba(255,255,255,0.8)" rx="1"/>
+    <rect x="-2" y="-7" width="8" height="6" fill="rgba(255,255,255,0.8)" rx="1"/>
+    <rect x="8" y="-7" width="8" height="6" fill="rgba(255,255,255,0.8)" rx="1"/>
+    <rect x="-12" y="2" width="24" height="4" fill="rgba(255,255,255,0.6)" rx="1"/>
+    <text x="0" y="-15" text-anchor="middle" fill="#10b981" font-size="8" font-weight="bold">Pod-3</text>
+  </g>
+  
+  <!-- Pod 4 -->
+  <g transform="translate(400, 280)">
+    <rect x="-15" y="-10" width="30" height="20" fill="url(#containerGradient)" rx="4" filter="url(#shadow)">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="-12" y="-7" width="8" height="6" fill="rgba(255,255,255,0.8)" rx="1"/>
+    <rect x="-2" y="-7" width="8" height="6" fill="rgba(255,255,255,0.8)" rx="1"/>
+    <rect x="8" y="-7" width="8" height="6" fill="rgba(255,255,255,0.8)" rx="1"/>
+    <rect x="-12" y="2" width="24" height="4" fill="rgba(255,255,255,0.6)" rx="1"/>
+    <text x="0" y="-15" text-anchor="middle" fill="#10b981" font-size="8" font-weight="bold">Pod-4</text>
+  </g>
+  
+  <!-- Connection lines from K8s to pods -->
+  <g opacity="0.7">
+    <line x1="250" y1="150" x2="200" y2="130" stroke="#326ce5" stroke-width="2" stroke-dasharray="5,5">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="350" y1="150" x2="400" y2="130" stroke="#326ce5" stroke-width="2" stroke-dasharray="5,5">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="1s" begin="0.25s" repeatCount="indefinite"/>
+    </line>
+    <line x1="250" y1="250" x2="200" y2="270" stroke="#326ce5" stroke-width="2" stroke-dasharray="5,5">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="1s" begin="0.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="350" y1="250" x2="400" y2="270" stroke="#326ce5" stroke-width="2" stroke-dasharray="5,5">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="1s" begin="0.75s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  
+  <!-- Cloud services -->
+  <!-- Load Balancer -->
+  <g transform="translate(100, 200)">
+    <rect x="-20" y="-15" width="40" height="30" fill="rgba(59, 130, 246, 0.8)" rx="6" filter="url(#shadow)"/>
+    <rect x="-17" y="-12" width="34" height="24" fill="#1e40af" rx="4"/>
+    
+    <!-- Load balancer icon -->
+    <circle cx="-8" cy="-5" r="2" fill="white"/>
+    <circle cx="0" cy="-5" r="2" fill="white"/>
+    <circle cx="8" cy="-5" r="2" fill="white"/>
+    <rect x="-12" y="0" width="24" height="2" fill="white" rx="1"/>
+    <circle cx="-8" cy="5" r="2" fill="white"/>
+    <circle cx="0" cy="5" r="2" fill="white"/>
+    <circle cx="8" cy="5" r="2" fill="white"/>
+    
+    <text x="0" y="-25" text-anchor="middle" fill="#3b82f6" font-size="8" font-weight="bold">LoadBalancer</text>
+  </g>
+  
+  <!-- Storage -->
+  <g transform="translate(500, 200)">
+    <rect x="-20" y="-15" width="40" height="30" fill="rgba(245, 158, 11, 0.8)" rx="6" filter="url(#shadow)"/>
+    <rect x="-17" y="-12" width="34" height="24" fill="#d97706" rx="4"/>
+    
+    <!-- Storage icon -->
+    <rect x="-12" y="-8" width="24" height="4" fill="white" rx="2"/>
+    <rect x="-12" y="-2" width="24" height="4" fill="white" rx="2"/>
+    <rect x="-12" y="4" width="24" height="4" fill="white" rx="2"/>
+    
+    <text x="0" y="-25" text-anchor="middle" fill="#f59e0b" font-size="8" font-weight="bold">Storage</text>
+  </g>
+  
+  <!-- Service mesh connections -->
+  <g opacity="0.6">
+    <path d="M120 200 Q160 180 200 200" fill="none" stroke="#3b82f6" stroke-width="2" stroke-dasharray="3,3">
+      <animate attributeName="stroke-dashoffset" values="0;6" dur="0.8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M400 200 Q440 180 480 200" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="3,3">
+      <animate attributeName="stroke-dashoffset" values="0;6" dur="0.8s" begin="0.4s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Namespace indicators -->
+  <g transform="translate(150, 60)">
+    <rect x="-25" y="-8" width="50" height="16" fill="rgba(139, 92, 246, 0.2)" stroke="#8b5cf6" stroke-width="1" rx="3"/>
+    <text x="0" y="-2" text-anchor="middle" fill="#8b5cf6" font-size="8" font-weight="bold">namespace:</text>
+    <text x="0" y="6" text-anchor="middle" fill="#8b5cf6" font-size="8">production</text>
+  </g>
+  
+  <g transform="translate(450, 60)">
+    <rect x="-25" y="-8" width="50" height="16" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" stroke-width="1" rx="3"/>
+    <text x="0" y="-2" text-anchor="middle" fill="#10b981" font-size="8" font-weight="bold">namespace:</text>
+    <text x="0" y="6" text-anchor="middle" fill="#10b981" font-size="8">staging</text>
+  </g>
+  
+  <!-- DevOps tools -->
+  <g transform="translate(80, 320)">
+    <circle cx="0" cy="0" r="15" fill="rgba(239, 68, 68, 0.2)" stroke="#ef4444" stroke-width="2" filter="url(#glow)">
+      <animate attributeName="r" values="13;17;13" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="0" y="-3" text-anchor="middle" fill="#ef4444" font-size="7" font-weight="bold">DOCKER</text>
+    <text x="0" y="5" text-anchor="middle" fill="#ef4444" font-size="6">BUILD</text>
+  </g>
+  
+  <g transform="translate(180, 320)">
+    <circle cx="0" cy="0" r="15" fill="rgba(59, 130, 246, 0.2)" stroke="#3b82f6" stroke-width="2" filter="url(#glow)">
+      <animate attributeName="r" values="13;17;13" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="0" y="-3" text-anchor="middle" fill="#3b82f6" font-size="7" font-weight="bold">HELM</text>
+    <text x="0" y="5" text-anchor="middle" fill="#3b82f6" font-size="6">DEPLOY</text>
+  </g>
+  
+  <g transform="translate(280, 320)">
+    <circle cx="0" cy="0" r="15" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" stroke-width="2" filter="url(#glow)">
+      <animate attributeName="r" values="13;17;13" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <text x="0" y="-3" text-anchor="middle" fill="#10b981" font-size="7" font-weight="bold">ISTIO</text>
+    <text x="0" y="5" text-anchor="middle" fill="#10b981" font-size="6">MESH</text>
+  </g>
+  
+  <g transform="translate(380, 320)">
+    <circle cx="0" cy="0" r="15" fill="rgba(245, 158, 11, 0.2)" stroke="#f59e0b" stroke-width="2" filter="url(#glow)">
+      <animate attributeName="r" values="13;17;13" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="0" y="-3" text-anchor="middle" fill="#f59e0b" font-size="7" font-weight="bold">PROM</text>
+    <text x="0" y="5" text-anchor="middle" fill="#f59e0b" font-size="6">MONITOR</text>
+  </g>
+  
+  <g transform="translate(480, 320)">
+    <circle cx="0" cy="0" r="15" fill="rgba(139, 92, 246, 0.2)" stroke="#8b5cf6" stroke-width="2" filter="url(#glow)">
+      <animate attributeName="r" values="13;17;13" dur="2s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="0" y="-3" text-anchor="middle" fill="#8b5cf6" font-size="7" font-weight="bold">ARGO</text>
+    <text x="0" y="5" text-anchor="middle" fill="#8b5cf6" font-size="6">CD</text>
+  </g>
+  
+  <!-- Floating cloud particles -->
+  <circle cx="120" cy="150" r="2" fill="rgba(255,255,255,0.6)">
+    <animate attributeName="cy" values="150;130;150" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="480" cy="180" r="1.5" fill="rgba(255,255,255,0.4)">
+    <animate attributeName="cy" values="180;160;180" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="550" cy="120" r="2.5" fill="rgba(255,255,255,0.5)">
+    <animate attributeName="cy" values="120;100;120" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Title area -->
+  <rect x="50" y="350" width="500" height="40" fill="rgba(0,0,0,0.4)" rx="8"/>
+  <text x="300" y="375" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Cloud-Native Entwicklung mit Kubernetes</text>
+</svg>

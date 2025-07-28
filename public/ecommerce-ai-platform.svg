@@ -1,0 +1,155 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1b4b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#312e81;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="aiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="chartGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradient)"/>
+  
+  <!-- Grid Pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#374151" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#grid)"/>
+  
+  <!-- Central AI Brain -->
+  <g transform="translate(400,200)">
+    <circle cx="0" cy="0" r="60" fill="url(#aiGradient)" filter="url(#glow)">
+      <animate attributeName="r" values="60;65;60" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#a855f7" stroke-width="2" opacity="0.6">
+      <animate attributeName="r" values="40;50;40" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <!-- AI Symbol -->
+    <text x="0" y="8" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">AI</text>
+  </g>
+  
+  <!-- Shopping Cart -->
+  <g transform="translate(150,150)">
+    <rect x="-15" y="-10" width="30" height="20" rx="3" fill="#10b981" opacity="0.9"/>
+    <circle cx="-8" cy="15" r="3" fill="#10b981"/>
+    <circle cx="8" cy="15" r="3" fill="#10b981"/>
+    <path d="M-12,-8 L-8,-8 L-6,8 L10,8" stroke="#10b981" stroke-width="2" fill="none"/>
+    <animateTransform attributeName="transform" type="translate" values="150,150;155,145;150,150" dur="2s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- Product Recommendations -->
+  <g transform="translate(650,180)">
+    <rect x="-20" y="-15" width="40" height="30" rx="5" fill="#f59e0b" opacity="0.9"/>
+    <rect x="-15" y="-10" width="30" height="8" fill="#fbbf24"/>
+    <circle cx="-8" cy="-6" r="2" fill="#f59e0b"/>
+    <circle cx="0" cy="-6" r="2" fill="#f59e0b"/>
+    <circle cx="8" cy="-6" r="2" fill="#f59e0b"/>
+    <text x="0" y="8" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8">REC</text>
+  </g>
+  
+  <!-- Price Optimization Chart -->
+  <g transform="translate(200,400)">
+    <rect x="0" y="0" width="150" height="100" fill="#1f2937" rx="8" opacity="0.8"/>
+    <text x="75" y="20" text-anchor="middle" fill="#9ca3af" font-family="Arial, sans-serif" font-size="10">Price Optimization</text>
+    
+    <!-- Chart Bars -->
+    <rect x="20" y="70" width="15" height="20" fill="url(#chartGradient)">
+      <animate attributeName="height" values="20;35;20" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="45" y="60" width="15" height="30" fill="url(#chartGradient)">
+      <animate attributeName="height" values="30;45;30" dur="2.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="70" y="50" width="15" height="40" fill="url(#chartGradient)">
+      <animate attributeName="height" values="40;55;40" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="95" y="45" width="15" height="45" fill="url(#chartGradient)">
+      <animate attributeName="height" values="45;60;45" dur="2.2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="120" y="35" width="15" height="55" fill="url(#chartGradient)">
+      <animate attributeName="height" values="55;70;55" dur="2.8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  
+  <!-- Customer Analytics -->
+  <g transform="translate(500,420)">
+    <rect x="0" y="0" width="120" height="80" fill="#1f2937" rx="8" opacity="0.8"/>
+    <text x="60" y="18" text-anchor="middle" fill="#9ca3af" font-family="Arial, sans-serif" font-size="10">Analytics</text>
+    
+    <!-- Pie Chart -->
+    <circle cx="60" cy="50" r="20" fill="none" stroke="#06b6d4" stroke-width="8" stroke-dasharray="31.4 94.2" transform="rotate(-90 60 50)"/>
+    <circle cx="60" cy="50" r="20" fill="none" stroke="#8b5cf6" stroke-width="8" stroke-dasharray="25.1 100.5" stroke-dashoffset="-31.4" transform="rotate(-90 60 50)"/>
+    <circle cx="60" cy="50" r="20" fill="none" stroke="#10b981" stroke-width="8" stroke-dasharray="18.8 106.8" stroke-dashoffset="-56.5" transform="rotate(-90 60 50)"/>
+  </g>
+  
+  <!-- Connection Lines -->
+  <g stroke="#6366f1" stroke-width="2" fill="none" opacity="0.6">
+    <path d="M340,200 Q250,250 180,180">
+      <animate attributeName="stroke-dasharray" values="0,300;150,150;300,0;0,300" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M460,200 Q550,250 620,210">
+      <animate attributeName="stroke-dasharray" values="0,300;150,150;300,0;0,300" dur="3.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M380,250 Q300,350 275,400">
+      <animate attributeName="stroke-dasharray" values="0,300;150,150;300,0;0,300" dur="4.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M420,250 Q480,350 500,420">
+      <animate attributeName="stroke-dasharray" values="0,300;150,150;300,0;0,300" dur="3.8s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Data Nodes -->
+  <circle cx="180" cy="180" r="4" fill="#06b6d4">
+    <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="620" cy="210" r="4" fill="#f59e0b">
+    <animate attributeName="r" values="4;6;4" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="275" cy="400" r="4" fill="#06b6d4">
+    <animate attributeName="r" values="4;6;4" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="500" cy="420" r="4" fill="#8b5cf6">
+    <animate attributeName="r" values="4;6;4" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Technology Labels -->
+  <g fill="#9ca3af" font-family="Arial, sans-serif" font-size="12">
+    <text x="50" y="550">Python</text>
+    <text x="150" y="550">TensorFlow</text>
+    <text x="250" y="550">React</text>
+    <text x="350" y="550">Node.js</text>
+    <text x="450" y="550">AWS</text>
+  </g>
+  
+  <!-- Floating Particles -->
+  <g fill="#8b5cf6" opacity="0.4">
+    <circle cx="100" cy="100" r="2">
+      <animateTransform attributeName="transform" type="translate" values="0,0;20,-10;0,0" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="120" r="2">
+      <animateTransform attributeName="transform" type="translate" values="0,0;-15,15;0,0" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="500" r="2">
+      <animateTransform attributeName="transform" type="translate" values="0,0;10,20;0,0" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="650" cy="480" r="2">
+      <animateTransform attributeName="transform" type="translate" values="0,0;-20,-5;0,0" dur="4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
