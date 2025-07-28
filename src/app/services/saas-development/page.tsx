@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Cloud, Database, Shield, Zap, Users, BarChart3 } from "lucide-react"
 import { Button } from "@/components/ui/Button"
+import Link from "next/link"
 
 const features = [
   {
@@ -58,25 +59,25 @@ const saasTypes = [
     title: "CRM & Sales Platforms",
     description: "Kundenbeziehungsmanagement-Systeme mit Pipeline-Tracking und Automatisierung.",
     examples: ["Lead Management", "Sales Automation", "Customer Analytics"],
-    price: "ab €25.000",
+    price: "Preis auf Anfrage",
   },
   {
     title: "Project Management Tools",
     description: "Kollaborative Projektmanagement-Plattformen mit Zeiterfassung und Reporting.",
     examples: ["Task Management", "Team Collaboration", "Resource Planning"],
-    price: "ab €20.000",
+    price: "Preis auf Anfrage",
   },
   {
     title: "E-Learning Platforms",
     description: "Umfassende Lernmanagementsysteme mit Video-Streaming und Fortschrittsverfolgung.",
     examples: ["Course Management", "Video Streaming", "Assessment Tools"],
-    price: "ab €30.000",
+    price: "Preis auf Anfrage",
   },
   {
     title: "HR & Recruiting Software",
     description: "Personalmanagement-Lösungen mit Bewerberverfolgung und Mitarbeiterportalen.",
     examples: ["Applicant Tracking", "Employee Onboarding", "Performance Management"],
-    price: "ab €35.000",
+    price: "Preis auf Anfrage",
   },
 ]
 
@@ -101,8 +102,8 @@ export default function SaaSDevelopmentPage() {
             Skalierbare Software-as-a-Service Lösungen für Ihr Business. Von der Konzeption bis zum Launch entwickeln
             wir cloud-native SaaS-Plattformen, die wachsen und sich anpassen.
           </p>
-          <Button size="lg" className="w-full sm:w-auto">
-            SaaS-Projekt besprechen
+          <Button size="lg" className="w-full sm:w-auto" asChild>
+            <Link href="/contact">SaaS-Projekt besprechen</Link>
           </Button>
         </motion.div>
 
@@ -177,8 +178,9 @@ export default function SaaSDevelopmentPage() {
                 <Button
                   variant="outline"
                   className="w-full border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-white bg-transparent"
+                  asChild
                 >
-                  Mehr erfahren
+                  <Link href="/contact">Beratung anfragen</Link>
                 </Button>
               </motion.div>
             ))}
@@ -229,8 +231,9 @@ export default function SaaSDevelopmentPage() {
             variant="secondary"
             size="lg"
             className="bg-white text-emerald-600 hover:bg-white/90 w-full sm:w-auto"
+            asChild
           >
-            Kostenlose Beratung
+            <Link href="/contact">Kostenlose Beratung</Link>
           </Button>
         </motion.div>
       </div>

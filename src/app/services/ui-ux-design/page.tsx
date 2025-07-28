@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Palette, Users, Eye, Smartphone, Monitor, Zap } from "lucide-react"
 import { Button } from "@/components/ui/Button"
+import Link from "next/link"
 
 const features = [
   {
@@ -57,29 +58,29 @@ const designServices = [
     title: "UX/UI Design für Web",
     description: "Komplette User Experience und Interface Design für Websites und Web-Anwendungen.",
     deliverables: ["User Journey Maps", "Wireframes", "High-Fidelity Designs", "Interactive Prototypes"],
-    price: "ab €8.000",
-    duration: "4-8 Wochen",
+    price: "Preis auf Anfrage",
+    duration: "Nach Vereinbarung",
   },
   {
     title: "Mobile App Design",
     description: "Native iOS und Android App Designs mit plattform-spezifischen Design Guidelines.",
     deliverables: ["App Flow Diagrams", "Screen Designs", "Icon Design", "Animation Concepts"],
-    price: "ab €12.000",
-    duration: "6-10 Wochen",
+    price: "Preis auf Anfrage",
+    duration: "Nach Vereinbarung",
   },
   {
     title: "Design System Entwicklung",
     description: "Umfassende Design Systems für skalierbare und konsistente User Interfaces.",
     deliverables: ["Component Library", "Style Guide", "Design Tokens", "Documentation"],
-    price: "ab €15.000",
-    duration: "8-12 Wochen",
+    price: "Preis auf Anfrage",
+    duration: "Nach Vereinbarung",
   },
   {
     title: "UX Audit & Optimierung",
     description: "Analyse bestehender Interfaces und Optimierungsempfehlungen für bessere Usability.",
     deliverables: ["UX Audit Report", "Heatmap Analysis", "Improvement Roadmap", "A/B Test Concepts"],
-    price: "ab €5.000",
-    duration: "2-4 Wochen",
+    price: "Preis auf Anfrage",
+    duration: "Nach Vereinbarung",
   },
 ]
 
@@ -104,8 +105,8 @@ export default function UIUXDesignPage() {
             Benutzerorientiertes Design, das konvertiert. Wir schaffen intuitive und ansprechende User Experiences, die
             Ihre Nutzer begeistern und Ihre Geschäftsziele erreichen.
           </p>
-          <Button size="lg" className="w-full sm:w-auto">
-            Design-Projekt starten
+          <Button size="lg" className="w-full sm:w-auto" asChild>
+            <Link href="/contact">Design-Projekt starten</Link>
           </Button>
         </motion.div>
 
@@ -181,8 +182,9 @@ export default function UIUXDesignPage() {
                 <Button
                   variant="outline"
                   className="w-full border-rose-500 text-rose-500 hover:bg-rose-500 hover:text-white bg-transparent"
+                  asChild
                 >
-                  Mehr erfahren
+                  <Link href="/contact">Beratung anfragen</Link>
                 </Button>
               </motion.div>
             ))}
@@ -229,8 +231,8 @@ export default function UIUXDesignPage() {
           <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
             Lassen Sie uns gemeinsam ein Design schaffen, das Ihre Nutzer begeistert und Ihr Business voranbringt.
           </p>
-          <Button variant="secondary" size="lg" className="bg-white text-rose-600 hover:bg-white/90 w-full sm:w-auto">
-            Design-Beratung buchen
+          <Button variant="secondary" size="lg" className="bg-white text-rose-600 hover:bg-white/90 w-full sm:w-auto" asChild>
+            <Link href="/contact">Design-Beratung buchen</Link>
           </Button>
         </motion.div>
       </div>

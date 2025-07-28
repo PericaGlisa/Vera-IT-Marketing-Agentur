@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { TrendingUp, Search, Target, BarChart3, Mail, Share2 } from "lucide-react"
 import { Button } from "@/components/ui/Button"
+import Link from "next/link"
 
 const features = [
   {
@@ -52,13 +53,13 @@ const marketingTools = [
   "Zapier",
 ]
 
-const marketingPackages = [
+const packages = [
   {
     title: "Starter Package",
     description: "Perfekt für kleine Unternehmen, die mit digitalem Marketing beginnen möchten.",
     services: ["SEO Audit", "Google My Business Setup", "Social Media Setup", "Basic Analytics"],
-    price: "€1.500/Monat",
-    duration: "3 Monate Mindestlaufzeit",
+    price: "Preis auf Anfrage",
+    duration: "Nach Vereinbarung",
     highlight: false,
   },
   {
@@ -71,8 +72,8 @@ const marketingPackages = [
       "Email Marketing",
       "Monthly Reporting",
     ],
-    price: "€3.500/Monat",
-    duration: "6 Monate Mindestlaufzeit",
+    price: "Preis auf Anfrage",
+    duration: "Nach Vereinbarung",
     highlight: true,
   },
   {
@@ -85,8 +86,8 @@ const marketingPackages = [
       "Dedicated Account Manager",
       "Custom Integrations",
     ],
-    price: "ab €7.500/Monat",
-    duration: "12 Monate Mindestlaufzeit",
+    price: "Preis auf Anfrage",
+    duration: "Nach Vereinbarung",
     highlight: false,
   },
 ]
@@ -112,8 +113,8 @@ export default function DigitalMarketingPage() {
             Datengetriebene Marketing-Strategien für maximalen ROI. Wir helfen Ihnen dabei, Ihre Zielgruppe zu
             erreichen, Leads zu generieren und nachhaltiges Wachstum zu erzielen.
           </p>
-          <Button size="lg" className="w-full sm:w-auto">
-            Marketing-Strategie entwickeln
+          <Button size="lg" className="w-full sm:w-auto" asChild>
+            <Link href="/contact">Marketing-Strategie entwickeln</Link>
           </Button>
         </motion.div>
 
@@ -157,7 +158,7 @@ export default function DigitalMarketingPage() {
         >
           <h2 className="text-2xl sm:text-3xl font-heading font-bold text-center mb-8 sm:mb-12">Marketing Pakete</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
-            {marketingPackages.map((pkg, index) => (
+            {packages.map((pkg, index) => (
               <motion.div
                 key={pkg.title}
                 className={`bg-zinc-800 border rounded-2xl p-6 sm:p-8 transition-all duration-300 relative ${
@@ -200,8 +201,9 @@ export default function DigitalMarketingPage() {
                       ? "bg-gradient-to-r from-rose-600 to-purple-600 hover:shadow-lg"
                       : "bg-zinc-700 hover:bg-zinc-600"
                   }`}
+                  asChild
                 >
-                  Paket auswählen
+                  <Link href="/contact">Beratung anfragen</Link>
                 </Button>
               </motion.div>
             ))}
@@ -248,8 +250,8 @@ export default function DigitalMarketingPage() {
           <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
             Lassen Sie uns gemeinsam eine Marketing-Strategie entwickeln, die messbare Ergebnisse liefert.
           </p>
-          <Button variant="secondary" size="lg" className="bg-white text-purple-600 hover:bg-white/90 w-full sm:w-auto">
-            Kostenlose Marketing-Analyse
+          <Button variant="secondary" size="lg" className="bg-white text-purple-600 hover:bg-white/90 w-full sm:w-auto" asChild>
+            <Link href="/contact">Kostenlose Marketing-Analyse</Link>
           </Button>
         </motion.div>
       </div>

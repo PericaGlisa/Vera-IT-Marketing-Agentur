@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Cloud, Server, Shield, Zap, Database, Settings } from "lucide-react"
 import { Button } from "@/components/ui/Button"
+import Link from "next/link"
 
 const features = [
   {
@@ -83,8 +84,8 @@ const cloudServices = [
       "Security Framework",
       "Governance Strategy",
     ],
-    price: "ab €5.000",
-    duration: "2-4 Wochen",
+    price: "Preis auf Anfrage",
+    duration: "Nach Vereinbarung",
   },
   {
     title: "Cloud Migration Services",
@@ -96,8 +97,8 @@ const cloudServices = [
       "Testing & Validation",
       "Go-Live Support",
     ],
-    price: "ab €15.000",
-    duration: "8-16 Wochen",
+    price: "Preis auf Anfrage",
+    duration: "Nach Vereinbarung",
   },
   {
     title: "Managed Cloud Services",
@@ -109,8 +110,8 @@ const cloudServices = [
       "Backup & Recovery",
       "Cost Optimization",
     ],
-    price: "ab €2.500/Monat",
-    duration: "Ongoing",
+    price: "Preis auf Anfrage",
+    duration: "Nach Vereinbarung",
   },
 ]
 
@@ -135,8 +136,8 @@ export default function CloudSolutionsPage() {
             Skalierbare Cloud-Infrastrukturen für moderne Unternehmen. Wir helfen Ihnen dabei, die Vorteile der Cloud
             optimal zu nutzen - von der Migration bis zum laufenden Betrieb.
           </p>
-          <Button size="lg" className="w-full sm:w-auto">
-            Cloud-Beratung starten
+          <Button size="lg" className="w-full sm:w-auto" asChild>
+            <Link href="/contact">Cloud-Beratung starten</Link>
           </Button>
         </motion.div>
 
@@ -265,7 +266,9 @@ export default function CloudSolutionsPage() {
                     ))}
                   </ul>
                 </div>
-                <Button className="w-full bg-zinc-700 hover:bg-zinc-600">Service auswählen</Button>
+                <Button className="w-full bg-zinc-700 hover:bg-zinc-600" asChild>
+                  <Link href="/contact">Beratung anfragen</Link>
+                </Button>
               </motion.div>
             ))}
           </div>
@@ -285,8 +288,8 @@ export default function CloudSolutionsPage() {
           <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
             Lassen Sie uns gemeinsam Ihre Cloud-Strategie entwickeln und Ihr Unternehmen in die digitale Zukunft führen.
           </p>
-          <Button variant="secondary" size="lg" className="bg-white text-indigo-600 hover:bg-white/90 w-full sm:w-auto">
-            Cloud-Assessment buchen
+          <Button variant="secondary" size="lg" className="bg-white text-indigo-600 hover:bg-white/90 w-full sm:w-auto" asChild>
+            <Link href="/contact">Cloud-Assessment buchen</Link>
           </Button>
         </motion.div>
       </div>

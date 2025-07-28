@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Code, Smartphone, Zap, Shield, Search, Palette } from "lucide-react"
 import { Button } from "@/components/ui/Button"
+import Link from "next/link"
 
 const features = [
   {
@@ -57,22 +58,22 @@ const services = [
   {
     title: "Corporate Websites",
     description: "Professionelle Unternehmenswebsites mit CMS-Integration und modernem Design.",
-    price: "ab €3.500",
+    price: "Preis auf Anfrage",
   },
   {
     title: "E-Commerce Lösungen",
     description: "Vollständige Online-Shops mit Payment-Integration und Inventory-Management.",
-    price: "ab €8.500",
+    price: "Preis auf Anfrage",
   },
   {
     title: "Web Applications",
     description: "Komplexe Web-Anwendungen und SaaS-Plattformen für Ihr Business.",
-    price: "ab €15.000",
+    price: "Preis auf Anfrage",
   },
   {
     title: "Progressive Web Apps",
     description: "App-ähnliche Erfahrungen im Browser mit Offline-Funktionalität.",
-    price: "ab €12.000",
+    price: "Preis auf Anfrage",
   },
 ]
 
@@ -97,9 +98,11 @@ export default function WebDevelopmentPage() {
             Moderne, performante Websites und Web-Anwendungen, die Ihre Nutzer begeistern. Von Corporate Websites bis zu
             komplexen SaaS-Plattformen - wir entwickeln digitale Lösungen, die funktionieren.
           </p>
-          <Button size="lg" className="w-full sm:w-auto">
-            Kostenloses Beratungsgespräch
-          </Button>
+          <Link href="/contact">
+            <Button size="lg" className="w-full sm:w-auto">
+              Kostenloses Beratungsgespräch
+            </Button>
+          </Link>
         </motion.div>
 
         {/* Features Grid */}
@@ -159,12 +162,14 @@ export default function WebDevelopmentPage() {
                   <span className="text-cyan-400 font-bold text-lg">{service.price}</span>
                 </div>
                 <p className="text-gray-400 leading-relaxed mb-6">{service.description}</p>
-                <Button
-                  variant="outline"
-                  className="w-full border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white bg-transparent"
-                >
-                  Mehr erfahren
-                </Button>
+                <Link href="/contact">
+                  <Button
+                    variant="outline"
+                    className="w-full border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white bg-transparent"
+                  >
+                    Beratung anfragen
+                  </Button>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -210,9 +215,15 @@ export default function WebDevelopmentPage() {
           <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
             Lassen Sie uns gemeinsam eine Website entwickeln, die Ihre Ziele erreicht und Ihre Nutzer begeistert.
           </p>
-          <Button variant="secondary" size="lg" className="bg-white text-cyan-600 hover:bg-white/90 w-full sm:w-auto">
-            Projekt starten
-          </Button>
+          <Link href="/contact">
+            <Button 
+              variant="secondary" 
+              size="lg" 
+              className="bg-white text-cyan-600 hover:bg-white/90 w-full sm:w-auto"
+            >
+              Projekt starten
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </div>

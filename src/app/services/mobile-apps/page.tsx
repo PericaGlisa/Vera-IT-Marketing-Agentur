@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Smartphone, Tablet, Watch, Zap, Shield, Users } from "lucide-react"
 import { Button } from "@/components/ui/Button"
+import Link from "next/link"
 
 const features = [
   {
@@ -57,28 +58,28 @@ const appTypes = [
     title: "Business & Productivity Apps",
     description: "Geschäfts-Apps für Produktivität, CRM, Projektmanagement und interne Kommunikation.",
     examples: ["CRM Mobile", "Task Management", "Team Communication"],
-    price: "ab €15.000",
+    price: "Preis auf Anfrage",
     icon: "💼",
   },
   {
     title: "E-Commerce & Marketplace",
     description: "Shopping-Apps mit Payment-Integration, Produktkatalogen und personalisierten Empfehlungen.",
     examples: ["Online Shop", "Marketplace", "Payment Integration"],
-    price: "ab €20.000",
+    price: "Preis auf Anfrage",
     icon: "🛒",
   },
   {
     title: "Social & Community Apps",
     description: "Social Media Plattformen, Community-Apps und Messaging-Lösungen.",
     examples: ["Social Network", "Chat Apps", "Community Platform"],
-    price: "ab €25.000",
+    price: "Preis auf Anfrage",
     icon: "👥",
   },
   {
     title: "Health & Fitness Apps",
     description: "Gesundheits-Apps mit Tracking, Wearable-Integration und Datenanalyse.",
     examples: ["Fitness Tracking", "Health Monitoring", "Workout Plans"],
-    price: "ab €18.000",
+    price: "Preis auf Anfrage",
     icon: "🏃‍♂️",
   },
 ]
@@ -104,8 +105,8 @@ export default function MobileAppsPage() {
             Native und Cross-Platform Mobile Apps für iOS und Android. Wir entwickeln benutzerfreundliche Apps, die Ihre
             Kunden lieben und Ihr Business voranbringen.
           </p>
-          <Button size="lg" className="w-full sm:w-auto">
-            App-Projekt starten
+          <Button size="lg" className="w-full sm:w-auto" asChild>
+            <Link href="/contact">App-Projekt starten</Link>
           </Button>
         </motion.div>
 
@@ -183,8 +184,9 @@ export default function MobileAppsPage() {
                 <Button
                   variant="outline"
                   className="w-full border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white bg-transparent"
+                  asChild
                 >
-                  Mehr erfahren
+                  <Link href="/contact">Beratung anfragen</Link>
                 </Button>
               </motion.div>
             ))}
@@ -231,8 +233,8 @@ export default function MobileAppsPage() {
           <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
             Lassen Sie uns gemeinsam eine App entwickeln, die Ihre Nutzer begeistert und Ihr Business wachsen lässt.
           </p>
-          <Button variant="secondary" size="lg" className="bg-white text-orange-600 hover:bg-white/90 w-full sm:w-auto">
-            App-Konzept besprechen
+          <Button variant="secondary" size="lg" className="bg-white text-orange-600 hover:bg-white/90 w-full sm:w-auto" asChild>
+            <Link href="/contact">App-Konzept besprechen</Link>
           </Button>
         </motion.div>
       </div>

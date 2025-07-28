@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Shield, Lock, Eye, AlertTriangle, Users, Database } from "lucide-react"
 import { Button } from "@/components/ui/Button"
+import Link from "next/link"
 
 const features = [
   {
@@ -48,8 +49,8 @@ const securityServices = [
       "Security Roadmap",
       "Executive Summary",
     ],
-    price: "ab €8.500",
-    duration: "2-4 Wochen",
+    price: "Preis auf Anfrage",
+    duration: "Nach Vereinbarung",
     risk: "Hoch",
   },
   {
@@ -62,16 +63,16 @@ const securityServices = [
       "Monthly Reports",
       "Security Updates",
     ],
-    price: "ab €3.500/Monat",
-    duration: "Ongoing",
+    price: "Preis auf Anfrage",
+    duration: "Nach Vereinbarung",
     risk: "Mittel",
   },
   {
     title: "Compliance & Governance",
     description: "Unterstützung bei der Einhaltung von Sicherheitsstandards und Compliance-Anforderungen.",
     deliverables: ["DSGVO Compliance", "ISO 27001 Support", "Policy Development", "Audit Preparation", "Documentation"],
-    price: "ab €12.000",
-    duration: "6-12 Wochen",
+    price: "Preis auf Anfrage",
+    duration: "Nach Vereinbarung",
     risk: "Hoch",
   },
 ]
@@ -128,8 +129,8 @@ export default function CybersecurityPage() {
             Umfassender Schutz vor Cyberbedrohungen. Wir sichern Ihre IT-Infrastruktur, Daten und Geschäftsprozesse
             gegen moderne Cyberrisiken und gewährleisten Compliance.
           </p>
-          <Button size="lg" className="w-full sm:w-auto">
-            Security-Assessment starten
+          <Button size="lg" className="w-full sm:w-auto" asChild>
+            <Link href="/contact">Security-Assessment starten</Link>
           </Button>
         </motion.div>
 
@@ -267,7 +268,9 @@ export default function CybersecurityPage() {
                     ))}
                   </ul>
                 </div>
-                <Button className="w-full bg-zinc-700 hover:bg-zinc-600">Service auswählen</Button>
+                <Button className="w-full bg-zinc-700 hover:bg-zinc-600" asChild>
+                  <Link href="/contact">Beratung anfragen</Link>
+                </Button>
               </motion.div>
             ))}
           </div>
@@ -287,8 +290,8 @@ export default function CybersecurityPage() {
           <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
             Cyberbedrohungen warten nicht. Lassen Sie uns gemeinsam Ihre IT-Sicherheit auf das nächste Level bringen.
           </p>
-          <Button variant="secondary" size="lg" className="bg-white text-orange-600 hover:bg-white/90 w-full sm:w-auto">
-            Kostenlose Security-Analyse
+          <Button variant="secondary" size="lg" className="bg-white text-orange-600 hover:bg-white/90 w-full sm:w-auto" asChild>
+            <Link href="/contact">Kostenlose Security-Analyse</Link>
           </Button>
         </motion.div>
       </div>

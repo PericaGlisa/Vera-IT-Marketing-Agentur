@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Brain, Cpu, Eye, Network, BarChart3, Zap } from "lucide-react"
 import { Button } from "@/components/ui/Button"
+import Link from "next/link"
 
 const features = [
   {
@@ -71,8 +72,8 @@ export default function AIDevPage() {
             Intelligente Lösungen für die Zukunft Ihres Unternehmens. Wir entwickeln maßgeschneiderte KI-Anwendungen,
             die Ihre Geschäftsprozesse revolutionieren.
           </p>
-          <Button size="lg" className="w-full sm:w-auto">
-            Kostenlose Beratung anfragen
+          <Button size="lg" className="w-full sm:w-auto" asChild>
+            <Link href="/contact">Kostenlose Beratung anfragen</Link>
           </Button>
         </motion.div>
 
@@ -141,8 +142,8 @@ export default function AIDevPage() {
           <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
             Lassen Sie uns gemeinsam die Möglichkeiten der Künstlichen Intelligenz für Ihr Unternehmen erkunden.
           </p>
-          <Button variant="secondary" size="lg" className="bg-white text-purple-600 hover:bg-white/90 w-full sm:w-auto">
-            Projekt besprechen
+          <Button variant="secondary" size="lg" className="bg-white text-purple-600 hover:bg-white/90 w-full sm:w-auto" asChild>
+            <Link href="/contact">Projekt besprechen</Link>
           </Button>
         </motion.div>
       </div>

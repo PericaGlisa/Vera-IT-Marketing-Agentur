@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Video, Camera, Film, Mic, Edit, Play } from "lucide-react"
 import { Button } from "@/components/ui/Button"
+import Link from "next/link"
 
 const features = [
   {
@@ -42,32 +43,32 @@ const videoTypes = [
     title: "Unternehmensvideos",
     description: "Imagefilme, Produktvideos und Unternehmensporträts für professionelle Kommunikation.",
     examples: ["Imagefilme", "Produktpräsentationen", "Mitarbeiterporträts", "Firmenevents"],
-    price: "ab €3.500",
-    duration: "2-4 Wochen",
+    price: "Preis auf Anfrage",
+    duration: "Nach Vereinbarung",
     icon: "🏢",
   },
   {
     title: "Marketing & Werbung",
     description: "Werbespots, Social Media Content und Kampagnenvideos für maximale Reichweite.",
     examples: ["TV-Spots", "Social Media Videos", "Influencer Content", "Produktwerbung"],
-    price: "ab €2.500",
-    duration: "1-3 Wochen",
+    price: "Preis auf Anfrage",
+    duration: "Nach Vereinbarung",
     icon: "📺",
   },
   {
     title: "Schulung & E-Learning",
     description: "Lehrvideos, Tutorials und E-Learning-Content für effektive Wissensvermittlung.",
     examples: ["Tutorial Videos", "Online-Kurse", "Schulungsvideos", "Webinar-Aufzeichnungen"],
-    price: "ab €1.800",
-    duration: "1-2 Wochen",
+    price: "Preis auf Anfrage",
+    duration: "Nach Vereinbarung",
     icon: "🎓",
   },
   {
     title: "Event & Dokumentation",
     description: "Eventdokumentation, Konferenzen und Live-Streaming für besondere Anlässe.",
     examples: ["Event-Dokumentation", "Konferenz-Aufzeichnung", "Live-Streaming", "Interviews"],
-    price: "ab €2.200",
-    duration: "1-2 Wochen",
+    price: "Preis auf Anfrage",
+    duration: "Nach Vereinbarung",
     icon: "🎬",
   },
 ]
@@ -108,9 +109,11 @@ export default function VideoProductionPage() {
             Professionelle Video-Produktion für Marketing, Schulungen und Unternehmenskommunikation. Von der Konzeption
             bis zur finalen Auslieferung - wir bringen Ihre Botschaft zum Leben.
           </p>
-          <Button size="lg" className="w-full sm:w-auto">
-            Video-Projekt starten
-          </Button>
+          <Link href="/contact">
+            <Button size="lg" className="w-full sm:w-auto">
+              Video-Projekt starten
+            </Button>
+          </Link>
         </motion.div>
 
         {/* Features Grid */}
@@ -187,12 +190,14 @@ export default function VideoProductionPage() {
                     ))}
                   </ul>
                 </div>
-                <Button
-                  variant="outline"
-                  className="w-full border-red-500 text-red-500 hover:bg-red-500 hover:text-white bg-transparent"
-                >
-                  Mehr erfahren
-                </Button>
+                <Link href="/contact">
+                  <Button
+                    variant="outline"
+                    className="w-full border-red-500 text-red-500 hover:bg-red-500 hover:text-white bg-transparent"
+                  >
+                    Beratung anfragen
+                  </Button>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -238,9 +243,11 @@ export default function VideoProductionPage() {
           <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
             Lassen Sie uns gemeinsam Videos produzieren, die Ihre Botschaft kraftvoll und einprägsam vermitteln.
           </p>
-          <Button variant="secondary" size="lg" className="bg-white text-red-600 hover:bg-white/90 w-full sm:w-auto">
-            Video-Beratung buchen
-          </Button>
+          <Link href="/contact">
+            <Button variant="secondary" size="lg" className="bg-white text-red-600 hover:bg-white/90 w-full sm:w-auto">
+              Video-Beratung buchen
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </div>

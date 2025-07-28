@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { BarChart3, Database, TrendingUp, Eye, Zap, Target } from "lucide-react"
 import { Button } from "@/components/ui/Button"
+import Link from "next/link"
 
 const features = [
   {
@@ -63,8 +64,8 @@ const analyticsServices = [
       "Governance Framework",
       "ROI Analysis",
     ],
-    price: "ab €7.500",
-    duration: "4-6 Wochen",
+    price: "Preis auf Anfrage",
+    duration: "Nach Vereinbarung",
     complexity: "Mittel",
   },
   {
@@ -77,8 +78,8 @@ const analyticsServices = [
       "Report Automation",
       "User Training",
     ],
-    price: "ab €15.000",
-    duration: "8-12 Wochen",
+    price: "Preis auf Anfrage",
+    duration: "Nach Vereinbarung",
     complexity: "Hoch",
   },
   {
@@ -91,8 +92,8 @@ const analyticsServices = [
       "Statistical Analysis",
       "Model Deployment",
     ],
-    price: "ab €20.000",
-    duration: "10-16 Wochen",
+    price: "Preis auf Anfrage",
+    duration: "Nach Vereinbarung",
     complexity: "Sehr Hoch",
   },
 ]
@@ -149,8 +150,8 @@ export default function DataAnalyticsPage() {
             Verwandeln Sie Ihre Daten in wertvolle Erkenntnisse. Wir helfen Ihnen dabei, das volle Potenzial Ihrer Daten
             zu erschließen und datengetriebene Entscheidungen zu treffen.
           </p>
-          <Button size="lg" className="w-full sm:w-auto">
-            Data Analytics Beratung
+          <Button size="lg" className="w-full sm:w-auto" asChild>
+            <Link href="/contact">Data Analytics Beratung</Link>
           </Button>
         </motion.div>
 
@@ -284,7 +285,9 @@ export default function DataAnalyticsPage() {
                     ))}
                   </ul>
                 </div>
-                <Button className="w-full bg-zinc-700 hover:bg-zinc-600">Service auswählen</Button>
+                <Button className="w-full bg-zinc-700 hover:bg-zinc-600" asChild>
+                  <Link href="/contact">Beratung anfragen</Link>
+                </Button>
               </motion.div>
             ))}
           </div>
@@ -331,8 +334,8 @@ export default function DataAnalyticsPage() {
             Lassen Sie uns gemeinsam das Potenzial Ihrer Daten erschließen und Ihr Business auf das nächste Level
             bringen.
           </p>
-          <Button variant="secondary" size="lg" className="bg-white text-purple-600 hover:bg-white/90 w-full sm:w-auto">
-            Kostenlose Datenanalyse
+          <Button variant="secondary" size="lg" className="bg-white text-purple-600 hover:bg-white/90 w-full sm:w-auto" asChild>
+            <Link href="/contact">Kostenlose Datenanalyse</Link>
           </Button>
         </motion.div>
       </div>

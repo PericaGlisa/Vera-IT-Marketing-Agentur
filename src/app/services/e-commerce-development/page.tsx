@@ -43,28 +43,28 @@ const platforms = [
     description: "Enterprise E-Commerce Lösung für skalierbare Online-Shops",
     features: ["Multi-Channel Selling", "Advanced Analytics", "Custom Apps", "API Integration"],
     bestFor: "Mittelständische bis große Unternehmen",
-    price: "ab €2.000/Monat",
+    price: "Preis auf Anfrage",
   },
   {
     name: "WooCommerce",
     description: "Flexible WordPress-basierte E-Commerce Lösung",
     features: ["WordPress Integration", "Extensive Plugins", "SEO Optimized", "Cost Effective"],
     bestFor: "Kleine bis mittelständische Unternehmen",
-    price: "ab €3.500 einmalig",
+    price: "Preis auf Anfrage",
   },
   {
     name: "Magento Commerce",
     description: "Leistungsstarke B2B und B2C E-Commerce Plattform",
     features: ["B2B Features", "Multi-Store", "Advanced SEO", "Customizable"],
     bestFor: "Große Unternehmen und B2B",
-    price: "ab €22.000/Jahr",
+    price: "Preis auf Anfrage",
   },
   {
     name: "Custom Solution",
     description: "Vollständig maßgeschneiderte E-Commerce Entwicklung",
     features: ["Unique Features", "Full Control", "Scalable Architecture", "API-First"],
     bestFor: "Unternehmen mit speziellen Anforderungen",
-    price: "ab €25.000",
+    price: "Preis auf Anfrage",
   },
 ]
 
@@ -80,7 +80,7 @@ const ecommerceServices = [
       "SEO Optimization",
       "Testing & Launch",
     ],
-    price: "ab €8.500",
+    price: "Preis auf Anfrage",
     duration: "6-10 Wochen",
   },
   {
@@ -94,7 +94,7 @@ const ecommerceServices = [
       "A/B Testing Setup",
       "Analytics Implementation",
     ],
-    price: "ab €5.500",
+    price: "Preis auf Anfrage",
     duration: "4-6 Wochen",
   },
   {
@@ -108,7 +108,7 @@ const ecommerceServices = [
       "Order Management",
       "Reporting Dashboard",
     ],
-    price: "ab €7.500",
+    price: "Preis auf Anfrage",
     duration: "4-8 Wochen",
   },
 ]
@@ -134,7 +134,7 @@ export default function ECommerceDevelopmentPage() {
             Leistungsstarke Online-Shops, die verkaufen. Wir entwickeln skalierbare E-Commerce-Lösungen mit optimaler
             User Experience und maximaler Conversion-Rate.
           </p>
-          <Button size="lg" className="w-full sm:w-auto">
+          <Button size="lg" className="w-full sm:w-auto" onClick={() => window.location.href = '/contact'}>
             E-Commerce Projekt starten
           </Button>
         </motion.div>
@@ -211,8 +211,9 @@ export default function ECommerceDevelopmentPage() {
                 <Button
                   variant="outline"
                   className="w-full border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white bg-transparent"
+                  onClick={() => window.location.href = '/contact'}
                 >
-                  Mehr erfahren
+                  Beratung anfragen
                 </Button>
               </motion.div>
             ))}
@@ -260,7 +261,7 @@ export default function ECommerceDevelopmentPage() {
                     ))}
                   </ul>
                 </div>
-                <Button className="w-full bg-zinc-700 hover:bg-zinc-600">Service auswählen</Button>
+                <Button className="w-full bg-zinc-700 hover:bg-zinc-600" onClick={() => window.location.href = '/contact'}>Service anfragen</Button>
               </motion.div>
             ))}
           </div>
@@ -281,7 +282,7 @@ export default function ECommerceDevelopmentPage() {
             Lassen Sie uns gemeinsam einen E-Commerce-Shop entwickeln, der Ihre Kunden begeistert und Ihren Umsatz
             steigert.
           </p>
-          <Button variant="secondary" size="lg" className="bg-white text-blue-600 hover:bg-white/90 w-full sm:w-auto">
+          <Button variant="secondary" size="lg" className="bg-white text-blue-600 hover:bg-white/90 w-full sm:w-auto" onClick={() => window.location.href = '/contact'}>
             E-Commerce Beratung buchen
           </Button>
         </motion.div>
