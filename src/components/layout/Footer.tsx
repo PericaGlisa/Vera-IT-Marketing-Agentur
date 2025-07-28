@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react"
+import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram, Video } from "lucide-react"
 
 export function Footer() {
   return (
@@ -49,14 +49,17 @@ export function Footer() {
               Technologien und datengetriebene Strategien.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-gray-400 hover:text-purple-500 transition-colors">
+              <Link href="https://www.facebook.com/verait.global" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-500 transition-colors">
+                <Facebook className="w-5 h-5" />
+              </Link>
+              <Link href="https://www.instagram.com/verait.global/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-500 transition-colors">
+                <Instagram className="w-5 h-5" />
+              </Link>
+              <Link href="https://www.linkedin.com/company/verait" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-500 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-purple-500 transition-colors">
-                <Twitter className="w-5 h-5" />
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-purple-500 transition-colors">
-                <Github className="w-5 h-5" />
+              <Link href="http://www.tiktok.com/@verait_global" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-500 transition-colors">
+                <Video className="w-5 h-5" />
               </Link>
             </div>
           </div>

@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Mail, Phone, MapPin, Clock } from "lucide-react"
+import { Mail, Phone, MapPin, Clock, Facebook, Instagram, Linkedin, Video } from "lucide-react"
 import { ContactForm } from "@/components/contact/ContactForm"
 
 export default function ContactPage() {
@@ -76,6 +76,24 @@ export default function ContactPage() {
                     <p className="text-gray-400 text-sm sm:text-base">Montag - Freitag: 9:00 - 18:00</p>
                     <p className="text-gray-400 text-sm sm:text-base">Samstag: 10:00 - 14:00</p>
                     <p className="text-gray-400 text-sm sm:text-base">Sonntag: Geschlossen</p>
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-gray-600">
+                  <h3 className="font-semibold text-white mb-4 text-sm sm:text-base">Folgen Sie uns</h3>
+                  <div className="flex space-x-4">
+                    <a href="https://www.facebook.com/verait.global" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg flex items-center justify-center hover:from-blue-500 hover:to-blue-600 transition-all duration-300">
+                      <Facebook className="w-5 h-5 text-white" />
+                    </a>
+                    <a href="https://www.instagram.com/verait.global/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg flex items-center justify-center hover:from-pink-500 hover:to-purple-500 transition-all duration-300">
+                      <Instagram className="w-5 h-5 text-white" />
+                    </a>
+                    <a href="https://www.linkedin.com/company/verait" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-to-r from-blue-700 to-blue-800 rounded-lg flex items-center justify-center hover:from-blue-600 hover:to-blue-700 transition-all duration-300">
+                      <Linkedin className="w-5 h-5 text-white" />
+                    </a>
+                    <a href="http://www.tiktok.com/@verait_global" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-to-r from-gray-800 to-black rounded-lg flex items-center justify-center hover:from-gray-700 hover:to-gray-900 transition-all duration-300">
+                      <Video className="w-5 h-5 text-white" />
+                    </a>
                   </div>
                 </div>
               </div>
