@@ -1,11 +1,12 @@
-import { Metadata } from "next"
+"use client"
 
-export const metadata: Metadata = {
-  title: "Impressum | Vera IT Marketing-Agentur",
-  description: "Impressum und rechtliche Angaben der Vera IT Marketing-Agentur Hamburg",
-}
+import { useEffect } from "react"
 
 export default function ImpressumPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-800 pt-20 sm:pt-24 lg:pt-28 pb-12 sm:pb-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
@@ -90,7 +91,10 @@ export default function ImpressumPage() {
             </section>
 
             <section>
-              <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">Verbraucherstreitbeilegung/Universalschlichtungsstelle</h2>
+              <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">
+                <span className="hidden sm:inline">Verbraucherstreitbeilegung/Universalschlichtungsstelle</span>
+                <span className="sm:hidden">Verbraucherstreitbeilegung</span>
+              </h2>
               <p className="text-gray-300 text-sm sm:text-base">
                 Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer 
                 Verbraucherschlichtungsstelle teilzunehmen.
