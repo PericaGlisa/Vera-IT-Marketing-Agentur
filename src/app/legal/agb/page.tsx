@@ -1,8 +1,8 @@
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "AGB | Vera IT Marketing-Agentur",
-  description: "Allgemeine Geschäftsbedingungen der Vera IT Marketing-Agentur Hamburg",
+  title: "AGB | Vera IT",
+  description: "Allgemeine Geschäftsbedingungen der Vera IT Hamburg",
 }
 
 export default function AGBPage() {
@@ -16,7 +16,7 @@ export default function AGBPage() {
             <section>
               <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">1. Geltungsbereich</h2>
               <p className="text-sm sm:text-base">
-                Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen der Vera IT Marketing-Agentur 
+                Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen der Vera IT 
                 und ihren Kunden über die Erbringung von Dienstleistungen im Bereich digitales Marketing, Webentwicklung, 
                 AI-Entwicklung und verwandten Services.
               </p>
@@ -25,7 +25,7 @@ export default function AGBPage() {
             <section>
               <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">2. Vertragspartner</h2>
               <div className="bg-zinc-800/50 border border-zinc-700 p-4 sm:p-6 rounded-lg">
-                <p className="font-medium text-white text-sm sm:text-base">Vera IT Marketing-Agentur</p>
+                <p className="font-medium text-white text-sm sm:text-base">Vera IT</p>
                 <p className="text-gray-300 text-sm sm:text-base">Rehrstieg 16d, 21147</p>
                  <p className="text-gray-300 text-sm sm:text-base">20095 Hamburg, Deutschland</p>
                 <p className="mt-2 text-gray-300 text-sm sm:text-base">
@@ -39,7 +39,7 @@ export default function AGBPage() {
               <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">3. Vertragsschluss</h2>
               <p className="text-sm sm:text-base">
                 Der Vertrag kommt durch die Annahme des Angebots durch den Kunden und die Bestätigung durch 
-                Vera IT Marketing-Agentur zustande. Alle Angebote sind freibleibend und unverbindlich.
+                Vera IT zustande. Alle Angebote sind freibleibend und unverbindlich.
               </p>
             </section>
 
@@ -81,7 +81,7 @@ export default function AGBPage() {
             <section>
               <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">7. Haftung</h2>
               <p className="text-sm sm:text-base">
-                Die Haftung von Vera IT Marketing-Agentur ist auf Vorsatz und grobe Fahrlässigkeit beschränkt. 
+                Die Haftung von Vera IT ist auf Vorsatz und grobe Fahrlässigkeit beschränkt. 
                 Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den 
                 vorhersehbaren, vertragstypischen Schaden begrenzt.
               </p>

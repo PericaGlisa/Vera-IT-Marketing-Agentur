@@ -89,7 +89,7 @@ export default function AboutPage() {
           >
             <h2 className="text-2xl sm:text-3xl font-heading font-bold mb-4 sm:mb-6">Unsere Vision</h2>
             <p className="text-gray-400 leading-relaxed mb-4">
-              Wir streben danach, die führende digitale Marketing-Agentur in Europa zu werden, die Unternehmen dabei
+              Wir streben danach, die führende digitale Agentur in Europa zu werden, die Unternehmen dabei
               hilft, das volle Potenzial der digitalen Transformation auszuschöpfen.
             </p>
             <p className="text-gray-400 leading-relaxed">

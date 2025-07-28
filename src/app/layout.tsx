@@ -9,10 +9,10 @@ import { BackToTop } from "@/components/ui/BackToTop"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Vera IT - Digital Marketing Agentur Hamburg",
+  title: "Vera IT - Digitale Agentur Hamburg",
   description:
-    "Führende digitale Marketing-Agentur in Hamburg. KI-gestützte Lösungen, innovative Web-Entwicklung und datengetriebenes Marketing für Ihren Erfolg.",
-  keywords: "Digital Marketing, Web Development, AI Development, Hamburg, Marketing Agentur",
+    "Führende digitale Agentur in Hamburg. KI-gestützte Lösungen, innovative Web-Entwicklung und datengetriebenes Marketing für Ihren Erfolg.",
+  keywords: "Digital Marketing, Web Development, AI Development, Hamburg, Digitale Agentur",
 }
 
 export default function RootLayout({

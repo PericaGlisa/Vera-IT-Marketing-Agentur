@@ -64,7 +64,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Wir sind Vera IT - Ihre führende digitale Marketing-Agentur in Hamburg. Transformieren Sie Ihr Unternehmen
+            Wir sind Vera IT - Ihre führende digitale Agentur in Hamburg. Transformieren Sie Ihr Unternehmen
             mit unseren innovativen Lösungen und erreichen Sie neue Höhen des digitalen Erfolgs.
           </motion.p>
 

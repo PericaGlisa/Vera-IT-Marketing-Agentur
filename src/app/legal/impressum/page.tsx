@@ -17,7 +17,7 @@ export default function ImpressumPage() {
             <section>
               <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">Angaben gemäß § 5 TMG</h2>
               <div className="bg-zinc-800/50 border border-zinc-700 p-4 sm:p-6 rounded-lg">
-                <p className="font-medium text-white mb-2">Vera IT Marketing-Agentur</p>
+                <p className="font-medium text-white mb-2">Vera IT</p>
                 <p className="text-gray-300 text-sm sm:text-base">Rehrstieg 16d, 21147</p>
                  <p className="text-gray-300 text-sm sm:text-base">20095 Hamburg, Deutschland</p>
               </div>

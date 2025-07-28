@@ -61,7 +61,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-white mb-1 text-sm sm:text-base">Adresse</h3>
-                    <p className="text-gray-400 text-sm sm:text-base">Vera IT Marketing-Agentur</p>
+                    <p className="text-gray-400 text-sm sm:text-base">Vera IT</p>
                      <p className="text-gray-400 text-sm sm:text-base">Rehrstieg 16d, 21147</p>
                      <p className="text-gray-400 text-sm sm:text-base">20095 Hamburg, Deutschland</p>
                   </div>
@@ -93,11 +93,11 @@ export default function ContactPage() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Vera IT Marketing-Agentur Standort"
+                  title="Vera IT Standort"
                 ></iframe>
               </div>
               <div className="mt-4 text-sm text-gray-400">
-                <p className="font-medium text-white mb-1">Vera IT Marketing-Agentur</p>
+                <p className="font-medium text-white mb-1">Vera IT</p>
                 <p>Rehrstieg 16d, 21147</p>
                 <p>20095 Hamburg, Deutschland</p>
               </div>

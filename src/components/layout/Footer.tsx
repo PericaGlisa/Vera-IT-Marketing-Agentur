@@ -45,7 +45,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
-              Führende digitale Marketing-Agentur in Hamburg. Wir transformieren Unternehmen durch innovative
+              Führende digitale Agentur in Hamburg. Wir transformieren Unternehmen durch innovative
               Technologien und datengetriebene Strategien.
             </p>
             <div className="flex space-x-4">
@@ -240,7 +240,7 @@ export function Footer() {
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3">
                       <MapPin className="w-5 h-5 text-purple-500 flex-shrink-0" />
-                      <span className="text-gray-400 text-sm sm:text-base">Vera IT Marketing-Agentur<br />Rehrstieg 16d, 21147<br />20095 Hamburg, Deutschland</span>
+                      <span className="text-gray-400 text-sm sm:text-base">Vera IT<br />Rehrstieg 16d, 21147<br />20095 Hamburg, Deutschland</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Mail className="w-5 h-5 text-purple-500 flex-shrink-0" />
@@ -259,7 +259,7 @@ export function Footer() {
 
         <div className="border-t border-gray-700 mt-8 sm:mt-12 pt-6 sm:pt-8 flex flex-col-reverse sm:flex-row justify-between items-center space-y-reverse space-y-4 sm:space-y-0">
           <p className="text-gray-400 text-sm text-center sm:text-left">
-            © 2025 Vera IT Marketing-Agentur. Made with ❤ in Hamburg
+            © 2025 Vera IT. Made with ❤ in Hamburg
           </p>
           <div className="flex flex-wrap justify-center sm:justify-end space-x-4 sm:space-x-6">
             <Link href="/legal/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
