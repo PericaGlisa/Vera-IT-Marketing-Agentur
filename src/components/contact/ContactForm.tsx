@@ -41,6 +41,29 @@ export function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    
+    // Frontend validation before submission
+    if (!formData.name.trim()) {
+      alert('Bitte geben Sie Ihren Namen ein.')
+      return
+    }
+    if (!formData.email.trim()) {
+      alert('Bitte geben Sie Ihre E-Mail-Adresse ein.')
+      return
+    }
+    if (!formData.service) {
+      alert('Bitte wählen Sie einen gewünschten Service aus.')
+      return
+    }
+    if (!formData.message.trim()) {
+      alert('Bitte beschreiben Sie Ihr Projekt.')
+      return
+    }
+    if (!formData.privacy) {
+      alert('Bitte akzeptieren Sie die Datenschutzerklärung.')
+      return
+    }
+    
     setIsSubmitting(true)
 
     try {
@@ -69,7 +92,22 @@ export function ContactForm() {
         })
       } else {
         const errorData = await response.json()
-        throw new Error(errorData.error || 'Failed to send message')
+        const errorMessage = errorData.error || 'Failed to send message'
+        
+        // Show specific error messages
+        if (errorMessage.includes('Missing required fields')) {
+          alert('Bitte füllen Sie alle Pflichtfelder aus (Name, E-Mail, Service, Projektbeschreibung).')
+        } else if (errorMessage.includes('Invalid email format')) {
+          alert('Bitte geben Sie eine gültige E-Mail-Adresse ein.')
+        } else if (errorMessage.includes('Name must be at least 2 characters')) {
+          alert('Der Name muss mindestens 2 Zeichen lang sein.')
+        } else if (errorMessage.includes('message at least 10 characters')) {
+          alert('Die Projektbeschreibung muss mindestens 10 Zeichen lang sein.')
+        } else if (errorMessage.includes('Too many requests')) {
+          alert('Zu viele Anfragen. Bitte versuchen Sie es in 15 Minuten erneut.')
+        } else {
+          alert(`Fehler: ${errorMessage}`)
+        }
       }
     } catch (error) {
       console.error('Error submitting form:', error)
