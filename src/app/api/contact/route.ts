@@ -1,8 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-// Initialize Resend with environment variable
-const resend = new Resend(process.env.RESEND_API_KEY)
+// Initialize Resend only when API key is available
+function getResendClient() {
+  if (!process.env.RESEND_API_KEY) {
+    throw new Error('RESEND_API_KEY environment variable is not set')
+  }
+  return new Resend(process.env.RESEND_API_KEY)
+}
 
 // Rate limiting storage (in production, use Redis or database)
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>()
@@ -103,6 +108,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Send email using Resend with sanitized data
+    const resend = getResendClient()
     const { data, error } = await resend.emails.send({
       from: `Vera IT Contact Form <${process.env.FROM_EMAIL || 'noreply@verait.de'}>`,
       to: [process.env.CONTACT_EMAIL || 'info@verait.de'],
