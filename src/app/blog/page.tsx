@@ -3,10 +3,7 @@
 import { motion } from "framer-motion"
 import { Calendar, User, ArrowRight, Clock } from "lucide-react"
 import { Button } from "@/components/ui/Button"
-<<<<<<< HEAD
 import { NewsletterForm } from "@/components/newsletter/NewsletterForm"
-=======
->>>>>>> 67a86e5e72b3fbc397a604f2aad5537cf50987d3
 import Image from "next/image"
 import Link from "next/link"
 
