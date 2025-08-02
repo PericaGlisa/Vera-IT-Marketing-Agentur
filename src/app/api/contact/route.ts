@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
+// Force dynamic rendering to prevent static generation during build
+export const dynamic = 'force-dynamic'
+
 // Initialize Resend only when API key is available
 function getResendClient() {
   if (!process.env.RESEND_API_KEY) {
