@@ -122,7 +122,7 @@ export default function BlogPage() {
           </h1>
           <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
             Bleiben Sie auf dem Laufenden mit den neuesten Trends, Technologien und Best Practices in der digitalen
-            Welt. Unsere Experten teilen ihr Wissen und ihre Erfahrungen.
+            Welt. Unsere Experten teilen ihr Wissen und ihre Erfahrungen mit Ihnen.
           </p>
         </motion.div>
 
