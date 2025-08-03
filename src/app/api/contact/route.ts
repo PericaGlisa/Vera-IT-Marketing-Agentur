@@ -91,6 +91,21 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Validate input lengths BEFORE sanitization
+    if (name.trim().length < 2) {
+      return NextResponse.json(
+        { error: 'Name must be at least 2 characters' },
+        { status: 400 }
+      )
+    }
+
+    if (message.trim().length < 10) {
+      return NextResponse.json(
+        { error: 'Message must be at least 10 characters' },
+        { status: 400 }
+      )
+    }
+
     // Validate email format
     if (!isValidEmail(email)) {
       return NextResponse.json(
@@ -99,7 +114,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Sanitize inputs
+    // Sanitize inputs AFTER validation
     const sanitizedData = {
       name: sanitizeName(name), // Use more permissive sanitization for names
       email: email.trim().toLowerCase(),
@@ -108,14 +123,6 @@ export async function POST(request: NextRequest) {
       service: sanitizeInput(service),
       budget: budget ? sanitizeInput(budget) : '',
       message: sanitizeInput(message)
-    }
-
-    // Additional validation
-    if (sanitizedData.name.length < 2 || sanitizedData.message.length < 10) {
-      return NextResponse.json(
-        { error: 'Name must be at least 2 characters and message at least 10 characters' },
-        { status: 400 }
-      )
     }
 
     // Send email using Resend with sanitized data
