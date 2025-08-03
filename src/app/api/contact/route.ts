@@ -39,9 +39,17 @@ function checkRateLimit(ip: string): boolean {
 // Input sanitization function
 function sanitizeInput(input: string): string {
   return input
-    .replace(/[<>"'&]/g, '') // Remove potentially dangerous characters
+    .replace(/[<>"&]/g, '') // Remove potentially dangerous characters but keep apostrophes for names
     .trim()
     .substring(0, 1000) // Limit length
+}
+
+// Special sanitization for names - more permissive
+function sanitizeName(input: string): string {
+  return input
+    .replace(/[<>"&]/g, '') // Remove only the most dangerous characters
+    .trim()
+    .substring(0, 100) // Reasonable limit for names
 }
 
 // Email validation function
@@ -93,7 +101,7 @@ export async function POST(request: NextRequest) {
 
     // Sanitize inputs
     const sanitizedData = {
-      name: sanitizeInput(name),
+      name: sanitizeName(name), // Use more permissive sanitization for names
       email: email.trim().toLowerCase(),
       company: company ? sanitizeInput(company) : '',
       phone: phone ? sanitizeInput(phone) : '',
