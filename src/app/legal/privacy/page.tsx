@@ -29,9 +29,8 @@ export default function PrivacyPage() {
                 Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
               </p>
               <div className="bg-zinc-800/50 border border-zinc-700 p-4 rounded-lg mt-4">
-                <p className="font-medium text-white">Vera IT</p>
-                 <p className="text-gray-300">Rehrstieg 16d, 21147</p>
-                 <p className="text-gray-300">20095 Hamburg, Deutschland</p>
+                 <p className="text-gray-300">Rehrstieg 16d</p>
+                 <p className="text-gray-300">21147 Hamburg, Deutschland</p>
                 <p className="mt-2 text-gray-300">
                   <strong className="text-white">E-Mail:</strong> info@verait.de<br/>
         <strong className="text-white">Telefon:</strong> +49 15563 740470

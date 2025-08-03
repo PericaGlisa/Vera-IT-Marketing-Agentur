@@ -25,9 +25,8 @@ export default function AGBPage() {
             <section>
               <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">2. Vertragspartner</h2>
               <div className="bg-zinc-800/50 border border-zinc-700 p-4 sm:p-6 rounded-lg">
-                <p className="font-medium text-white text-sm sm:text-base">Vera IT</p>
-                <p className="text-gray-300 text-sm sm:text-base">Rehrstieg 16d, 21147</p>
-                 <p className="text-gray-300 text-sm sm:text-base">20095 Hamburg, Deutschland</p>
+                <p className="text-gray-300 text-sm sm:text-base">Rehrstieg 16d</p>
+                 <p className="text-gray-300 text-sm sm:text-base">21147 Hamburg, Deutschland</p>
                 <p className="mt-2 text-gray-300 text-sm sm:text-base">
                   <strong className="text-white">E-Mail:</strong> info@verait.de<br/>
         <strong className="text-white">Telefon:</strong> +49 15563 740470

@@ -75,7 +75,7 @@ export function Footer() {
                   <ul className="space-y-2">
                     <li>
                       <Link
-                        href="/services/ai-development"
+                        href="/leistungen/ki-entwicklung"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
                         AI Development
@@ -83,7 +83,7 @@ export function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="/services/web-development"
+                        href="/leistungen/web-entwicklung"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
                         Web Development
@@ -91,7 +91,7 @@ export function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="/services/saas-development"
+                        href="/leistungen/saas-entwicklung"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
                         SaaS Development
@@ -99,7 +99,7 @@ export function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="/services/mobile-apps"
+                        href="/leistungen/mobile-apps"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
                         Mobile Apps
@@ -107,7 +107,7 @@ export function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="/services/ui-ux-design"
+                        href="/leistungen/ui-ux-design"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
                         UI/UX Design
@@ -115,7 +115,7 @@ export function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="/services/digital-marketing"
+                        href="/leistungen/digital-marketing"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
                         Digital Marketing
@@ -130,7 +130,7 @@ export function Footer() {
                   <ul className="space-y-2">
                     <li>
                       <Link
-                        href="/services/brand-design"
+                        href="/leistungen/brand-design"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
                         Brand Design
@@ -138,7 +138,7 @@ export function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="/services/video-production"
+                        href="/leistungen/video-produktion"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
                         Video Production
@@ -146,7 +146,7 @@ export function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="/services/e-commerce-development"
+                        href="/leistungen/e-commerce-entwicklung"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
                         E-Commerce Development
@@ -154,7 +154,7 @@ export function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="/services/cloud-solutions"
+                        href="/leistungen/cloud-loesungen"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
                         Cloud Solutions
@@ -162,7 +162,7 @@ export function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="/services/cybersecurity"
+                        href="/leistungen/cybersecurity"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
                         Cybersecurity
@@ -170,7 +170,7 @@ export function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="/services/data-analytics"
+                        href="/leistungen/datenanalyse"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
                         Data Analytics
@@ -188,7 +188,7 @@ export function Footer() {
                   <ul className="space-y-2">
                     <li>
                       <Link
-                        href="/about"
+                        href="/ueber-uns"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
                         Über Uns
@@ -196,7 +196,7 @@ export function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="/about/team"
+                        href="/team"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
                         Unser Team
@@ -204,7 +204,7 @@ export function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="/about/careers"
+                        href="/karriere"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
                         Karriere
@@ -212,7 +212,7 @@ export function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="/projects"
+                        href="/projekte"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
                         Projekte
@@ -228,7 +228,7 @@ export function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="/contact"
+                        href="/kontakt"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
                         Kontakt
@@ -243,15 +243,15 @@ export function Footer() {
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3">
                       <MapPin className="w-5 h-5 text-purple-500 flex-shrink-0" />
-                      <span className="text-gray-400 text-sm sm:text-base">Vera IT<br />Rehrstieg 16d, 21147<br />20095 Hamburg, Deutschland</span>
+                      <span className="text-gray-400 text-sm sm:text-base">Rehrstieg 16d<br />21147 Hamburg, Deutschland</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Mail className="w-5 h-5 text-purple-500 flex-shrink-0" />
-                      <span className="text-gray-400 text-sm sm:text-base">info@verait.de</span>
+                      <a href="mailto:info@verait.de" className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base">info@verait.de</a>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Phone className="w-5 h-5 text-purple-500 flex-shrink-0" />
-                      <span className="text-gray-400 text-sm sm:text-base">+49 15563 740470</span>
+                      <a href="tel:+4915563740470" className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base">+49 15563 740470</a>
                     </div>
                   </div>
                 </div>
@@ -265,16 +265,16 @@ export function Footer() {
             © 2025 Vera IT. Mit ❤ in Hamburg gemacht
           </p>
           <div className="flex flex-wrap justify-center sm:justify-end space-x-4 sm:space-x-6">
-            <Link href="/legal/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link href="/rechtliches/datenschutz" className="text-gray-400 hover:text-white text-sm transition-colors">
               Datenschutz
             </Link>
-            <Link href="/legal/impressum" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link href="/rechtliches/impressum" className="text-gray-400 hover:text-white text-sm transition-colors">
               Impressum
             </Link>
-            <Link href="/legal/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link href="/rechtliches/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
               Cookie-Richtlinie
             </Link>
-            <Link href="/legal/agb" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link href="/rechtliches/agb" className="text-gray-400 hover:text-white text-sm transition-colors">
               AGB
             </Link>
           </div>

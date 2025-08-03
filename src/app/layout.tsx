@@ -13,6 +13,14 @@ export const metadata: Metadata = {
   description:
     "Führende digitale Agentur in Hamburg. KI-gestützte Lösungen, innovative Web-Entwicklung und datengetriebenes Marketing für Ihren Erfolg.",
   keywords: "Digital Marketing, Web Development, AI Development, Hamburg, Digitale Agentur",
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
+  other: {
+    "google": "notranslate",
+  },
 }
 
 export default function RootLayout({

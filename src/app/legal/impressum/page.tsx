@@ -17,9 +17,8 @@ export default function ImpressumPage() {
             <section>
               <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">Angaben gemäß § 5 TMG</h2>
               <div className="bg-zinc-800/50 border border-zinc-700 p-4 sm:p-6 rounded-lg">
-                <p className="font-medium text-white mb-2">Vera IT</p>
-                <p className="text-gray-300 text-sm sm:text-base">Rehrstieg 16d, 21147</p>
-                 <p className="text-gray-300 text-sm sm:text-base">20095 Hamburg, Deutschland</p>
+                <p className="text-gray-300 text-sm sm:text-base">Rehrstieg 16d</p>
+                 <p className="text-gray-300 text-sm sm:text-base">21147 Hamburg, Deutschland</p>
               </div>
             </section>
 
@@ -65,8 +64,8 @@ export default function ImpressumPage() {
               <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">Redaktionell verantwortlich</h2>
               <div className="bg-zinc-800/50 border border-zinc-700 p-4 sm:p-6 rounded-lg">
                 <p className="text-white font-medium text-sm sm:text-base">Jovica Mihajlovic</p>
-                <p className="text-gray-300 text-sm sm:text-base">Rehrstieg 16d, 21147</p>
-                 <p className="text-gray-300 text-sm sm:text-base">20095 Hamburg, Deutschland</p>
+                <p className="text-gray-300 text-sm sm:text-base">Rehrstieg 16d</p>
+                 <p className="text-gray-300 text-sm sm:text-base">21147 Hamburg, Deutschland</p>
               </div>
             </section>
 

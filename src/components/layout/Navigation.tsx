@@ -21,73 +21,73 @@ import {
 const services = [
   {
     name: "AI Development",
-    href: "/services/ai-development",
+    href: "/leistungen/ki-entwicklung",
     icon: Brain,
     description: "Intelligente KI-Lösungen und Machine Learning",
   },
   {
     name: "Web Development",
-    href: "/services/web-development",
+    href: "/leistungen/web-entwicklung",
     icon: Code,
     description: "Moderne Websites und Web-Anwendungen",
   },
   {
     name: "SaaS Development",
-    href: "/services/saas-development",
+    href: "/leistungen/saas-entwicklung",
     icon: Cloud,
     description: "Skalierbare Software-as-a-Service Lösungen",
   },
   {
     name: "Mobile Apps",
-    href: "/services/mobile-apps",
+    href: "/leistungen/mobile-apps",
     icon: Smartphone,
     description: "Native und Cross-Platform Mobile Apps",
   },
   {
     name: "UI/UX Design",
-    href: "/services/ui-ux-design",
+    href: "/leistungen/ui-ux-design",
     icon: Palette,
     description: "Benutzerorientiertes Design und UX",
   },
   {
     name: "Digital Marketing",
-    href: "/services/digital-marketing",
+    href: "/leistungen/digital-marketing",
     icon: TrendingUp,
     description: "Datengetriebene Marketing-Strategien",
   },
   {
     name: "Brand Design",
-    href: "/services/brand-design",
+    href: "/leistungen/brand-design",
     icon: Palette,
     description: "Starke Markenidentitäten und Corporate Design",
   },
   {
     name: "Video Production",
-    href: "/services/video-production",
+    href: "/leistungen/video-produktion",
     icon: Video,
     description: "Professionelle Video-Produktion",
   },
   {
     name: "E-Commerce Development",
-    href: "/services/e-commerce-development",
+    href: "/leistungen/e-commerce-entwicklung",
     icon: ShoppingCart,
     description: "Leistungsstarke Online-Shops",
   },
   {
     name: "Cloud Solutions",
-    href: "/services/cloud-solutions",
+    href: "/leistungen/cloud-loesungen",
     icon: Cloud,
     description: "Skalierbare Cloud-Infrastrukturen",
   },
   {
     name: "Cybersecurity",
-    href: "/services/cybersecurity",
+    href: "/leistungen/cybersecurity",
     icon: Shield,
     description: "Umfassender Schutz vor Cyberbedrohungen",
   },
   {
     name: "Data Analytics",
-    href: "/services/data-analytics",
+    href: "/leistungen/datenanalyse",
     icon: BarChart3,
     description: "Datengetriebene Geschäftsentscheidungen",
   },
@@ -278,7 +278,7 @@ export function Navigation() {
                         
                         <div className="text-center mt-6 lg:mt-8">
                           <Link
-                            href="/contact"
+                            href="/kontakt"
                             className="inline-flex items-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg lg:rounded-xl font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 text-xs sm:text-sm lg:text-base"
                             onClick={() => setServicesOpen(false)}
                           >
@@ -292,16 +292,16 @@ export function Navigation() {
               </AnimatePresence>
             </div>
 
-            <Link href="/about" className="text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
+            <Link href="/ueber-uns" className="text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
               Über Uns
             </Link>
-            <Link href="/projects" className="text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
+            <Link href="/projekte" className="text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
               Projekte
             </Link>
             <Link href="/blog" className="text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
               Blog
             </Link>
-            <Link href="/contact" className="text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
+            <Link href="/kontakt" className="text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
               Kontakt
             </Link>
           </div>
@@ -309,7 +309,7 @@ export function Navigation() {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Link
-              href="/contact"
+              href="/kontakt"
               className="primary-gradient text-white px-4 xl:px-6 py-2 rounded-lg font-medium hover:shadow-lg hover:scale-105 transition-all duration-300 text-sm xl:text-base"
             >
               Projekt starten
@@ -412,14 +412,14 @@ export function Navigation() {
                   </div>
 
                   <Link
-                    href="/about"
+                    href="/ueber-uns"
                     className="block text-gray-300 hover:text-white transition-colors py-3 text-lg font-medium border-b border-gray-800"
                     onClick={() => setIsOpen(false)}
                   >
                     Über Uns
                   </Link>
                   <Link
-                    href="/projects"
+                    href="/projekte"
                     className="block text-gray-300 hover:text-white transition-colors py-3 text-lg font-medium border-b border-gray-800"
                     onClick={() => setIsOpen(false)}
                   >
@@ -433,7 +433,7 @@ export function Navigation() {
                     Blog
                   </Link>
                   <Link
-                    href="/contact"
+                    href="/kontakt"
                     className="block text-gray-300 hover:text-white transition-colors py-3 text-lg font-medium border-b border-gray-800"
                     onClick={() => setIsOpen(false)}
                   >
@@ -444,7 +444,7 @@ export function Navigation() {
                 {/* Mobile CTA Button */}
                 <div className="pt-6">
                   <Link
-                    href="/contact"
+                    href="/kontakt"
                     className="block primary-gradient text-white px-6 py-4 rounded-lg font-medium text-center text-lg hover:shadow-lg transition-all duration-300"
                     onClick={() => setIsOpen(false)}
                   >

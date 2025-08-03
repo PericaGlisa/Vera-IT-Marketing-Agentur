@@ -51,7 +51,7 @@ export function CTA() {
               transition={{ duration: 0.8, delay: 0.6 }}
               viewport={{ once: true }}
             >
-              <Link href="/contact" className="w-full sm:w-auto">
+              <Link href="/kontakt" className="w-full sm:w-auto">
                 <Button
                   size="lg"
                   variant="secondary"

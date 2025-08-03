@@ -229,7 +229,7 @@ export function ContactForm() {
           />
           <label htmlFor="privacy" className="text-xs sm:text-sm text-gray-400 leading-relaxed">
             Ich akzeptiere die{" "}
-            <a href="/legal/privacy" className="text-purple-500 hover:underline">
+            <a href="/rechtliches/datenschutz" className="text-purple-500 hover:underline">
               Datenschutzerklärung
             </a>{" "}
             und stimme der Verarbeitung meiner Daten zu. *

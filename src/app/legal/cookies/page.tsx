@@ -162,7 +162,7 @@ export default function CookiePolicyPage() {
               <div className="bg-zinc-800/50 border border-zinc-700 p-4 rounded-lg mt-4">
                 <p><strong>E-Mail:</strong> info@verait.de</p>
 <p><strong>Telefon:</strong> +49 15563 740470</p>
-<p><strong>Adresse:</strong> Vera IT, Rehrstieg 16d, 21147, 20095 Hamburg, Deutschland</p>
+<p><strong>Adresse:</strong> Rehrstieg 16d, 21147 Hamburg, Deutschland</p>
               </div>
             </section>
 
