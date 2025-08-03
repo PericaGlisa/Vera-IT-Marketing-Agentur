@@ -72,9 +72,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-white mb-1 text-sm sm:text-base">Öffnungszeiten</h3>
-                    <p className="text-gray-400 text-sm sm:text-base">Montag - Freitag: 9:00 - 18:00</p>
-                    <p className="text-gray-400 text-sm sm:text-base">Samstag: 10:00 - 14:00</p>
-                    <p className="text-gray-400 text-sm sm:text-base">Sonntag: Geschlossen</p>
+                    <p className="text-gray-400 text-sm sm:text-base">Montag - Freitag: 09:00 - 17:00 Uhr</p>
+                    <p className="text-gray-400 text-sm sm:text-base">Wochenende: Geschlossen</p>
                   </div>
                 </div>
 
