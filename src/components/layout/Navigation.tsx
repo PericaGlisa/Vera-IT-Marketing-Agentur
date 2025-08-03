@@ -456,8 +456,8 @@ export function Navigation() {
                 <div className="pt-6 border-t border-gray-800">
                   <div className="text-center space-y-2">
                     <p className="text-gray-400 text-sm">Kontaktieren Sie uns direkt:</p>
-                    <p className="text-white font-medium">+49 15563 740470</p>
-                <p className="text-purple-400">info@verait.de</p>
+                    <a href="tel:+4915563740470" className="block text-white font-medium hover:text-purple-400 transition-colors">+49 15563 740470</a>
+                    <a href="mailto:info@verait.de" className="block text-purple-400 hover:text-purple-300 transition-colors">info@verait.de</a>
                   </div>
                 </div>
               </div>
