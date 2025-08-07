@@ -212,7 +212,7 @@ export function Navigation() {
                 {servicesOpen && (
                   <motion.div
                     key="services-mega-menu"
-                    className="fixed inset-0 top-14 sm:top-16 lg:top-20 bg-zinc-950/98 backdrop-blur-md z-45"
+                    className="fixed left-0 right-0 top-14 sm:top-16 lg:top-20 h-screen bg-zinc-950/98 backdrop-blur-md z-45"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -336,7 +336,7 @@ export function Navigation() {
           <motion.div
             key="mobile-menu"
             ref={mobileNavRef}
-            className="lg:hidden fixed inset-0 top-14 sm:top-16 lg:top-20 bg-zinc-950/98 backdrop-blur-md z-[90]"
+            className="lg:hidden fixed left-0 right-0 top-14 sm:top-16 lg:top-20 h-screen bg-zinc-950/98 backdrop-blur-md z-[90]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

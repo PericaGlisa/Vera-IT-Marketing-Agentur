@@ -9,7 +9,7 @@ import { ParticleBackground } from "@/components/ui/ParticleBackground"
 
 export function Hero() {
   return (
-    <section className="relative min-h-[110vh] sm:min-h-[115vh] lg:min-h-[120vh] flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-28 pb-8 sm:pb-12 lg:pb-16">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-28 pb-8 sm:pb-12 lg:pb-16">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-800" />
 

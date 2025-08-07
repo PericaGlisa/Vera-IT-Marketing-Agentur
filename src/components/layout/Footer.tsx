@@ -234,6 +234,14 @@ export function Footer() {
                         Kontakt
                       </Link>
                     </li>
+                    <li>
+                      <Link
+                        href="/neue-kunden-form"
+                        className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
+                      >
+                        Kundenformular
+                      </Link>
+                    </li>
                   </ul>
                 </div>
 
