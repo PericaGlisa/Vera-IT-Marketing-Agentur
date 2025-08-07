@@ -76,7 +76,6 @@ const initialFormData: FormData = {
 export default function NeueKundenForm() {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState<FormData>(initialFormData);
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const totalSteps = 6;
 
   const updateFormData = (field: keyof FormData, value: string | string[]) => {
@@ -126,7 +125,9 @@ export default function NeueKundenForm() {
 
       const result = await response.json();
       console.log('Form submitted successfully:', result);
-      setIsSubmitted(true);
+      
+      // Redirect to thank you page
+      window.location.href = '/danke';
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitError(error instanceof Error ? error.message : 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.');
@@ -154,29 +155,7 @@ export default function NeueKundenForm() {
     }
   };
 
-  if (isSubmitted) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4">
-        <div className="max-w-2xl mx-auto">
-          <Card className="text-center">
-            <CardContent className="pt-8 pb-8">
-              <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-              <h1 className="text-2xl font-bold text-gray-900 mb-4">
-                Vielen Dank für Ihre Anfrage!
-              </h1>
-              <p className="text-gray-600 mb-6">
-                Wir haben Ihre Informationen erhalten und werden uns in Kürze bei Ihnen melden, 
-                um einen ersten Gesprächstermin zu vereinbaren.
-              </p>
-              <Button onClick={() => window.location.href = '/'} className="bg-blue-600 hover:bg-blue-700">
-                Zurück zur Startseite
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    );
-  }
+  // Remove the inline success state since we redirect to /danke page
 
   return (
     <div className="min-h-screen bg-zinc-950 pt-24 sm:pt-28 lg:pt-32 pb-16 sm:pb-20 lg:pb-24 px-4">
@@ -264,7 +243,7 @@ export default function NeueKundenForm() {
                           value={option}
                           checked={formData.companyStage === option}
                           onChange={(e) => updateFormData('companyStage', e.target.value)}
-                          className="text-blue-600"
+                          className="text-purple-600"
                         />
                         <span className="text-sm sm:text-base text-gray-400">{option}</span>
                       </label>
@@ -318,7 +297,7 @@ export default function NeueKundenForm() {
                           value={option}
                           checked={formData.teamSize === option}
                           onChange={(e) => updateFormData('teamSize', e.target.value)}
-                          className="text-blue-600"
+                          className="text-purple-600"
                         />
                         <span className="text-sm text-gray-300">{option}</span>
                       </label>
@@ -342,11 +321,11 @@ export default function NeueKundenForm() {
                       <label key={option} className="flex items-center space-x-2">
                         <input
                           type="radio"
-                          name="revenue"
-                          value={option}
-                          checked={formData.revenue === option}
-                          onChange={(e) => updateFormData('revenue', e.target.value)}
-                          className="text-blue-600"
+                        name="revenue"
+                        value={option}
+                        checked={formData.revenue === option}
+                        onChange={(e) => updateFormData('revenue', e.target.value)}
+                        className="text-purple-600"
                         />
                         <span className="text-sm text-gray-300">{option}</span>
                       </label>
@@ -361,11 +340,11 @@ export default function NeueKundenForm() {
                       <label key={option} className="flex items-center space-x-2">
                         <input
                           type="radio"
-                          name="hasProduct"
-                          value={option}
-                          checked={formData.hasProduct === option}
-                          onChange={(e) => updateFormData('hasProduct', e.target.value)}
-                          className="text-blue-600"
+                        name="hasProduct"
+                        value={option}
+                        checked={formData.hasProduct === option}
+                        onChange={(e) => updateFormData('hasProduct', e.target.value)}
+                        className="text-purple-600"
                         />
                         <span className="text-sm text-gray-300">{option}</span>
                       </label>
@@ -411,7 +390,7 @@ export default function NeueKundenForm() {
                           type="checkbox"
                           checked={formData.mainReasons.includes(option)}
                           onChange={(e) => handleMainReasonsChange(option, e.target.checked)}
-                          className="text-blue-600"
+                          className="text-purple-600"
                         />
                         <span className="text-sm text-gray-300">{option}</span>
                       </label>
@@ -421,7 +400,7 @@ export default function NeueKundenForm() {
                         type="checkbox"
                         checked={formData.mainReasons.includes('Anderes')}
                         onChange={(e) => handleMainReasonsChange('Anderes', e.target.checked)}
-                        className="text-blue-600"
+                        className="text-purple-600"
                       />
                       <span className="text-sm text-gray-300">Anderes:</span>
                     </label>
@@ -475,7 +454,7 @@ export default function NeueKundenForm() {
                           value={option}
                           checked={formData.priority === option}
                           onChange={(e) => updateFormData('priority', e.target.value)}
-                          className="text-blue-600"
+                          className="text-purple-600"
                         />
                         <span className="text-sm text-gray-300">{option}</span>
                       </label>
@@ -506,7 +485,7 @@ export default function NeueKundenForm() {
                           value={option}
                           checked={formData.hasTechTeam === option}
                           onChange={(e) => updateFormData('hasTechTeam', e.target.value)}
-                          className="text-blue-600"
+                          className="text-purple-600"
                         />
                         <span className="text-sm text-gray-300">{option}</span>
                       </label>
@@ -538,7 +517,7 @@ export default function NeueKundenForm() {
                           value={option}
                           checked={formData.hasIdeas === option}
                           onChange={(e) => updateFormData('hasIdeas', e.target.value)}
-                          className="text-blue-600"
+                          className="text-purple-600"
                         />
                         <span className="text-sm text-gray-300">{option}</span>
                       </label>
@@ -563,7 +542,7 @@ export default function NeueKundenForm() {
                           value={option}
                           checked={formData.timeframe === option}
                           onChange={(e) => updateFormData('timeframe', e.target.value)}
-                          className="text-blue-600"
+                          className="text-purple-600"
                         />
                         <span className="text-sm text-gray-300">{option}</span>
                       </label>
@@ -600,7 +579,7 @@ export default function NeueKundenForm() {
                           value={option}
                           checked={formData.budget === option}
                           onChange={(e) => updateFormData('budget', e.target.value)}
-                          className="text-blue-600"
+                          className="text-purple-600"
                         />
                         <span className="text-sm sm:text-base text-gray-400">{option}</span>
                       </label>
@@ -623,9 +602,9 @@ export default function NeueKundenForm() {
                           value={option}
                           checked={formData.hasWorkedWithIT === option}
                           onChange={(e) => updateFormData('hasWorkedWithIT', e.target.value)}
-                          className="text-blue-600"
+                          className="text-purple-600"
                         />
-                        <span className="text-sm">{option}</span>
+                        <span className="text-sm text-gray-300">{option}</span>
                       </label>
                     ))}
                   </div>
