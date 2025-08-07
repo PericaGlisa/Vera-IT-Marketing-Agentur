@@ -9,7 +9,7 @@ import { ParticleBackground } from "@/components/ui/ParticleBackground"
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-16 sm:pb-20 lg:pb-24 safe-area-inset">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-4 sm:pb-8 lg:pb-12">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-800" />
 
@@ -24,7 +24,7 @@ export function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto text-center flex items-center justify-center min-h-full px-safe">
+      <div className="relative z-10 container mx-auto text-center flex items-center justify-center min-h-full">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -32,7 +32,7 @@ export function Hero() {
           className="max-w-4xl mx-auto w-full flex flex-col items-center justify-center"
         >
           <motion.h1
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading font-bold mb-4 sm:mb-6 md:mb-8 leading-tight mt-2 sm:mt-4 md:mt-6 lg:mt-8"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold mb-4 sm:mb-6 leading-tight mt-4 sm:mt-6 lg:mt-8"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -41,7 +41,7 @@ export function Hero() {
           </motion.h1>
 
           <motion.div
-            className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-4 sm:mb-6 md:mb-8 h-10 sm:h-12 md:h-16 flex items-center justify-center"
+            className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-4 sm:mb-6 h-12 sm:h-16 flex items-center justify-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -59,7 +59,7 @@ export function Hero() {
           </motion.div>
 
           <motion.p
-            className="text-sm sm:text-base md:text-lg text-gray-400 mb-6 sm:mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed px-2 sm:px-4 md:px-0 text-center"
+            className="text-base sm:text-lg text-gray-400 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-2 sm:px-0 text-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -69,7 +69,7 @@ export function Hero() {
           </motion.p>
 
           <motion.div
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-2 sm:px-4 md:px-0 w-full max-w-xs sm:max-w-sm md:max-w-none"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4 sm:px-0 w-full max-w-sm sm:max-w-none"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
@@ -89,13 +89,13 @@ export function Hero() {
 
           {/* Scroll Indicator */}
           <motion.div
-            className="mt-12 sm:mt-16 md:mt-20 lg:mt-24 mb-6 sm:mb-8 md:mb-12 lg:mb-16 flex justify-center"
+            className="mt-8 sm:mt-12 lg:mt-16 flex justify-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
           >
-            <div className="w-4 h-6 sm:w-5 sm:h-8 md:w-6 md:h-10 border-2 border-gray-400 rounded-full flex justify-center">
-              <div className="w-0.5 h-1.5 sm:w-1 sm:h-2 md:h-3 bg-gray-400 rounded-full mt-1 sm:mt-1.5 md:mt-2 animate-bounce" />
+            <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-gray-400 rounded-full flex justify-center">
+              <div className="w-1 h-2 sm:h-3 bg-gray-400 rounded-full mt-1.5 sm:mt-2 animate-bounce" />
             </div>
           </motion.div>
         </motion.div>

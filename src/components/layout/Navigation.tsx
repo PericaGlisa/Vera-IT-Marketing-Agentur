@@ -154,8 +154,8 @@ export function Navigation() {
         isScrolled ? "bg-zinc-950/95 border-b border-gray-700" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-18 md:h-20 lg:h-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 flex-shrink-0 z-50 group">
             <div className="relative">
@@ -317,18 +317,30 @@ export function Navigation() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden flex-shrink-0 mr-1">
-            <button
-              ref={mobileButtonRef}
-              className="text-white p-2 sm:p-3 z-[100] relative pointer-events-auto bg-zinc-800/50 rounded-lg border border-zinc-700/50 hover:bg-zinc-700/50 transition-colors"
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label="Menu öffnen"
-            >
-              <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.3 }}>
-                {isOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
-              </motion.div>
-            </button>
-          </div>
+          <button
+            ref={mobileButtonRef}
+            className="lg:hidden z-[100] relative pointer-events-auto group"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Menu öffnen"
+          >
+            <div className="relative">
+              {/* Outer glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-indigo-600/30 rounded-lg blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
+              
+              {/* Glass container */}
+              <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-lg p-2 shadow-2xl group-hover:bg-white/10 group-hover:border-white/20 group-hover:shadow-purple-500/20 transition-all duration-500">
+                {/* Inner glass reflection */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent rounded-lg opacity-60"></div>
+                
+                {/* Menu Icon */}
+                <div className="relative">
+                  <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.3 }}>
+                    {isOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6 text-white drop-shadow-lg" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6 text-white drop-shadow-lg" />}
+                  </motion.div>
+                </div>
+              </div>
+            </div>
+          </button>
         </div>
       </div>
 
@@ -336,14 +348,14 @@ export function Navigation() {
       <AnimatePresence mode="wait">
         {isOpen && (
           <motion.div
-              key="mobile-menu"
-              ref={mobileNavRef}
-              className="lg:hidden fixed left-0 right-0 top-16 sm:top-18 md:top-20 h-screen bg-zinc-950/98 backdrop-blur-md z-[90]"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-            >
+            key="mobile-menu"
+            ref={mobileNavRef}
+            className="lg:hidden fixed left-0 right-0 top-14 sm:top-16 lg:top-20 h-screen bg-zinc-950/98 backdrop-blur-md z-[90]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
             <motion.div
               className="h-full overflow-y-auto"
               initial={{ y: -20 }}
