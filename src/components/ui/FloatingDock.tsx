@@ -159,7 +159,7 @@ export function FloatingDock() {
                         {isHovered && (
                           <motion.div
                             initial={{ opacity: 0, y: 10, scale: 0.8 }}
-                            animate={{ opacity: 1, y: -40, scale: 1 }}
+                            animate={{ opacity: 1, y: -45, scale: 1 }}
                             exit={{ opacity: 0, y: 10, scale: 0.8 }}
                             transition={{ duration: 0.2 }}
                             className="absolute left-1/2 transform -translate-x-1/2 pointer-events-none block scale-90 sm:scale-100"
@@ -186,13 +186,13 @@ export function FloatingDock() {
                             
                             {/* Icon background */}
                             <motion.div 
-                              className={`relative w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${item.color} rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}
+                              className={`relative w-8 h-8 xs:w-10 xs:h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${item.color} rounded-md xs:rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}
                             >
                               {/* Inner glass effect */}
                               <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent rounded-lg sm:rounded-xl opacity-60"></div>
                               
                               {/* Icon */}
-                              <Icon className="w-4 h-4 sm:w-6 sm:h-6 text-white drop-shadow-lg relative z-10" />
+                              <Icon className="w-3.5 h-3.5 xs:w-4 xs:h-4 sm:w-6 sm:h-6 text-white drop-shadow-lg relative z-10" />
                             </motion.div>
                           </div>
                         ) : (
