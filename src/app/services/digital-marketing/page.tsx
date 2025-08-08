@@ -251,7 +251,7 @@ export default function DigitalMarketingPage() {
             Lassen Sie uns gemeinsam eine Marketing-Strategie entwickeln, die messbare Ergebnisse liefert.
           </p>
           <Button variant="secondary" size="lg" className="bg-white text-purple-600 hover:bg-white/90 w-full sm:w-auto" asChild>
-            <Link href="/kontakt">Kostenlose Marketing-Analyse</Link>
+            <Link href="/neue-kunden-form">Kostenlose Marketing-Analyse</Link>
           </Button>
         </motion.div>
       </div>

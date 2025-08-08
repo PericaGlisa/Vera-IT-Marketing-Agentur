@@ -103,7 +103,7 @@ export default function SaaSDevelopmentPage() {
             wir cloud-native SaaS-Plattformen, die wachsen und sich anpassen.
           </p>
           <Button size="lg" className="w-full sm:w-auto" asChild>
-            <Link href="/kontakt">SaaS-Projekt besprechen</Link>
+            <Link href="/neue-kunden-form">SaaS-Projekt besprechen</Link>
           </Button>
         </motion.div>
 
@@ -233,7 +233,7 @@ export default function SaaSDevelopmentPage() {
             className="bg-white text-emerald-600 hover:bg-white/90 w-full sm:w-auto"
             asChild
           >
-            <Link href="/kontakt">Kostenlose Beratung</Link>
+            <Link href="/neue-kunden-form">Kostenlose Beratung</Link>
           </Button>
         </motion.div>
       </div>

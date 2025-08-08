@@ -278,7 +278,7 @@ export function Navigation() {
                         
                         <div className="text-center mt-6 lg:mt-8">
                           <Link
-                            href="/kontakt"
+                            href="/neue-kunden-form"
                             className="inline-flex items-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg lg:rounded-xl font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 text-xs sm:text-sm lg:text-base"
                             onClick={() => setServicesOpen(false)}
                           >
@@ -309,7 +309,7 @@ export function Navigation() {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Link
-              href="/kontakt"
+              href="/neue-kunden-form"
               className="primary-gradient text-white px-4 xl:px-6 py-2 rounded-lg font-medium hover:shadow-lg hover:scale-105 transition-all duration-300 text-sm xl:text-base"
             >
               Projekt starten
@@ -458,7 +458,7 @@ export function Navigation() {
                 {/* Mobile CTA Button */}
                 <div className="pt-6">
                   <Link
-                    href="/kontakt"
+                    href="/neue-kunden-form"
                     className="block primary-gradient text-white px-6 py-4 rounded-lg font-medium text-center text-lg hover:shadow-lg transition-all duration-300"
                     onClick={() => setIsOpen(false)}
                   >

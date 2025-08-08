@@ -106,7 +106,7 @@ export default function MobileAppsPage() {
             Kunden lieben und Ihr Business voranbringen.
           </p>
           <Button size="lg" className="w-full sm:w-auto" asChild>
-            <Link href="/kontakt">App-Projekt starten</Link>
+            <Link href="/neue-kunden-form">App-Projekt starten</Link>
           </Button>
         </motion.div>
 
@@ -234,7 +234,7 @@ export default function MobileAppsPage() {
             Lassen Sie uns gemeinsam eine App entwickeln, die Ihre Nutzer begeistert und Ihr Business wachsen lässt.
           </p>
           <Button variant="secondary" size="lg" className="bg-white text-orange-600 hover:bg-white/90 w-full sm:w-auto" asChild>
-            <Link href="/kontakt">App-Konzept besprechen</Link>
+            <Link href="/neue-kunden-form">App-Konzept besprechen</Link>
           </Button>
         </motion.div>
       </div>

@@ -130,7 +130,7 @@ export default function CybersecurityPage() {
             gegen moderne Cyberrisiken und gewährleisten Compliance.
           </p>
           <Button size="lg" className="w-full sm:w-auto" asChild>
-            <Link href="/kontakt">Security-Assessment starten</Link>
+            <Link href="/neue-kunden-form">Security-Assessment starten</Link>
           </Button>
         </motion.div>
 
@@ -269,7 +269,7 @@ export default function CybersecurityPage() {
                   </ul>
                 </div>
                 <Button className="w-full bg-zinc-700 hover:bg-zinc-600" asChild>
-                  <Link href="/kontakt">Beratung anfragen</Link>
+                  <Link href="/neue-kunden-form">Beratung anfragen</Link>
                 </Button>
               </motion.div>
             ))}
@@ -291,7 +291,7 @@ export default function CybersecurityPage() {
             Cyberbedrohungen warten nicht. Lassen Sie uns gemeinsam Ihre IT-Sicherheit auf das nächste Level bringen.
           </p>
           <Button variant="secondary" size="lg" className="bg-white text-orange-600 hover:bg-white/90 w-full sm:w-auto" asChild>
-            <Link href="/kontakt">Kostenlose Security-Analyse</Link>
+            <Link href="/neue-kunden-form">Kostenlose Security-Analyse</Link>
           </Button>
         </motion.div>
       </div>

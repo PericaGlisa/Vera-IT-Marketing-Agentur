@@ -162,7 +162,7 @@ export default function WebDevelopmentPage() {
                   <span className="text-cyan-400 font-bold text-lg">{service.price}</span>
                 </div>
                 <p className="text-gray-400 leading-relaxed mb-6">{service.description}</p>
-                <Link href="/kontakt">
+                <Link href="/neue-kunden-form">
                   <Button
                     variant="outline"
                     className="w-full border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white bg-transparent"
@@ -215,7 +215,7 @@ export default function WebDevelopmentPage() {
           <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
             Lassen Sie uns gemeinsam eine Website entwickeln, die Ihre Ziele erreicht und Ihre Nutzer begeistert.
           </p>
-          <Link href="/kontakt">
+          <Link href="/neue-kunden-form">
             <Button 
               variant="secondary" 
               size="lg" 

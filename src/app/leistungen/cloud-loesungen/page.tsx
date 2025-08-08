@@ -289,7 +289,7 @@ export default function CloudSolutionsPage() {
             Lassen Sie uns gemeinsam Ihre Cloud-Strategie entwickeln und Ihr Unternehmen in die digitale Zukunft führen.
           </p>
           <Button variant="secondary" size="lg" className="bg-white text-indigo-600 hover:bg-white/90 w-full sm:w-auto" asChild>
-            <Link href="/kontakt">Cloud-Assessment buchen</Link>
+            <Link href="/neue-kunden-form">Cloud-Assessment buchen</Link>
           </Button>
         </motion.div>
       </div>

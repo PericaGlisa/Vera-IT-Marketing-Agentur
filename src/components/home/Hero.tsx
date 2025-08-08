@@ -74,7 +74,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <Link href="/kontakt" className="w-full sm:w-auto">
+            <Link href="/neue-kunden-form" className="w-full sm:w-auto">
               <Button size="lg" className="group w-full sm:w-auto min-w-[160px] sm:min-w-[180px]">
                 Projekt starten
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />

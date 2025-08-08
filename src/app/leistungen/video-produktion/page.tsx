@@ -109,7 +109,7 @@ export default function VideoProductionPage() {
             Professionelle Video-Produktion für Marketing, Schulungen und Unternehmenskommunikation. Von der Konzeption
             bis zur finalen Auslieferung - wir bringen Ihre Botschaft zum Leben.
           </p>
-          <Link href="/kontakt">
+          <Link href="/neue-kunden-form">
             <Button size="lg" className="w-full sm:w-auto">
               Video-Projekt starten
             </Button>
@@ -243,7 +243,7 @@ export default function VideoProductionPage() {
           <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
             Lassen Sie uns gemeinsam Videos produzieren, die Ihre Botschaft kraftvoll und einprägsam vermitteln.
           </p>
-          <Link href="/kontakt">
+          <Link href="/neue-kunden-form">
             <Button variant="secondary" size="lg" className="bg-white text-red-600 hover:bg-white/90 w-full sm:w-auto">
               Video-Beratung buchen
             </Button>

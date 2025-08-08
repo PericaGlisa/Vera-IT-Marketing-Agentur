@@ -73,7 +73,7 @@ export default function AIDevPage() {
             die Ihre Geschäftsprozesse revolutionieren.
           </p>
           <Button size="lg" className="w-full sm:w-auto" asChild>
-            <Link href="/kontakt">Kostenlose Beratung anfragen</Link>
+            <Link href="/neue-kunden-form">Kostenlose Beratung anfragen</Link>
           </Button>
         </motion.div>
 
@@ -143,7 +143,7 @@ export default function AIDevPage() {
             Lassen Sie uns gemeinsam die Möglichkeiten der Künstlichen Intelligenz für Ihr Unternehmen erkunden.
           </p>
           <Button variant="secondary" size="lg" className="bg-white text-purple-600 hover:bg-white/90 w-full sm:w-auto" asChild>
-            <Link href="/kontakt">Projekt besprechen</Link>
+            <Link href="/neue-kunden-form">Projekt besprechen</Link>
           </Button>
         </motion.div>
       </div>

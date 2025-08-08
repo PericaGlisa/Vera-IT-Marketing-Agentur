@@ -273,7 +273,7 @@ export default function ProjectsPage() {
           <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
             Haben Sie eine Idee für ein digitales Projekt? Kontaktieren Sie uns für eine kostenlose Beratung.
           </p>
-          <Link href="/kontakt">
+          <Link href="/neue-kunden-form">
             <Button variant="secondary" size="lg" className="bg-white text-purple-600 hover:bg-white/90 w-full sm:w-auto">
               Projekt besprechen
             </Button>

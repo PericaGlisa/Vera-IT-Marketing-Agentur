@@ -120,7 +120,7 @@ export default function BrandDesignPage() {
             authentisch kommunizieren und emotionale Verbindungen schaffen.
           </p>
           <Button size="lg" className="w-full sm:w-auto" asChild>
-            <Link href="/kontakt">Brand-Projekt starten</Link>
+            <Link href="/neue-kunden-form">Brand-Projekt starten</Link>
           </Button>
         </motion.div>
 
@@ -263,7 +263,7 @@ export default function BrandDesignPage() {
             bleibt.
           </p>
           <Button variant="secondary" size="lg" className="bg-white text-pink-600 hover:bg-white/90 w-full sm:w-auto" asChild>
-            <Link href="/kontakt">Brand-Beratung buchen</Link>
+            <Link href="/neue-kunden-form">Brand-Beratung buchen</Link>
           </Button>
         </motion.div>
       </div>
