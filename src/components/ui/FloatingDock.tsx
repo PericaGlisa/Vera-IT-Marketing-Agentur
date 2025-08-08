@@ -157,7 +157,17 @@ export function FloatingDock() {
                           <div className={`absolute inset-0 bg-gradient-to-r ${item.color} rounded-xl blur-md opacity-0 group-hover:opacity-60 transition-opacity duration-300`}></div>
                           
                           {/* Icon background */}
-                          <div className={`relative w-10 h-10 sm:w-12 sm:h-12 ${isSpecial ? 'w-11 h-11 sm:w-14 sm:h-14' : ''} bg-gradient-to-r ${item.color} rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}>
+                          <motion.div 
+                            className={`relative w-10 h-10 sm:w-12 sm:h-12 ${isSpecial ? 'w-11 h-11 sm:w-14 sm:h-14' : ''} bg-gradient-to-r ${item.color} rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}
+                            animate={isSpecial ? { 
+                              scale: [1, 1.05, 1],
+                              x: isSpecial ? [0, -1, 1, -1, 0] : 0
+                            } : {}}
+                            transition={isSpecial ? { 
+                              scale: { duration: 1.5, repeat: Infinity, ease: "easeInOut" },
+                              x: { duration: 0.3, repeat: Infinity, repeatType: "loop", ease: "easeInOut" }
+                            } : {}}
+                          >
                             {/* Inner glass effect */}
                             <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent rounded-lg sm:rounded-xl opacity-60"></div>
                             
@@ -168,13 +178,24 @@ export function FloatingDock() {
                             {isSpecial && (
                               <motion.div
                                 className="absolute -top-0.5 -right-0.5 sm:-top-1 sm:-right-1 w-3 h-3 sm:w-4 sm:h-4 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center"
-                                animate={{ scale: [1, 1.2, 1] }}
-                                transition={{ duration: 2, repeat: Infinity }}
+                                animate={{ 
+                                  scale: [1, 1.4, 1],
+                                  boxShadow: [
+                                    "0 0 0 0 rgba(255, 177, 66, 0.7)",
+                                    "0 0 0 10px rgba(255, 177, 66, 0)",
+                                    "0 0 0 0 rgba(255, 177, 66, 0)"
+                                  ]
+                                }}
+                                transition={{ 
+                                  duration: 2, 
+                                  repeat: Infinity,
+                                  ease: "easeInOut" 
+                                }}
                               >
                                 <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
                               </motion.div>
                             )}
-                          </div>
+                          </motion.div>
                         </div>
                       </Link>
                     </motion.div>
