@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   },
   other: {
     "google": "notranslate",
+    "theme-color": "#9333ea",
   },
 }
 
