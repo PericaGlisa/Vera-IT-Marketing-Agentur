@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Textarea } from '@/components/ui/Textarea';
@@ -74,6 +74,10 @@ const initialFormData: FormData = {
 };
 
 export default function NeueKundenForm() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const totalSteps = 6;

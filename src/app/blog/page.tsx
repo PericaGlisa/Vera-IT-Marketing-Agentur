@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect } from "react"
 import { motion } from "framer-motion"
 import { Calendar, User, ArrowRight, Clock } from "lucide-react"
 import { Button } from "@/components/ui/Button"
@@ -106,6 +107,10 @@ const categories = [
 export default function BlogPage() {
   const featuredPost = blogPosts.find((post) => post.featured)
   const regularPosts = blogPosts.filter((post) => !post.featured)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div className="pt-20 sm:pt-24 lg:pt-28 pb-12 sm:pb-16 bg-zinc-950">

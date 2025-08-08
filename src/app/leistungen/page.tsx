@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect } from "react"
 import { motion } from "framer-motion"
 import {
   Brain,
@@ -104,6 +105,10 @@ const services = [
 ]
 
 export default function ServicesPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}

@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect } from "react"
 import { motion } from "framer-motion"
 import { Smartphone, Tablet, Watch, Zap, Shield, Users } from "lucide-react"
 import { Button } from "@/components/ui/Button"
@@ -85,6 +86,10 @@ const appTypes = [
 ]
 
 export default function MobileAppsPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="pt-20 sm:pt-24 lg:pt-28 pb-12 sm:pb-16 bg-zinc-950">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

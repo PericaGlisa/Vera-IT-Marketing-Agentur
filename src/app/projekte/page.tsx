@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect } from "react"
 import { motion } from "framer-motion"
 import { ExternalLink, Calendar, Users, Award } from "lucide-react"
 import Link from "next/link"
@@ -109,6 +110,10 @@ const projects = [
 const categories = ["Alle", "AI Development", "Web Development", "Mobile Development", "IoT & AI"]
 
 export default function ProjectsPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="pt-20 sm:pt-24 lg:pt-28 pb-12 sm:pb-16 bg-zinc-950">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

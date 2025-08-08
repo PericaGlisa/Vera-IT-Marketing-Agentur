@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect } from "react"
 import { motion } from "framer-motion"
 import { Cloud, Database, Shield, Zap, Users, BarChart3 } from "lucide-react"
 import { Button } from "@/components/ui/Button"
@@ -82,6 +83,10 @@ const saasTypes = [
 ]
 
 export default function SaaSDevelopmentPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="pt-16 sm:pt-20 pb-12 sm:pb-16 bg-zinc-950">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

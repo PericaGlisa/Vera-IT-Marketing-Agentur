@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect } from "react"
 import { motion } from "framer-motion"
 import { ShoppingCart, CreditCard, Package, BarChart3, Shield, Smartphone } from "lucide-react"
 import { Button } from "@/components/ui/Button"
@@ -114,6 +115,10 @@ const ecommerceServices = [
 ]
 
 export default function ECommerceDevelopmentPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="pt-16 sm:pt-20 pb-12 sm:pb-16 bg-zinc-950">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

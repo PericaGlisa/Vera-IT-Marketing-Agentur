@@ -1,10 +1,15 @@
 'use client';
 
+import { useEffect } from 'react';
 import { CheckCircle, ArrowLeft, Home } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import Link from 'next/link';
 
 export default function DankePage() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="min-h-screen bg-zinc-950 pt-24 sm:pt-28 lg:pt-32 pb-16 sm:pb-20 lg:pb-24 px-4">
       <div className="max-w-4xl mx-auto">
