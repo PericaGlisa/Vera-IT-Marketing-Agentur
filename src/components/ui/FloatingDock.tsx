@@ -118,7 +118,7 @@ export function FloatingDock() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className="fixed bottom-20 sm:bottom-6 left-0 right-0 z-[70] pointer-events-none flex justify-center px-2 sm:px-4"
+          className="fixed bottom-16 xs:bottom-14 sm:bottom-6 left-0 right-0 z-[70] pointer-events-none flex justify-center px-1 xs:px-2 sm:px-4"
         >
           {/* Glass Container */}
           <div className="relative pointer-events-auto mx-auto">
@@ -126,12 +126,12 @@ export function FloatingDock() {
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-indigo-600/20 to-purple-600/20 rounded-2xl blur-xl opacity-60"></div>
             
             {/* Main glass container */}
-            <div className="relative bg-black/20 backdrop-blur-xl border border-white/10 rounded-xl sm:rounded-2xl p-2 sm:p-3 shadow-2xl">
+            <div className="relative bg-black/20 backdrop-blur-xl border border-white/10 rounded-lg xs:rounded-xl sm:rounded-2xl p-1.5 xs:p-2 sm:p-3 shadow-2xl">
               {/* Inner glass reflection */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent rounded-xl sm:rounded-2xl opacity-60"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent rounded-lg xs:rounded-xl sm:rounded-2xl opacity-60"></div>
               
               {/* Dock Items */}
-              <div className="relative flex items-center space-x-1 sm:space-x-2">
+              <div className="relative flex items-center space-x-0.5 xs:space-x-1 sm:space-x-2">
                 {dockItems.map((item, index) => {
                   const Icon = item.icon
                   const isHovered = hoveredIndex === index
@@ -143,7 +143,7 @@ export function FloatingDock() {
                       className="relative"
                       onMouseEnter={() => setHoveredIndex(index)}
                       onMouseLeave={() => setHoveredIndex(null)}
-                      whileHover={{ scale: isMobile ? 1.1 : 1.2, y: isMobile ? -4 : -8 }}
+                      whileHover={{ scale: isMobile ? 1.05 : 1.1, y: isMobile ? -2 : -4 }}
                       whileTap={{ scale: 0.95 }}
                       animate={isSpecial ? {
                         scale: [1, 1.05, 1],
@@ -159,12 +159,12 @@ export function FloatingDock() {
                         {isHovered && (
                           <motion.div
                             initial={{ opacity: 0, y: 10, scale: 0.8 }}
-                            animate={{ opacity: 1, y: -50, scale: 1 }}
+                            animate={{ opacity: 1, y: -40, scale: 1 }}
                             exit={{ opacity: 0, y: 10, scale: 0.8 }}
                             transition={{ duration: 0.2 }}
-                            className="absolute left-1/2 transform -translate-x-1/2 pointer-events-none hidden sm:block"
+                            className="absolute left-1/2 transform -translate-x-1/2 pointer-events-none block scale-90 sm:scale-100"
                           >
-                            <div className="bg-black/80 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-lg border border-white/20 whitespace-nowrap">
+                            <div className="bg-black/80 backdrop-blur-sm text-white text-[10px] xs:text-xs px-1.5 xs:px-2 py-0.5 xs:py-1 rounded-md xs:rounded-lg border border-white/20 whitespace-nowrap">
                               {item.name}
                               <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black/80"></div>
                             </div>
@@ -211,7 +211,7 @@ export function FloatingDock() {
                               
                               {/* Icon background */}
                               <motion.div 
-                                className={`relative w-10 h-10 sm:w-12 sm:h-12 ${isSpecial ? 'w-11 h-11 sm:w-14 sm:h-14' : ''} bg-gradient-to-r ${item.color} rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}
+                                className={`relative w-8 h-8 xs:w-10 xs:h-10 sm:w-12 sm:h-12 ${isSpecial ? 'w-9 h-9 xs:w-11 xs:h-11 sm:w-14 sm:h-14' : ''} bg-gradient-to-r ${item.color} rounded-md xs:rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}
                                 animate={isSpecial ? { 
                                   scale: [1, 1.08, 1],
                                   x: [0, -2, 2, -2, 0],
@@ -231,12 +231,12 @@ export function FloatingDock() {
                                 <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent rounded-lg sm:rounded-xl opacity-60"></div>
                                 
                                 {/* Icon */}
-                                <Icon className={`${isSpecial ? 'w-5 h-5 sm:w-7 sm:h-7' : 'w-4 h-4 sm:w-6 sm:h-6'} text-white drop-shadow-lg relative z-10`} />
+                                <Icon className={`${isSpecial ? 'w-4 h-4 xs:w-5 xs:h-5 sm:w-7 sm:h-7' : 'w-3.5 h-3.5 xs:w-4 xs:h-4 sm:w-6 sm:h-6'} text-white drop-shadow-lg relative z-10`} />
                                 
                                 {/* Special indicator for CTA */}
                                 {isSpecial && (
                                   <motion.div
-                                    className="absolute -top-0.5 -right-0.5 sm:-top-1 sm:-right-1 w-3 h-3 sm:w-4 sm:h-4 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center"
+                                    className="absolute -top-0.5 -right-0.5 xs:-top-0.5 xs:-right-0.5 sm:-top-1 sm:-right-1 w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-4 sm:h-4 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center"
                                     animate={{ 
                                       scale: [1, 1.4, 1],
                                       boxShadow: [
@@ -251,7 +251,7 @@ export function FloatingDock() {
                                       ease: "easeInOut" 
                                     }}
                                   >
-                                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
+                                    <div className="w-1 h-1 xs:w-1.5 xs:h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
                                   </motion.div>
                                 )}
                               </motion.div>
