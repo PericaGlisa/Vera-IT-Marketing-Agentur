@@ -7,8 +7,6 @@ import {
   Home,
   Briefcase,
   User,
-  FolderOpen,
-  BookOpen,
   Mail,
   Plus,
   ArrowUp,
@@ -32,18 +30,6 @@ const dockItems = [
     href: "/ueber-uns",
     icon: User,
     color: "from-indigo-500 to-blue-500",
-  },
-  {
-    name: "Projekte",
-    href: "/projekte",
-    icon: FolderOpen,
-    color: "from-purple-500 to-pink-500",
-  },
-  {
-    name: "Blog",
-    href: "/blog",
-    icon: BookOpen,
-    color: "from-pink-500 to-rose-500",
   },
   {
     name: "Kontakt",
@@ -131,7 +117,7 @@ export function FloatingDock() {
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent rounded-lg xs:rounded-xl sm:rounded-2xl opacity-60"></div>
               
               {/* Dock Items */}
-              <div className="relative flex items-center space-x-1 xs:space-x-1.5 sm:space-x-2">
+              <div className="relative flex items-center space-x-2 xs:space-x-2.5 sm:space-x-2">
                 {dockItems.map((item, index) => {
                   const Icon = item.icon
                   const isHovered = hoveredIndex === index
