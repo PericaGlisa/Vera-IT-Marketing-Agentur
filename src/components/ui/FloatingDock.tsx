@@ -11,6 +11,7 @@ import {
   BookOpen,
   Mail,
   Plus,
+  ArrowUp,
 } from "lucide-react"
 
 const dockItems = [
@@ -51,6 +52,13 @@ const dockItems = [
     color: "from-rose-500 to-orange-500",
   },
   {
+    name: "Nach oben",
+    href: "#",
+    icon: ArrowUp,
+    color: "from-blue-500 to-cyan-500",
+    action: "scrollToTop",
+  },
+  {
     name: "Projekt starten",
     href: "/neue-kunden-form",
     icon: Plus,
@@ -63,6 +71,13 @@ export function FloatingDock() {
   const [isVisible, setIsVisible] = useState(false)
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const [isMobile, setIsMobile] = useState(false)
+  
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -158,67 +173,92 @@ export function FloatingDock() {
                       </AnimatePresence>
 
                       {/* Icon Container */}
-                      <Link href={item.href}>
-                        <div className="relative group">
-                          {/* Glow effect */}
-                          <motion.div 
-                            className={`absolute inset-0 bg-gradient-to-r ${item.color} rounded-xl blur-md ${isSpecial ? 'opacity-30' : 'opacity-0 group-hover:opacity-60'} transition-opacity duration-300`}
-                            animate={isSpecial ? {
-                              opacity: [0.3, 0.6, 0.3]
-                            } : undefined}
-                            transition={isSpecial ? {
-                              opacity: { duration: 2, repeat: Infinity, ease: "easeInOut" }
-                            } : undefined}
-                          ></motion.div>
-                          
-                          {/* Icon background */}
-                          <motion.div 
-                            className={`relative w-10 h-10 sm:w-12 sm:h-12 ${isSpecial ? 'w-11 h-11 sm:w-14 sm:h-14' : ''} bg-gradient-to-r ${item.color} rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}
-                            animate={isSpecial ? { 
-                              scale: [1, 1.08, 1],
-                              x: [0, -2, 2, -2, 0],
-                              boxShadow: [
-                                "0 0 0 0 rgba(147, 51, 234, 0.4)",
-                                "0 0 0 8px rgba(147, 51, 234, 0)",
-                                "0 0 0 0 rgba(147, 51, 234, 0)"
-                              ]
-                            } : {}}
-                            transition={isSpecial ? { 
-                              scale: { duration: 1.8, repeat: Infinity, ease: "easeInOut" },
-                              x: { duration: 0.5, repeat: Infinity, repeatType: "loop", ease: "easeInOut" },
-                              boxShadow: { duration: 2, repeat: Infinity }
-                            } : {}}
-                          >
-                            {/* Inner glass effect */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent rounded-lg sm:rounded-xl opacity-60"></div>
+                      <div 
+                        onClick={item.action === "scrollToTop" ? scrollToTop : undefined}
+                        className={item.action === "scrollToTop" ? "cursor-pointer" : ""}
+                      >
+                        {item.action === "scrollToTop" ? (
+                          <div className="relative group">
+                            {/* Glow effect */}
+                            <motion.div 
+                              className={`absolute inset-0 bg-gradient-to-r ${item.color} rounded-xl blur-md opacity-0 group-hover:opacity-60 transition-opacity duration-300`}
+                            ></motion.div>
                             
-                            {/* Icon */}
-                            <Icon className={`${isSpecial ? 'w-5 h-5 sm:w-7 sm:h-7' : 'w-4 h-4 sm:w-6 sm:h-6'} text-white drop-shadow-lg relative z-10`} />
-                            
-                            {/* Special indicator for CTA */}
-                            {isSpecial && (
-                              <motion.div
-                                className="absolute -top-0.5 -right-0.5 sm:-top-1 sm:-right-1 w-3 h-3 sm:w-4 sm:h-4 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center"
-                                animate={{ 
-                                  scale: [1, 1.4, 1],
+                            {/* Icon background */}
+                            <motion.div 
+                              className={`relative w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${item.color} rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}
+                            >
+                              {/* Inner glass effect */}
+                              <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent rounded-lg sm:rounded-xl opacity-60"></div>
+                              
+                              {/* Icon */}
+                              <Icon className="w-4 h-4 sm:w-6 sm:h-6 text-white drop-shadow-lg relative z-10" />
+                            </motion.div>
+                          </div>
+                        ) : (
+                          <Link href={item.href}>
+                            <div className="relative group">
+                              {/* Glow effect */}
+                              <motion.div 
+                                className={`absolute inset-0 bg-gradient-to-r ${item.color} rounded-xl blur-md ${isSpecial ? 'opacity-30' : 'opacity-0 group-hover:opacity-60'} transition-opacity duration-300`}
+                                animate={isSpecial ? {
+                                  opacity: [0.3, 0.6, 0.3]
+                                } : undefined}
+                                transition={isSpecial ? {
+                                  opacity: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+                                } : undefined}
+                              ></motion.div>
+                              
+                              {/* Icon background */}
+                              <motion.div 
+                                className={`relative w-10 h-10 sm:w-12 sm:h-12 ${isSpecial ? 'w-11 h-11 sm:w-14 sm:h-14' : ''} bg-gradient-to-r ${item.color} rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}
+                                animate={isSpecial ? { 
+                                  scale: [1, 1.08, 1],
+                                  x: [0, -2, 2, -2, 0],
                                   boxShadow: [
-                                    "0 0 0 0 rgba(255, 177, 66, 0.7)",
-                                    "0 0 0 10px rgba(255, 177, 66, 0)",
-                                    "0 0 0 0 rgba(255, 177, 66, 0)"
+                                    "0 0 0 0 rgba(147, 51, 234, 0.4)",
+                                    "0 0 0 8px rgba(147, 51, 234, 0)",
+                                    "0 0 0 0 rgba(147, 51, 234, 0)"
                                   ]
-                                }}
-                                transition={{ 
-                                  duration: 2, 
-                                  repeat: Infinity,
-                                  ease: "easeInOut" 
-                                }}
+                                } : {}}
+                                transition={isSpecial ? { 
+                                  scale: { duration: 1.8, repeat: Infinity, ease: "easeInOut" },
+                                  x: { duration: 0.5, repeat: Infinity, repeatType: "loop", ease: "easeInOut" },
+                                  boxShadow: { duration: 2, repeat: Infinity }
+                                } : {}}
                               >
-                                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
+                                {/* Inner glass effect */}
+                                <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent rounded-lg sm:rounded-xl opacity-60"></div>
+                                
+                                {/* Icon */}
+                                <Icon className={`${isSpecial ? 'w-5 h-5 sm:w-7 sm:h-7' : 'w-4 h-4 sm:w-6 sm:h-6'} text-white drop-shadow-lg relative z-10`} />
+                                
+                                {/* Special indicator for CTA */}
+                                {isSpecial && (
+                                  <motion.div
+                                    className="absolute -top-0.5 -right-0.5 sm:-top-1 sm:-right-1 w-3 h-3 sm:w-4 sm:h-4 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center"
+                                    animate={{ 
+                                      scale: [1, 1.4, 1],
+                                      boxShadow: [
+                                        "0 0 0 0 rgba(255, 177, 66, 0.7)",
+                                        "0 0 0 10px rgba(255, 177, 66, 0)",
+                                        "0 0 0 0 rgba(255, 177, 66, 0)"
+                                      ]
+                                    }}
+                                    transition={{ 
+                                      duration: 2, 
+                                      repeat: Infinity,
+                                      ease: "easeInOut" 
+                                    }}
+                                  >
+                                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
+                                  </motion.div>
+                                )}
                               </motion.div>
-                            )}
-                          </motion.div>
-                        </div>
-                      </Link>
+                            </div>
+                          </Link>
+                        )}
+                      </div>
                     </motion.div>
                   )
                 })}

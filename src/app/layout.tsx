@@ -4,7 +4,6 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import { Navigation } from "@/components/layout/Navigation"
 import { Footer } from "@/components/layout/Footer"
-import { BackToTop } from "@/components/ui/BackToTop"
 import { FloatingDock } from "@/components/ui/FloatingDock"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -36,7 +35,6 @@ export default function RootLayout({
         <Navigation />
         <main className="min-h-screen">{children}</main>
         <Footer />
-        <BackToTop />
         <FloatingDock />
       </body>
     </html>
