@@ -73,9 +73,9 @@ export function FloatingDock() {
       // Show dock after scrolling down 100px
       const shouldShowFromTop = scrollY > 100
       
-      // Hide dock when near bottom (within 200px of footer)
+      // Hide dock when near bottom (within 300px of footer to avoid overlap with BackToTop)
       const distanceFromBottom = documentHeight - (scrollY + windowHeight)
-      const shouldHideNearBottom = distanceFromBottom < 200
+      const shouldHideNearBottom = distanceFromBottom < 300
       
       setIsVisible(shouldShowFromTop && !shouldHideNearBottom)
     }
@@ -103,7 +103,7 @@ export function FloatingDock() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className="fixed bottom-4 sm:bottom-6 left-0 right-0 z-[70] pointer-events-none flex justify-center px-2 sm:px-4"
+          className="fixed bottom-20 sm:bottom-6 left-0 right-0 z-[70] pointer-events-none flex justify-center px-2 sm:px-4"
         >
           {/* Glass Container */}
           <div className="relative pointer-events-auto mx-auto">
