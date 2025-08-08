@@ -130,7 +130,14 @@ export function FloatingDock() {
                       onMouseLeave={() => setHoveredIndex(null)}
                       whileHover={{ scale: isMobile ? 1.1 : 1.2, y: isMobile ? -4 : -8 }}
                       whileTap={{ scale: 0.95 }}
-                      transition={{ duration: 0.2, ease: "easeOut" }}
+                      animate={isSpecial ? {
+                        scale: [1, 1.05, 1],
+                        y: [0, -2, 0]
+                      } : undefined}
+                      transition={isSpecial ? {
+                        scale: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+                        y: { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
+                      } : { duration: 0.2, ease: "easeOut" }}
                     >
                       {/* Tooltip */}
                       <AnimatePresence>
@@ -154,18 +161,32 @@ export function FloatingDock() {
                       <Link href={item.href}>
                         <div className="relative group">
                           {/* Glow effect */}
-                          <div className={`absolute inset-0 bg-gradient-to-r ${item.color} rounded-xl blur-md opacity-0 group-hover:opacity-60 transition-opacity duration-300`}></div>
+                          <motion.div 
+                            className={`absolute inset-0 bg-gradient-to-r ${item.color} rounded-xl blur-md ${isSpecial ? 'opacity-30' : 'opacity-0 group-hover:opacity-60'} transition-opacity duration-300`}
+                            animate={isSpecial ? {
+                              opacity: [0.3, 0.6, 0.3]
+                            } : undefined}
+                            transition={isSpecial ? {
+                              opacity: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+                            } : undefined}
+                          ></motion.div>
                           
                           {/* Icon background */}
                           <motion.div 
                             className={`relative w-10 h-10 sm:w-12 sm:h-12 ${isSpecial ? 'w-11 h-11 sm:w-14 sm:h-14' : ''} bg-gradient-to-r ${item.color} rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}
                             animate={isSpecial ? { 
-                              scale: [1, 1.05, 1],
-                              x: isSpecial ? [0, -1, 1, -1, 0] : 0
+                              scale: [1, 1.08, 1],
+                              x: [0, -2, 2, -2, 0],
+                              boxShadow: [
+                                "0 0 0 0 rgba(147, 51, 234, 0.4)",
+                                "0 0 0 8px rgba(147, 51, 234, 0)",
+                                "0 0 0 0 rgba(147, 51, 234, 0)"
+                              ]
                             } : {}}
                             transition={isSpecial ? { 
-                              scale: { duration: 1.5, repeat: Infinity, ease: "easeInOut" },
-                              x: { duration: 0.3, repeat: Infinity, repeatType: "loop", ease: "easeInOut" }
+                              scale: { duration: 1.8, repeat: Infinity, ease: "easeInOut" },
+                              x: { duration: 0.5, repeat: Infinity, repeatType: "loop", ease: "easeInOut" },
+                              boxShadow: { duration: 2, repeat: Infinity }
                             } : {}}
                           >
                             {/* Inner glass effect */}
