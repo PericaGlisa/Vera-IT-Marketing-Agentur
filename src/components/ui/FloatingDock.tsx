@@ -126,12 +126,12 @@ export function FloatingDock() {
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-indigo-600/20 to-purple-600/20 rounded-2xl blur-xl opacity-60"></div>
             
             {/* Main glass container */}
-            <div className="relative bg-black/20 backdrop-blur-xl border border-white/10 rounded-lg xs:rounded-xl sm:rounded-2xl p-1.5 xs:p-2 sm:p-3 shadow-2xl">
+            <div className="relative bg-black/20 backdrop-blur-xl border border-white/10 rounded-lg xs:rounded-xl sm:rounded-2xl p-2 xs:p-2.5 sm:p-3.5 shadow-2xl">
               {/* Inner glass reflection */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent rounded-lg xs:rounded-xl sm:rounded-2xl opacity-60"></div>
               
               {/* Dock Items */}
-              <div className="relative flex items-center space-x-0.5 xs:space-x-1 sm:space-x-2">
+              <div className="relative flex items-center space-x-1 xs:space-x-1.5 sm:space-x-2">
                 {dockItems.map((item, index) => {
                   const Icon = item.icon
                   const isHovered = hoveredIndex === index
@@ -159,12 +159,12 @@ export function FloatingDock() {
                         {isHovered && (
                           <motion.div
                             initial={{ opacity: 0, y: 10, scale: 0.8 }}
-                            animate={{ opacity: 1, y: -45, scale: 1 }}
+                            animate={{ opacity: 1, y: -55, scale: 1 }}
                             exit={{ opacity: 0, y: 10, scale: 0.8 }}
                             transition={{ duration: 0.2 }}
                             className="absolute left-1/2 transform -translate-x-1/2 pointer-events-none block scale-90 sm:scale-100"
                           >
-                            <div className="bg-black/80 backdrop-blur-sm text-white text-[10px] xs:text-xs px-1.5 xs:px-2 py-0.5 xs:py-1 rounded-md xs:rounded-lg border border-white/20 whitespace-nowrap">
+                            <div className="bg-black/80 backdrop-blur-sm text-white text-xs xs:text-sm px-2 xs:px-2.5 py-1 xs:py-1.5 rounded-md xs:rounded-lg border border-white/20 whitespace-nowrap">
                               {item.name}
                               <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black/80"></div>
                             </div>
@@ -186,13 +186,13 @@ export function FloatingDock() {
                             
                             {/* Icon background */}
                             <motion.div 
-                              className={`relative w-8 h-8 xs:w-10 xs:h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${item.color} rounded-md xs:rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}
+                              className={`relative w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 bg-gradient-to-r ${item.color} rounded-md xs:rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}
                             >
                               {/* Inner glass effect */}
                               <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent rounded-lg sm:rounded-xl opacity-60"></div>
                               
                               {/* Icon */}
-                              <Icon className="w-3.5 h-3.5 xs:w-4 xs:h-4 sm:w-6 sm:h-6 text-white drop-shadow-lg relative z-10" />
+                              <Icon className="w-4.5 h-4.5 xs:w-5 xs:h-5 sm:w-7 sm:h-7 text-white drop-shadow-lg relative z-10" />
                             </motion.div>
                           </div>
                         ) : (
@@ -211,7 +211,7 @@ export function FloatingDock() {
                               
                               {/* Icon background */}
                               <motion.div 
-                                className={`relative w-8 h-8 xs:w-10 xs:h-10 sm:w-12 sm:h-12 ${isSpecial ? 'w-9 h-9 xs:w-11 xs:h-11 sm:w-14 sm:h-14' : ''} bg-gradient-to-r ${item.color} rounded-md xs:rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}
+                                className={`relative w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 ${isSpecial ? 'w-11 h-11 xs:w-13 xs:h-13 sm:w-16 sm:h-16' : ''} bg-gradient-to-r ${item.color} rounded-md xs:rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}
                                 animate={isSpecial ? { 
                                   scale: [1, 1.08, 1],
                                   x: [0, -2, 2, -2, 0],
@@ -231,12 +231,12 @@ export function FloatingDock() {
                                 <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent rounded-lg sm:rounded-xl opacity-60"></div>
                                 
                                 {/* Icon */}
-                                <Icon className={`${isSpecial ? 'w-4 h-4 xs:w-5 xs:h-5 sm:w-7 sm:h-7' : 'w-3.5 h-3.5 xs:w-4 xs:h-4 sm:w-6 sm:h-6'} text-white drop-shadow-lg relative z-10`} />
+                                <Icon className={`${isSpecial ? 'w-5 h-5 xs:w-6 xs:h-6 sm:w-8 sm:h-8' : 'w-4.5 h-4.5 xs:w-5 xs:h-5 sm:w-7 sm:h-7'} text-white drop-shadow-lg relative z-10`} />
                                 
                                 {/* Special indicator for CTA */}
                                 {isSpecial && (
                                   <motion.div
-                                    className="absolute -top-0.5 -right-0.5 xs:-top-0.5 xs:-right-0.5 sm:-top-1 sm:-right-1 w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-4 sm:h-4 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center"
+                                    className="absolute -top-1 -right-1 xs:-top-1 xs:-right-1 sm:-top-1.5 sm:-right-1.5 w-3.5 h-3.5 xs:w-4 xs:h-4 sm:w-5 sm:h-5 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center"
                                     animate={{ 
                                       scale: [1, 1.4, 1],
                                       boxShadow: [
@@ -251,7 +251,7 @@ export function FloatingDock() {
                                       ease: "easeInOut" 
                                     }}
                                   >
-                                    <div className="w-1 h-1 xs:w-1.5 xs:h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
+                                    <div className="w-1.5 h-1.5 xs:w-2 xs:h-2 sm:w-2.5 sm:h-2.5 bg-white rounded-full"></div>
                                   </motion.div>
                                 )}
                               </motion.div>
