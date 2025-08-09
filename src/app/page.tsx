@@ -23,7 +23,7 @@ export default function HomePage() {
   const faqItems = [
     {
       question: "Warum sollte ich Vera IT als digitale Agentur in Hamburg wählen?",
-      answer: "Vera IT ist Ihre führende digitale Agentur in Hamburg mit über 500 erfolgreichen Projekten. Wir bieten KI-Entwicklung, Web-Entwicklung, Mobile Apps und Digitales Marketing aus einer Hand. Unser Expertenteam in Hamburg sorgt für persönliche Betreuung und maßgeschneiderte Lösungen für Ihr Unternehmen."
+      answer: "Vera IT ist Ihre führende digitale Agentur in Hamburg mit über 25 erfolgreichen Projekten. Wir bieten KI-Entwicklung, Web-Entwicklung, Mobile Apps und Digitales Marketing aus einer Hand. Unser Expertenteam in Hamburg sorgt für persönliche Betreuung und maßgeschneiderte Lösungen für Ihr Unternehmen."
     },
     {
       question: "Welche digitalen Services bietet Vera IT in Hamburg an?",

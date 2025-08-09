@@ -66,54 +66,56 @@ export default function FAQ({ items, title = "Häufig gestellte Fragen", classNa
             </p>
           </motion.div>
 
-          <div className="max-w-4xl mx-auto">
-            {items.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="mb-6 sm:mb-8"
-              >
-                <div className="bg-zinc-800 border border-gray-700 rounded-2xl overflow-hidden hover:border-purple-500/50 transition-all duration-300 group">
-                  <button
-                    onClick={() => toggleItem(index)}
-                    className="w-full px-6 sm:px-8 py-6 sm:py-8 text-left flex items-center justify-between hover:bg-zinc-700/50 transition-colors duration-300"
-                    aria-expanded={openItems.includes(index)}
-                    aria-controls={`faq-answer-${index}`}
-                  >
-                    <h3 className="text-lg sm:text-xl font-heading font-semibold text-white pr-4 sm:pr-6 leading-relaxed group-hover:text-purple-500 transition-colors">
-                      {item.question}
-                    </h3>
-                    <div className="flex-shrink-0">
-                      {openItems.includes(index) ? (
-                        <ChevronUp className="w-5 h-5 sm:w-6 sm:h-6 text-purple-500" />
-                      ) : (
-                        <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 text-gray-400 group-hover:text-purple-500 transition-colors" />
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+              {items.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="mb-4 lg:mb-0"
+                >
+                  <div className="bg-zinc-800 border border-gray-700 rounded-2xl overflow-hidden hover:border-purple-500/50 transition-all duration-300 group h-full">
+                    <button
+                      onClick={() => toggleItem(index)}
+                      className="w-full px-4 sm:px-6 py-4 sm:py-6 text-left flex items-center justify-between hover:bg-zinc-700/50 transition-colors duration-300"
+                      aria-expanded={openItems.includes(index)}
+                      aria-controls={`faq-answer-${index}`}
+                    >
+                      <h3 className="text-base sm:text-lg font-heading font-semibold text-white pr-3 sm:pr-4 leading-relaxed group-hover:text-purple-500 transition-colors">
+                        {item.question}
+                      </h3>
+                      <div className="flex-shrink-0">
+                        {openItems.includes(index) ? (
+                          <ChevronUp className="w-4 h-4 sm:w-5 sm:h-5 text-purple-500" />
+                        ) : (
+                          <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-purple-500 transition-colors" />
+                        )}
+                      </div>
+                    </button>
+                    
+                    <AnimatePresence>
+                      {openItems.includes(index) && (
+                        <motion.div
+                          id={`faq-answer-${index}`}
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="px-4 sm:px-6 pt-3 sm:pt-4 pb-4 sm:pb-6 text-sm text-gray-300 leading-relaxed border-t border-gray-700/50">
+                            {item.answer}
+                          </div>
+                        </motion.div>
                       )}
-                    </div>
-                  </button>
-                  
-                  <AnimatePresence>
-                    {openItems.includes(index) && (
-                      <motion.div
-                        id={`faq-answer-${index}`}
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="px-6 sm:px-8 pt-4 sm:pt-6 pb-6 sm:pb-8 text-sm sm:text-base text-gray-300 leading-relaxed border-t border-gray-700/50">
-                          {item.answer}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              </motion.div>
-            ))}
+                    </AnimatePresence>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

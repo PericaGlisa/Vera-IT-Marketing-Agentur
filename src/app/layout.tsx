@@ -15,7 +15,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Vera IT - Führende Digitale Agentur Hamburg | KI & Web-Entwicklung",
   description:
-    "🚀 Vera IT Hamburg: Ihre #1 Digitale Agentur für KI-Entwicklung, Web-Entwicklung, Mobile Apps & Digitales Marketing. ✅ 500+ erfolgreiche Projekte ✅ Kostenlose Beratung ✅ Hamburg & Deutschland",
+    "🚀 Vera IT Hamburg: Ihre #1 Digitale Agentur für KI-Entwicklung, Web-Entwicklung, Mobile Apps & Digitales Marketing. ✅ 25+ erfolgreiche Projekte ✅ Kostenlose Beratung ✅ Hamburg & Deutschland",
   keywords: "Digitale Agentur Hamburg, Web-Entwicklung Hamburg, KI-Entwicklung Deutschland, Mobile App Entwicklung Hamburg, Digitales Marketing Hamburg, SEO Agentur Hamburg, Interface Design Hamburg, Markendesign Hamburg, Software Entwicklung Hamburg, IT Beratung Hamburg, Webdesign Hamburg, Online Marketing Hamburg",
   authors: [{ name: "Vera IT Team" }],
   creator: "Vera IT - Digitale Agentur Hamburg",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Vera IT - Führende Digitale Agentur Hamburg | KI & Web-Entwicklung",
-    description: "🚀 Vera IT Hamburg: Ihre #1 Digitale Agentur für KI-Entwicklung, Web-Entwicklung & Digitales Marketing. ✅ 500+ Projekte ✅ Kostenlose Beratung",
+    description: "🚀 Vera IT Hamburg: Ihre #1 Digitale Agentur für KI-Entwicklung, Web-Entwicklung & Digitales Marketing. ✅ 25+ Projekte ✅ Kostenlose Beratung",
     url: 'https://verait.de',
     siteName: 'Vera IT - Digitale Agentur Hamburg',
     locale: 'de_DE',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Vera IT - Führende Digitale Agentur Hamburg",
-    description: "🚀 KI-Entwicklung, Web-Entwicklung & Digitales Marketing in Hamburg. ✅ 500+ erfolgreiche Projekte",
+    description: "🚀 KI-Entwicklung, Web-Entwicklung & Digitales Marketing in Hamburg. ✅ 25+ erfolgreiche Projekte",
     images: ['/vera-it-logo.png'],
   },
   robots: {

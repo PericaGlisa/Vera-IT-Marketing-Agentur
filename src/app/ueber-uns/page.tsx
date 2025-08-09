@@ -33,11 +33,11 @@ const values = [
 
 const milestones = [
   { year: "2021", title: "Gründung", description: "Vera IT wird in Hamburg gegründet" },
-  { year: "2022", title: "Erste Erfolge", description: "50+ erfolgreiche Projekte abgeschlossen" },
-  { year: "2022", title: "Team-Expansion", description: "Wachstum auf 25 Experten" },
+  { year: "2022", title: "Erste Erfolge", description: "10+ erfolgreiche Projekte abgeschlossen" },
+  { year: "2022", title: "Team-Expansion", description: "Wachstum auf 8 Experten" },
   { year: "2023", title: "KI-Spezialisierung", description: "Fokus auf KI-Entwicklung" },
-  { year: "2023", title: "Marktführer", description: "100+ Projekte, 50+ Teammitglieder" },
-  { year: "2024", title: "Internationale Expansion", description: "Projekte in ganz Europa" },
+  { year: "2023", title: "Marktführer", description: "20+ Projekte, 8+ Teammitglieder" },
+  { year: "2024", title: "Internationale Expansion", description: "25+ Projekte in ganz Europa" },
 ]
 
 export default function AboutPage() {
@@ -70,7 +70,7 @@ export default function AboutPage() {
             Über <span className="gradient-text">Vera IT</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Seit 2021 transformieren wir Unternehmen durch innovative digitale Lösungen. Unser Team aus 50+ Experten
+            Seit 2021 transformieren wir Unternehmen durch innovative digitale Lösungen. Unser Team aus 8+ Experten
             entwickelt maßgeschneiderte KI-Anwendungen, moderne Websites und datengetriebene Marketing-Strategien.
           </p>
         </motion.div>
@@ -109,7 +109,7 @@ export default function AboutPage() {
               hilft, das volle Potenzial der digitalen Transformation auszuschöpfen.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              Bis 2030 wollen wir 1000+ Unternehmen dabei unterstützt haben, ihre digitalen Ziele zu erreichen und dabei
+              Bis 2030 wollen wir 100+ Unternehmen dabei unterstützt haben, ihre digitalen Ziele zu erreichen und dabei
               nachhaltige, innovative Lösungen zu schaffen, die einen positiven Einfluss auf Gesellschaft und Umwelt
               haben.
             </p>

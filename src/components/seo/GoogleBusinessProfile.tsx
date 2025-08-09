@@ -15,7 +15,7 @@ export default function GoogleBusinessProfile({
   address = "Hamburger Straße 123, 20095 Hamburg, Deutschland",
   phone = "+49-40-12345678",
   website = "https://verait.de",
-  description = "Führende digitale Agentur in Hamburg für KI-Entwicklung, Web-Entwicklung, Mobile Apps und Digitales Marketing. Über 500 erfolgreiche Projekte."
+  description = "Führende digitale Agentur in Hamburg für KI-Entwicklung, Web-Entwicklung, Mobile Apps und Digitales Marketing. Über 25 erfolgreiche Projekte."
 }: GoogleBusinessProfileProps) {
 
   // Google Business Profile structured data

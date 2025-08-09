@@ -81,12 +81,12 @@ const teamMembers = [
 ]
 
 const departments = [
-  { name: "Leadership", count: 2, color: "from-purple-600 to-indigo-600" },
-  { name: "AI & Machine Learning", count: 3, color: "from-indigo-600 to-cyan-600" },
-  { name: "Development", count: 4, color: "from-cyan-600 to-emerald-600" },
-  { name: "Design & UX", count: 3, color: "from-emerald-600 to-orange-600" },
-  { name: "Digitales Marketing", count: 2, color: "from-orange-600 to-rose-600" },
-  { name: "Project Management", count: 2, color: "from-rose-600 to-purple-600" },
+  { name: "Führung", count: 2, color: "from-purple-600 to-indigo-600" },
+  { name: "KI & Machine Learning", count: 1, color: "from-indigo-600 to-cyan-600" },
+  { name: "Entwicklung", count: 2, color: "from-cyan-600 to-emerald-600" },
+  { name: "Design & UX", count: 1, color: "from-emerald-600 to-orange-600" },
+  { name: "Digitales Marketing", count: 1, color: "from-orange-600 to-rose-600" },
+  { name: "Projektmanagement", count: 1, color: "from-rose-600 to-purple-600" },
 ]
 
 export default function TeamPage() {
@@ -108,7 +108,7 @@ export default function TeamPage() {
             Unser <span className="gradient-text">Team</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Lernen Sie die kreativen Köpfe hinter Vera IT kennen. Unser interdisziplinäres Team aus 16 Experten bringt
+            Lernen Sie die kreativen Köpfe hinter Vera IT kennen. Unser interdisziplinäres Team aus 8 Experten bringt
             jahrelange Erfahrung und Leidenschaft für Innovation mit.
           </p>
         </motion.div>
