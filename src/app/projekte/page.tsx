@@ -2,10 +2,10 @@
 
 import { useEffect } from "react"
 import { motion } from "framer-motion"
-import { ExternalLink, Calendar, Users, Award } from "lucide-react"
-import Link from "next/link"
+import { Award, Users, Calendar, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 import Image from "next/image"
+import Link from "next/link"
 
 const projects = [
   {
@@ -134,7 +134,7 @@ export default function ProjectsPage() {
         </motion.div>
 
         {/* Stats */}
-        <motion.div
+        <motion.section
           className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-16 sm:mb-20"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -169,7 +169,7 @@ export default function ProjectsPage() {
             <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">12+</div>
             <p className="text-gray-400 text-sm sm:text-base">Branchen</p>
           </div>
-        </motion.div>
+        </motion.section>
 
         {/* Projects Grid */}
         <motion.div

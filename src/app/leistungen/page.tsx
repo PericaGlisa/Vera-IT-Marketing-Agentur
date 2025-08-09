@@ -15,6 +15,7 @@ import {
   BarChart3,
 } from "lucide-react"
 import Link from "next/link"
+import StructuredData from "@/components/seo/StructuredData"
 
 const services = [
   {
@@ -108,8 +109,15 @@ export default function ServicesPage() {
     window.scrollTo(0, 0)
   }, [])
 
+  const servicesSchema = {
+    name: "Digitale Services Portfolio Hamburg",
+    description: "Komplettes Portfolio digitaler Dienstleistungen: KI-Entwicklung, Web-Entwicklung, Mobile Apps, Digitales Marketing und mehr für Unternehmen in Hamburg und Deutschland",
+    serviceType: "Digital Services Portfolio"
+  }
+
   return (
     <div className="min-h-screen bg-black text-white">
+      <StructuredData type="service" data={servicesSchema} />
       {/* Hero Section */}
       <section className="py-20 sm:py-24 lg:py-32 bg-gradient-to-b from-zinc-900 to-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -7,14 +7,65 @@ import { Footer } from "@/components/layout/Footer"
 import { FloatingDock } from "@/components/ui/FloatingDock"
 import CookieConsentBanner from "@/components/cookie-consent/CookieConsentBanner"
 import Analytics from "@/components/analytics/Analytics"
+import StructuredData from "@/components/seo/StructuredData"
+import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Vera IT - Digitale Agentur Hamburg",
+  title: "Vera IT - Führende Digitale Agentur Hamburg | KI & Web-Entwicklung",
   description:
-    "Führende digitale Agentur in Hamburg. KI-gestützte Lösungen, innovative Web-Entwicklung und datengetriebenes Marketing für Ihren Erfolg.",
-  keywords: "Digitales Marketing, Web-Entwicklung, KI-Entwicklung, Hamburg, Digitale Agentur",
+    "🚀 Vera IT Hamburg: Ihre #1 Digitale Agentur für KI-Entwicklung, Web-Entwicklung, Mobile Apps & Digitales Marketing. ✅ 500+ erfolgreiche Projekte ✅ Kostenlose Beratung ✅ Hamburg & Deutschland",
+  keywords: "Digitale Agentur Hamburg, Web-Entwicklung Hamburg, KI-Entwicklung Deutschland, Mobile App Entwicklung Hamburg, Digitales Marketing Hamburg, SEO Agentur Hamburg, Interface Design Hamburg, Markendesign Hamburg, Software Entwicklung Hamburg, IT Beratung Hamburg, Webdesign Hamburg, Online Marketing Hamburg",
+  authors: [{ name: "Vera IT Team" }],
+  creator: "Vera IT - Digitale Agentur Hamburg",
+  publisher: "Vera IT GmbH",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://verait.de'),
+  alternates: {
+    canonical: 'https://verait.de',
+    languages: {
+      'de-DE': 'https://verait.de',
+      'de': 'https://verait.de',
+    },
+  },
+  openGraph: {
+    title: "Vera IT - Führende Digitale Agentur Hamburg | KI & Web-Entwicklung",
+    description: "🚀 Vera IT Hamburg: Ihre #1 Digitale Agentur für KI-Entwicklung, Web-Entwicklung & Digitales Marketing. ✅ 500+ Projekte ✅ Kostenlose Beratung",
+    url: 'https://verait.de',
+    siteName: 'Vera IT - Digitale Agentur Hamburg',
+    locale: 'de_DE',
+    type: 'website',
+    images: [
+      {
+        url: '/vera-it-logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Vera IT - Digitale Agentur Hamburg Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Vera IT - Führende Digitale Agentur Hamburg",
+    description: "🚀 KI-Entwicklung, Web-Entwicklung & Digitales Marketing in Hamburg. ✅ 500+ erfolgreiche Projekte",
+    images: ['/vera-it-logo.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: "/icon.png",
     shortcut: "/icon.png",
@@ -23,6 +74,10 @@ export const metadata: Metadata = {
   other: {
     "google": "notranslate",
     "theme-color": "#9333ea",
+    "geo.region": "DE-HH",
+    "geo.placename": "Hamburg",
+    "geo.position": "53.5511;9.9937",
+    "ICBM": "53.5511, 9.9937",
   },
 }
 
@@ -33,6 +88,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de" className="dark">
+      <head>
+        <StructuredData type="organization" />
+        <StructuredData type="localBusiness" />
+        <LocalBusinessSchema />
+      </head>
       <body className={`${inter.className} bg-zinc-950 text-white antialiased`}>
         <Navigation />
         <main className="min-h-screen">{children}</main>
