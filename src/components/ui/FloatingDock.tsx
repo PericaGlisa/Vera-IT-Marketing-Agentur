@@ -55,7 +55,6 @@ const dockItems = [
 
 export function FloatingDock() {
   const [isVisible, setIsVisible] = useState(false)
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const [isMobile, setIsMobile] = useState(false)
   
   const scrollToTop = () => {
@@ -120,15 +119,12 @@ export function FloatingDock() {
               <div className="relative flex items-center space-x-2 xs:space-x-2.5 sm:space-x-2">
                 {dockItems.map((item, index) => {
                   const Icon = item.icon
-                  const isHovered = hoveredIndex === index
                   const isSpecial = item.special
                   
                   return (
                     <motion.div
                       key={item.name}
                       className="relative"
-                      onMouseEnter={() => setHoveredIndex(index)}
-                      onMouseLeave={() => setHoveredIndex(null)}
                       whileHover={{ scale: isMobile ? 1.05 : 1.1, y: isMobile ? -2 : -4 }}
                       whileTap={{ scale: 0.95 }}
                       animate={isSpecial ? {
@@ -140,23 +136,6 @@ export function FloatingDock() {
                         y: { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
                       } : { duration: 0.2, ease: "easeOut" }}
                     >
-                      {/* Tooltip */}
-                      <AnimatePresence>
-                        {isHovered && (
-                          <motion.div
-                            initial={{ opacity: 0, y: 10, scale: 0.8 }}
-                            animate={{ opacity: 1, y: -55, scale: 1 }}
-                            exit={{ opacity: 0, y: 10, scale: 0.8 }}
-                            transition={{ duration: 0.2 }}
-                            className="absolute left-1/2 transform -translate-x-1/2 pointer-events-none block scale-90 sm:scale-100"
-                          >
-                            <div className="bg-black/80 backdrop-blur-sm text-white text-xs xs:text-sm px-2 xs:px-2.5 py-1 xs:py-1.5 rounded-md xs:rounded-lg border border-white/20 whitespace-nowrap">
-                              {item.name}
-                              <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black/80"></div>
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
 
                       {/* Icon Container */}
                       <div 

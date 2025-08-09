@@ -4,11 +4,13 @@ import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram, Video, Settings } from "lucide-react"
-import { useState } from "react"
+import { useState, useRef } from "react"
 import CookieSettingsModal from "@/components/cookie-consent/CookieSettingsModal"
 
 export function Footer() {
   const [showCookieSettings, setShowCookieSettings] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const logoRef = useRef<HTMLImageElement>(null);
 
   return (
     <footer className="bg-zinc-900 border-t border-gray-700">
@@ -294,26 +296,87 @@ export function Footer() {
       </div>
       
       {/* Large VERA Branding */}
-      <div className="relative overflow-hidden py-2 sm:py-3 lg:py-4 bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-600">
-        <div className="absolute inset-0 bg-gradient-to-t from-purple-800/60 via-purple-700/40 to-purple-600/20"></div>
+      <div className="relative overflow-hidden py-2 sm:py-3 lg:py-4 bg-gradient-to-br from-purple-700 via-purple-800 to-indigo-700">
+        <div className="absolute inset-0 bg-gradient-to-t from-purple-900/80 via-purple-800/60 to-purple-700/40"></div>
+        
+        {/* Animated background particles */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white/20 rounded-full animate-pulse"></div>
+          <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-white/30 rounded-full animate-ping"></div>
+          <div className="absolute top-1/2 left-3/4 w-1.5 h-1.5 bg-white/25 rounded-full animate-pulse delay-1000"></div>
+        </div>
+        
         <div className="relative w-full px-4 sm:px-6 lg:px-8">
           <motion.div
-            className="text-center w-full"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
+             className="text-center w-full"
+             initial={{ opacity: 0, y: 50 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             transition={{ duration: 1, ease: "easeOut" }}
+             viewport={{ once: true }}
+           >
             <div className="w-full flex justify-center items-center">
-              <img 
-                src="/vera-logo-high-res.png" 
-                alt="VERA IT Logo" 
-                className="h-24 xs:h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 2xl:h-72 w-auto object-contain hover:opacity-80 transition-all duration-700"
-                style={{
-                  filter: 'brightness(0) invert(1) contrast(1.2) saturate(1.1) drop-shadow(0 0 8px rgba(255,255,255,0.3))'
-                }}
-              />
-            </div>
+               <div className="relative">
+                 {/* Angelic light hover effect */}
+                 {isHovered && (
+                   <>
+                     <motion.div
+                       className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent rounded-full blur-xl"
+                       initial={{ scale: 0, opacity: 0 }}
+                       animate={{ scale: 1.5, opacity: [0, 1, 0] }}
+                       transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                     />
+                     <motion.div
+                       className="absolute inset-0 bg-gradient-to-r from-yellow-200/40 via-white/50 to-yellow-200/40 rounded-full blur-2xl"
+                       initial={{ scale: 0, opacity: 0 }}
+                       animate={{ scale: 2, opacity: [0, 0.8, 0] }}
+                       transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                     />
+                     {/* Sparkling particles */}
+                     {[...Array(8)].map((_, i) => (
+                       <motion.div
+                         key={i}
+                         className="absolute w-1 h-1 bg-white rounded-full"
+                         style={{
+                           top: `${20 + Math.sin(i * 45 * Math.PI / 180) * 40}%`,
+                           left: `${50 + Math.cos(i * 45 * Math.PI / 180) * 40}%`,
+                         }}
+                         initial={{ scale: 0, opacity: 0 }}
+                         animate={{ 
+                           scale: [0, 1, 0], 
+                           opacity: [0, 1, 0],
+                           rotate: [0, 360]
+                         }}
+                         transition={{ 
+                           duration: 1.5, 
+                           repeat: Infinity, 
+                           delay: i * 0.2,
+                           ease: "easeInOut"
+                         }}
+                       />
+                     ))}
+                   </>
+                 )}
+                 
+                 {/* Floating Logo */}
+                 <motion.img
+                   ref={logoRef}
+                   src="/vera-logo-high-res.png"
+                   alt="VERA IT Logo"
+                   className="h-24 xs:h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 2xl:h-72 w-auto object-contain hover:scale-105 transition-transform duration-500 drop-shadow-lg"
+                   style={{
+                     filter: 'brightness(0) invert(1) contrast(1.2) saturate(1.1) drop-shadow(0 0 12px rgba(255,255,255,0.4))'
+                   }}
+                   onMouseEnter={() => setIsHovered(true)}
+                   onMouseLeave={() => setIsHovered(false)}
+                   animate={{ y: [0, -5, 0] }}
+                   transition={{ 
+                     duration: 4, 
+                     repeat: Infinity, 
+                     ease: "easeInOut" 
+                   }}
+                 />
+               </div>
+             </div>
           </motion.div>
         </div>
       </div>

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Shield, Clock, Award, CheckCircle, Phone, MessageCircle, Lock, ShieldCheck, Key, Headphones } from "lucide-react"
+import { Button } from "@/components/ui/Button"
 
 const trustElements = [
   {
@@ -123,41 +124,74 @@ export function TrustSignals() {
 
         {/* Contact Options */}
         <motion.div
-          className="bg-gradient-to-r from-purple-600/10 to-indigo-600/10 border border-purple-500/20 rounded-2xl p-6 sm:p-8"
+          className="relative bg-gradient-to-r from-purple-600 via-indigo-600 to-violet-600 rounded-2xl sm:rounded-3xl p-8 sm:p-12 md:p-16 text-center overflow-hidden"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="text-center mb-6">
-            <h3 className="text-xl sm:text-2xl font-heading font-semibold text-white mb-2">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-0 left-0 w-32 h-32 sm:w-40 sm:h-40 bg-white rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-0 w-48 h-48 sm:w-60 sm:h-60 bg-white rounded-full blur-3xl" />
+          </div>
+
+          <div className="relative z-10">
+            <motion.h3
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-4 sm:mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               Sofortiger Support verfügbar
-            </h3>
-            <p className="text-gray-400 text-sm sm:text-base">
-              Haben Sie Fragen? Kontaktieren Sie uns jetzt!
-            </p>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="tel:+4915563740470"
-              className="flex items-center space-x-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-6 py-3 rounded-xl transition-all duration-300 font-medium shadow-lg hover:shadow-purple-500/25"
+            </motion.h3>
+
+            <motion.p
+              className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
             >
-              <Phone className="w-5 h-5" />
-              <span>+49 155 63740470</span>
-            </a>
-            <a
-              href="https://wa.me/4915563740470"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-3 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white px-6 py-3 rounded-xl transition-all duration-300 font-medium shadow-lg hover:shadow-indigo-500/25"
+              Haben Sie Fragen? Kontaktieren Sie uns jetzt für sofortige Unterstützung.
+            </motion.p>
+
+            <motion.div
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4 sm:px-0 w-full max-w-sm sm:max-w-none mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true }}
             >
-              <MessageCircle className="w-5 h-5" />
-              <span>WhatsApp Chat</span>
-            </a>
+              <a href="tel:+4915563740470" className="w-full sm:w-auto">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="bg-white text-purple-600 hover:bg-white/90 hover:scale-105 w-full sm:w-auto min-w-[160px] sm:min-w-[180px]"
+                >
+                  <Phone className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
+                  +49 155 63740470
+                </Button>
+              </a>
+
+              <a
+                href="https://wa.me/4915563740470"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
+              >
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-white hover:text-purple-600 bg-transparent w-full sm:w-auto min-w-[160px] sm:min-w-[180px]"
+                >
+                  <MessageCircle className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
+                  WhatsApp Chat
+                </Button>
+              </a>
+            </motion.div>
           </div>
-          <p className="text-center text-gray-400 text-xs mt-4">
-            Antwortzeit: Unter 2 Stunden (Mon-Fri 9-17 Uhr)
-          </p>
         </motion.div>
       </div>
     </section>

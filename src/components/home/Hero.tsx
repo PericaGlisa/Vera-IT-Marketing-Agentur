@@ -39,7 +39,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.1 }}
           >
             <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-lg px-4 py-2 inline-block">
-              <p className="text-sm sm:text-base text-purple-300 font-medium tracking-wide uppercase">
+              <p className="text-xs sm:text-sm text-purple-300 font-medium tracking-wide uppercase">
                 Für innovative Unternehmen
               </p>
             </div>
@@ -51,7 +51,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            KI-Lösungen, Web-Apps und <span className="gradient-text">Marketing-Automation</span> aus einer Hand
+            KI-Lösungen und <span className="gradient-text">Marketing-Automation</span> aus einer Hand
           </motion.h1>
 
           <motion.div
@@ -78,7 +78,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Steigern Sie Ihren Umsatz um 40%, automatisieren Sie wiederkehrende Prozesse und erreichen Sie mehr Kunden durch maßgeschneiderte digitale Lösungen von Hamburgs führender Tech-Agentur.
+            Steigern Sie Ihren Umsatz um 40% und automatisieren Sie Prozesse durch maßgeschneiderte digitale Lösungen von Hamburgs führender Tech-Agentur.
           </motion.p>
 
           <motion.div
