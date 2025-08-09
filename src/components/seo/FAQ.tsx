@@ -49,7 +49,7 @@ export default function FAQ({ items, title = "Häufig gestellte Fragen", classNa
         }}
       />
       
-      <section className={`py-12 sm:py-16 lg:py-20 ${className}`}>
+      <section className={`py-12 sm:py-16 lg:py-20 bg-zinc-900 ${className}`}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -75,7 +75,7 @@ export default function FAQ({ items, title = "Häufig gestellte Fragen", classNa
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="mb-4 lg:mb-0"
+                  className="mb-2 sm:mb-4 lg:mb-0"
                 >
                   <div className="bg-zinc-800 border border-gray-700 rounded-2xl overflow-hidden hover:border-purple-500/50 transition-all duration-300 group h-full">
                     <button

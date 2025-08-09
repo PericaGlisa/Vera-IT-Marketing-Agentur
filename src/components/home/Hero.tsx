@@ -31,13 +31,27 @@ export function Hero() {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto w-full flex flex-col items-center justify-center"
         >
+          {/* Eyebrow Text */}
+          <motion.div
+            className="relative mb-3 sm:mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+          >
+            <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-lg px-4 py-2 inline-block">
+              <p className="text-sm sm:text-base text-purple-300 font-medium tracking-wide uppercase">
+                Für innovative Unternehmen
+              </p>
+            </div>
+          </motion.div>
+
           <motion.h1
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold mb-4 sm:mb-6 leading-tight mt-4 sm:mt-6 lg:mt-8"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold mb-4 sm:mb-6 leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Digitale Transformation <span className="gradient-text">neu definiert</span>
+            KI-Lösungen, Web-Apps und <span className="gradient-text">Marketing-Automation</span> aus einer Hand
           </motion.h1>
 
           <motion.div
@@ -64,8 +78,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Wir sind Vera IT - Ihre führende digitale Agentur in Hamburg. Transformieren Sie Ihr Unternehmen
-            mit unseren innovativen Lösungen und erreichen Sie neue Höhen des digitalen Erfolgs.
+            Steigern Sie Ihren Umsatz um 40%, automatisieren Sie wiederkehrende Prozesse und erreichen Sie mehr Kunden durch maßgeschneiderte digitale Lösungen von Hamburgs führender Tech-Agentur.
           </motion.p>
 
           <motion.div
@@ -74,17 +87,27 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <Link href="/neue-kunden-form" className="w-full sm:w-auto">
-              <Button size="lg" className="group w-full sm:w-auto min-w-[160px] sm:min-w-[180px]">
-                Projekt starten
-                <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
+            <div className="flex flex-col items-center w-full sm:w-auto">
+              <Link href="/neue-kunden-form" className="w-full sm:w-auto">
+                <Button size="lg" className="group w-full sm:w-auto min-w-[160px] sm:min-w-[200px]">
+                  Kostenlose Beratung buchen
+                  <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              <p className="text-xs text-gray-500 mt-2 text-center">
+                Unverbindlich • 15 Min Erstberatung
+              </p>
+            </div>
 
-            <Button variant="outline" size="lg" className="group bg-transparent w-full sm:w-auto min-w-[160px] sm:min-w-[180px]">
-              <Play className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
-              Demo ansehen
-            </Button>
+            <div className="flex flex-col items-center w-full sm:w-auto">
+              <Button variant="outline" size="lg" className="group bg-transparent w-full sm:w-auto min-w-[160px] sm:min-w-[180px]">
+                <Play className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
+                Erfolgsgeschichten ansehen
+              </Button>
+              <p className="text-xs text-gray-500 mt-2 text-center">
+                Echte Projekte • Messbare Erfolge
+              </p>
+            </div>
           </motion.div>
 
           {/* Scroll Indicator */}

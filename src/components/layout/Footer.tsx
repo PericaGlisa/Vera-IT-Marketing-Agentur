@@ -293,6 +293,31 @@ export function Footer() {
         </div>
       </div>
       
+      {/* Large VERA Branding */}
+      <div className="relative overflow-hidden py-2 sm:py-3 lg:py-4 bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-600">
+        <div className="absolute inset-0 bg-gradient-to-t from-purple-800/60 via-purple-700/40 to-purple-600/20"></div>
+        <div className="relative w-full px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center w-full"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <div className="w-full flex justify-center items-center">
+              <img 
+                src="/vera-logo-high-res.png" 
+                alt="VERA IT Logo" 
+                className="h-24 xs:h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 2xl:h-72 w-auto object-contain hover:opacity-80 transition-all duration-700"
+                style={{
+                  filter: 'brightness(0) invert(1) contrast(1.2) saturate(1.1) drop-shadow(0 0 8px rgba(255,255,255,0.3))'
+                }}
+              />
+            </div>
+          </motion.div>
+        </div>
+      </div>
+      
       {/* Cookie Settings Modal */}
       <CookieSettingsModal 
         isOpen={showCookieSettings} 
