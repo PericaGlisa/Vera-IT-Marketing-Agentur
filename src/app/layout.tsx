@@ -5,6 +5,8 @@ import "./globals.css"
 import { Navigation } from "@/components/layout/Navigation"
 import { Footer } from "@/components/layout/Footer"
 import { FloatingDock } from "@/components/ui/FloatingDock"
+import CookieConsentBanner from "@/components/cookie-consent/CookieConsentBanner"
+import Analytics from "@/components/analytics/Analytics"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -36,6 +38,8 @@ export default function RootLayout({
         <main className="min-h-screen">{children}</main>
         <Footer />
         <FloatingDock />
+        <CookieConsentBanner />
+        <Analytics />
       </body>
     </html>
   )

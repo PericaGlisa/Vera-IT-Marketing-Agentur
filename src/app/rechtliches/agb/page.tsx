@@ -53,8 +53,8 @@ export default function AGBPage() {
                 <p className="text-gray-300 text-sm sm:text-base">Rehrstieg 16d</p>
                 <p className="text-gray-300 text-sm sm:text-base">21147 Hamburg, Deutschland</p>
                 <p className="mt-2 text-gray-300 text-sm sm:text-base">
-                  <strong className="text-white">E-Mail:</strong> info@vera-it.de<br/>
-                  <strong className="text-white">Telefon:</strong> +49 40 123456789
+                  <strong className="text-white">E-Mail:</strong> info@verait.de<br/>
+                  <strong className="text-white">Telefon:</strong> +49 15563 740470
                 </p>
               </div>
             </motion.section>
@@ -196,7 +196,7 @@ export default function AGBPage() {
 
             <div className="mt-12 pt-8 border-t border-zinc-700">
               <p className="text-sm text-gray-400">
-                Stand: Januar 2024
+                Stand: Januar 2025
               </p>
             </div>
           </div>

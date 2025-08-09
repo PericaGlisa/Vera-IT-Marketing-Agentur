@@ -153,8 +153,8 @@ export default function AboutPage() {
                 <motion.div
                   key={milestone.year}
                   className={`relative flex items-center ${index % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"}`}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
@@ -163,11 +163,17 @@ export default function AboutPage() {
 
                   {/* Content */}
                   <div className={`ml-12 sm:ml-0 sm:w-1/2 ${index % 2 === 0 ? "sm:pr-8" : "sm:pl-8"}`}>
-                    <div className="bg-zinc-800 border border-gray-700 rounded-2xl p-6">
+                    <motion.div 
+                      className="bg-zinc-800 border border-gray-700 rounded-2xl p-6"
+                      initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 + 0.2 }}
+                      viewport={{ once: true }}
+                    >
                       <div className="text-2xl font-bold gradient-text mb-2">{milestone.year}</div>
                       <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">{milestone.title}</h3>
                       <p className="text-gray-400">{milestone.description}</p>
-                    </div>
+                    </motion.div>
                   </div>
                 </motion.div>
               ))}

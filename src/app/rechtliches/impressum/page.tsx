@@ -49,8 +49,8 @@ export default function ImpressumPage() {
             >
               <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">Kontakt</h2>
               <div className="bg-zinc-900/50 border border-zinc-600 p-4 sm:p-6 rounded-lg">
-                <p className="text-gray-300 text-sm sm:text-base">Telefon: +49 40 123456789</p>
-                <p className="text-gray-300 text-sm sm:text-base">E-Mail: info@vera-it.de</p>
+                <p className="text-gray-300 text-sm sm:text-base">Telefon: +49 15563 740470</p>
+                <p className="text-gray-300 text-sm sm:text-base">E-Mail: info@verait.de</p>
               </div>
             </motion.section>
 
@@ -132,12 +132,27 @@ export default function ImpressumPage() {
               transition={{ duration: 0.8, delay: 0.7 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">Verbraucherstreitbeilegung/Universalschlichtungsstelle</h2>
+              <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-4 leading-tight">
+                <span className="block sm:inline">Verbraucherstreitbeilegung/</span>
+                <span className="block sm:inline">Universalschlichtungsstelle</span>
+              </h2>
               <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
                 Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer 
                 Verbraucherstreitschlichtungsstelle teilzunehmen.
               </p>
             </motion.section>
+
+            <motion.div
+              className="text-left mt-12 pt-8 border-t border-zinc-700"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-gray-500 text-sm">
+                Stand: Januar 2025
+              </p>
+            </motion.div>
           </div>
         </div>
       </div>

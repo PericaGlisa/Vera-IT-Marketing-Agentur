@@ -178,7 +178,7 @@ export default function CookiePolicyPage() {
 
             <div className="mt-12 pt-8 border-t border-zinc-700">
               <p className="text-sm text-gray-400">
-                Letzte Aktualisierung: Januar 2024
+                Letzte Aktualisierung: Januar 2025
               </p>
             </div>
           </div>

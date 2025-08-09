@@ -3,9 +3,13 @@
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram, Video } from "lucide-react"
+import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram, Video, Settings } from "lucide-react"
+import { useState } from "react"
+import CookieSettingsModal from "@/components/cookie-consent/CookieSettingsModal"
 
 export function Footer() {
+  const [showCookieSettings, setShowCookieSettings] = useState(false);
+
   return (
     <footer className="bg-zinc-900 border-t border-gray-700">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
@@ -68,10 +72,10 @@ export function Footer() {
           <div className="lg:col-span-2">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
               {/* Top Row */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 sm:col-span-2">
+              <div className="grid grid-cols-2 gap-4 sm:gap-6 sm:gap-8 sm:col-span-2">
                 {/* Services */}
                 <div className="space-y-4">
-                  <h3 className="text-white font-semibold text-base sm:text-lg">Leistungen</h3>
+                  <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Leistungen</h3>
                   <ul className="space-y-2">
                     <li>
                       <Link
@@ -126,7 +130,7 @@ export function Footer() {
 
                 {/* Additional Services */}
                 <div className="space-y-4">
-                  <h3 className="text-white font-semibold text-base sm:text-lg">Weitere Services</h3>
+                  <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Weitere Services</h3>
                   <ul className="space-y-2">
                     <li>
                       <Link
@@ -181,10 +185,10 @@ export function Footer() {
               </div>
 
               {/* Bottom Row */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 sm:col-span-2">
+              <div className="grid grid-cols-2 gap-4 sm:gap-6 sm:gap-8 sm:col-span-2">
                 {/* Company */}
                 <div className="space-y-4">
-                  <h3 className="text-white font-semibold text-base sm:text-lg">Unternehmen</h3>
+                  <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Unternehmen</h3>
                   <ul className="space-y-2">
                     <li>
                       <Link
@@ -240,7 +244,7 @@ export function Footer() {
 
                 {/* Contact */}
                 <div className="space-y-4">
-                  <h3 className="text-white font-semibold text-base sm:text-lg">Kontakt</h3>
+                  <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Kontakt</h3>
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3">
                       <MapPin className="w-5 h-5 text-purple-500 flex-shrink-0" />
@@ -275,12 +279,25 @@ export function Footer() {
             <Link href="/rechtliches/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
               Cookie-Richtlinie
             </Link>
+            <button 
+              onClick={() => setShowCookieSettings(true)}
+              className="flex items-center gap-1 text-gray-400 hover:text-white text-sm transition-colors"
+            >
+              <Settings className="w-3 h-3" />
+              Cookie-Einstellungen
+            </button>
             <Link href="/rechtliches/agb" className="text-gray-400 hover:text-white text-sm transition-colors">
               AGB
             </Link>
           </div>
         </div>
       </div>
+      
+      {/* Cookie Settings Modal */}
+      <CookieSettingsModal 
+        isOpen={showCookieSettings} 
+        onClose={() => setShowCookieSettings(false)} 
+      />
     </footer>
   )
 }
