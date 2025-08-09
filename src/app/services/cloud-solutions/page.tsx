@@ -135,7 +135,7 @@ export default function CloudSolutionsPage() {
             <Cloud className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-4 sm:mb-6">
-            <span className="gradient-text">Cloud Solutions</span>
+            <span className="gradient-text">Cloud-Lösungen</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-6 sm:mb-8 leading-relaxed">
             Skalierbare Cloud-Infrastrukturen für moderne Unternehmen. Wir helfen Ihnen dabei, die Vorteile der Cloud

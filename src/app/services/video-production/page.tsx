@@ -108,7 +108,7 @@ export default function VideoProductionPage() {
             <Video className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-4 sm:mb-6">
-            <span className="gradient-text">Video Production</span>
+            <span className="gradient-text">Video-Produktion</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-6 sm:mb-8 leading-relaxed">
             Professionelle Video-Produktion für Marketing, Schulungen und Unternehmenskommunikation. Von der Konzeption
@@ -129,7 +129,7 @@ export default function VideoProductionPage() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h2 className="text-2xl sm:text-3xl font-heading font-bold text-center mb-8 sm:mb-12">
-            Unsere Video Production Services
+            Unsere Video-Produktion Services
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {features.map((feature, index) => (

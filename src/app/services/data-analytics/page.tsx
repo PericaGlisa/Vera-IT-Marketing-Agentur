@@ -149,14 +149,14 @@ export default function DataAnalyticsPage() {
             <BarChart3 className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-4 sm:mb-6">
-            <span className="gradient-text">Data Analytics</span>
+            <span className="gradient-text">Datenanalyse</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-6 sm:mb-8 leading-relaxed">
             Verwandeln Sie Ihre Daten in wertvolle Erkenntnisse. Wir helfen Ihnen dabei, das volle Potenzial Ihrer Daten
             zu erschließen und datengetriebene Entscheidungen zu treffen.
           </p>
           <Button size="lg" className="w-full sm:w-auto" asChild>
-            <Link href="/kontakt">Data Analytics Beratung</Link>
+            <Link href="/kontakt">Datenanalyse Beratung</Link>
           </Button>
         </motion.div>
 

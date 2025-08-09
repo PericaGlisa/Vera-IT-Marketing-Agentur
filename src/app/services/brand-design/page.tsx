@@ -118,7 +118,7 @@ export default function BrandDesignPage() {
             <Palette className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-4 sm:mb-6">
-            <span className="gradient-text">Brand Design</span>
+            <span className="gradient-text">Markendesign</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-6 sm:mb-8 leading-relaxed">
             Starke Marken, die im Gedächtnis bleiben. Wir entwickeln einzigartige Markenidentitäten, die Ihre Werte
@@ -137,7 +137,7 @@ export default function BrandDesignPage() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h2 className="text-2xl sm:text-3xl font-heading font-bold text-center mb-8 sm:mb-12">
-            Unser Brand Design Ansatz
+            Unser Markendesign Ansatz
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {features.map((feature, index) => (
@@ -168,7 +168,7 @@ export default function BrandDesignPage() {
           viewport={{ once: true }}
         >
           <h2 className="text-2xl sm:text-3xl font-heading font-bold text-center mb-8 sm:mb-12">
-            Unsere Brand Design Services
+            Unsere Markendesign Services
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
             {brandServices.map((service, index) => (

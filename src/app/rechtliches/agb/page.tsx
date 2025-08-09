@@ -90,9 +90,9 @@ export default function AGBPage() {
                 <li>AI Development und Machine Learning Lösungen</li>
                 <li>Web Development und SaaS-Entwicklung</li>
                 <li>Mobile App Entwicklung</li>
-                <li>UI/UX Design</li>
-                <li>Digital Marketing und SEO</li>
-                <li>Brand Design und Video Production</li>
+                <li>Interface Design</li>
+                <li>Digitales Marketing und SEO</li>
+                <li>Markendesign und Video Production</li>
                 <li>E-Commerce Development</li>
                 <li>Cloud Solutions und Cybersecurity</li>
               </ul>

@@ -33,7 +33,7 @@ const blogPosts = [
     author: "Vera IT",
     date: "2024-01-10",
     readTime: "6 min",
-    category: "Web Development",
+    category: "Web-Entwicklung",
     image: "/responsive-design-2024.svg",
     tags: ["Responsive Design", "UX/UI", "Mobile First", "CSS"],
     archived: true,
@@ -89,7 +89,7 @@ const blogPosts = [
     readTime: "10 min",
     category: "Mobile Development",
     image: "/progressive-web-apps.svg",
-    tags: ["PWA", "Mobile", "Web Development", "Performance"],
+    tags: ["PWA", "Mobile", "Web-Entwicklung", "Performance"],
     archived: true,
   },
 ]
@@ -97,7 +97,7 @@ const blogPosts = [
 const categories = [
   "Alle",
   "AI & Machine Learning",
-  "Web Development",
+  "Web-Entwicklung",
   "Mobile Development",
   "Digital Marketing",
   "DevOps & Cloud",

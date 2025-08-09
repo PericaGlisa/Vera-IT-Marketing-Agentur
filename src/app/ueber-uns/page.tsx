@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { Users, Target, Award, Globe, ArrowRight } from "lucide-react"
 import Link from "next/link"
@@ -35,14 +35,25 @@ const milestones = [
   { year: "2021", title: "Gründung", description: "Vera IT wird in Hamburg gegründet" },
   { year: "2022", title: "Erste Erfolge", description: "50+ erfolgreiche Projekte abgeschlossen" },
   { year: "2022", title: "Team-Expansion", description: "Wachstum auf 25 Experten" },
-  { year: "2023", title: "KI-Spezialisierung", description: "Fokus auf AI Development" },
+  { year: "2023", title: "KI-Spezialisierung", description: "Fokus auf KI-Entwicklung" },
   { year: "2023", title: "Marktführer", description: "100+ Projekte, 50+ Teammitglieder" },
   { year: "2024", title: "Internationale Expansion", description: "Projekte in ganz Europa" },
 ]
 
 export default function AboutPage() {
+  const [isMobile, setIsMobile] = useState(false)
+
   useEffect(() => {
     window.scrollTo(0, 0)
+    
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640)
+    }
+    
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    
+    return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
   return (
@@ -65,12 +76,12 @@ export default function AboutPage() {
         </motion.div>
 
         {/* Mission & Vision */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 mb-16 sm:mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 mb-12 sm:mb-16 lg:mb-20">
           <motion.div
             className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8"
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: isMobile ? 0 : -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: isMobile ? 0.5 : 0.8 }}
             viewport={{ once: true }}
           >
             <h2 className="text-2xl sm:text-3xl font-heading font-bold mb-4 sm:mb-6">Unsere Mission</h2>
@@ -87,9 +98,9 @@ export default function AboutPage() {
 
           <motion.div
             className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8"
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: isMobile ? 0 : 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: isMobile ? 0.5 : 0.8 }}
             viewport={{ once: true }}
           >
             <h2 className="text-2xl sm:text-3xl font-heading font-bold mb-4 sm:mb-6">Unsere Vision</h2>
@@ -107,23 +118,27 @@ export default function AboutPage() {
 
         {/* Values */}
         <motion.div
-          className="mb-16 sm:mb-20"
-          initial={{ opacity: 0, y: 50 }}
+          className="mb-12 sm:mb-16 lg:mb-20"
+          initial={{ opacity: 0, y: isMobile ? 15 : 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: isMobile ? 0.4 : 0.6 }}
+          viewport={{ once: true, margin: isMobile ? "-20px" : "-50px" }}
         >
-          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-center mb-8 sm:mb-12">Unsere Werte</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-center mb-6 sm:mb-8 lg:mb-12">Unsere Werte</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
                 className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-purple-500/50 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.02 }}
+                transition={{ 
+                  duration: 0.5, 
+                  delay: isMobile ? index * 0.05 : index * 0.1,
+                  ease: "easeOut"
+                }}
+                viewport={{ once: true, margin: "-30px" }}
+                whileHover={{ scale: isMobile ? 1 : 1.02 }}
               >
                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-indigo-500 via-purple-500 to-violet-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <value.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
@@ -137,42 +152,53 @@ export default function AboutPage() {
 
         {/* Timeline */}
         <motion.div
-          className="mb-16 sm:mb-20"
-          initial={{ opacity: 0, y: 50 }}
+          className="mb-12 sm:mb-16 lg:mb-20"
+          initial={{ opacity: 0, y: isMobile ? 15 : 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: isMobile ? 0.4 : 0.6 }}
+          viewport={{ once: true, margin: isMobile ? "-20px" : "-50px" }}
         >
-          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-center mb-8 sm:mb-12">Unsere Geschichte</h2>
+          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-center mb-6 sm:mb-8 lg:mb-12">Unsere Geschichte</h2>
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-500 via-purple-500 to-violet-500 transform sm:-translate-x-0.5"></div>
 
-            <div className="space-y-8 sm:space-y-12">
+            <div className="space-y-6 sm:space-y-8 md:space-y-12 lg:space-y-16">
               {milestones.map((milestone, index) => (
                 <motion.div
                   key={milestone.year}
-                  className={`relative flex items-center ${index % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"}`}
-                  initial={{ opacity: 0, y: 30 }}
+                  className={`relative flex items-start ${index % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"}`}
+                  initial={{ opacity: 0, y: isMobile ? 10 : 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  transition={{ 
+                    duration: isMobile ? 0.3 : 0.5, 
+                    delay: isMobile ? index * 0.03 : index * 0.08,
+                    ease: "easeOut"
+                  }}
+                  viewport={{ once: true, margin: isMobile ? "-10px" : "-20px" }}
                 >
                   {/* Timeline dot */}
-                  <div className="absolute left-4 sm:left-1/2 w-4 h-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-violet-500 rounded-full transform sm:-translate-x-2 z-10"></div>
+                  <div className="absolute left-4 sm:left-1/2 w-4 h-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-violet-500 rounded-full transform sm:-translate-x-2 z-10 mt-2"></div>
 
                   {/* Content */}
-                  <div className={`ml-12 sm:ml-0 sm:w-1/2 ${index % 2 === 0 ? "sm:pr-8" : "sm:pl-8"}`}>
+                  <div className={`ml-12 sm:ml-0 sm:w-1/2 ${index % 2 === 0 ? "sm:pr-6 md:pr-8" : "sm:pl-6 md:pl-8"}`}>
                     <motion.div 
-                      className="bg-zinc-800 border border-gray-700 rounded-2xl p-6"
-                      initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                      className="bg-zinc-800 border border-gray-700 rounded-2xl p-4 sm:p-6"
+                      initial={{ 
+                        opacity: 0, 
+                        x: isMobile ? 0 : (index % 2 === 0 ? -20 : 20)
+                      }}
                       whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 + 0.2 }}
-                      viewport={{ once: true }}
+                      transition={{ 
+                        duration: isMobile ? 0.2 : 0.4, 
+                        delay: isMobile ? index * 0.02 + 0.05 : index * 0.08 + 0.15,
+                        ease: "easeOut"
+                      }}
+                      viewport={{ once: true, margin: isMobile ? "-5px" : "-10px" }}
                     >
-                      <div className="text-2xl font-bold gradient-text mb-2">{milestone.year}</div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">{milestone.title}</h3>
-                      <p className="text-gray-400">{milestone.description}</p>
+                      <div className="text-xl sm:text-2xl font-bold gradient-text mb-2">{milestone.year}</div>
+                      <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-2">{milestone.title}</h3>
+                      <p className="text-sm sm:text-base text-gray-400">{milestone.description}</p>
                     </motion.div>
                   </div>
                 </motion.div>

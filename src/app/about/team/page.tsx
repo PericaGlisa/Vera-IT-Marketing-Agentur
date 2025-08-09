@@ -46,7 +46,7 @@ const teamMembers = [
     name: "Tom Müller",
     position: "Creative Director",
     department: "Design & UX",
-    bio: "Award-winning Designer mit 12+ Jahren Erfahrung. Spezialist für User Experience und Brand Design.",
+    bio: "Award-winning Designer mit 12+ Jahren Erfahrung. Spezialist für User Experience und Markendesign.",
     image: "/professional-creative-director.png",
     social: {
       linkedin: "#",
@@ -57,7 +57,7 @@ const teamMembers = [
   {
     name: "Anna Kowalski",
     position: "Head of Marketing",
-    department: "Digital Marketing",
+    department: "Digitales Marketing",
     bio: "Expertin für datengetriebenes Marketing und Growth Hacking. Ehemals bei Facebook und Spotify.",
     image: "/professional-woman-marketing-director.png",
     social: {
@@ -85,7 +85,7 @@ const departments = [
   { name: "AI & Machine Learning", count: 3, color: "from-indigo-600 to-cyan-600" },
   { name: "Development", count: 4, color: "from-cyan-600 to-emerald-600" },
   { name: "Design & UX", count: 3, color: "from-emerald-600 to-orange-600" },
-  { name: "Digital Marketing", count: 2, color: "from-orange-600 to-rose-600" },
+  { name: "Digitales Marketing", count: 2, color: "from-orange-600 to-rose-600" },
   { name: "Project Management", count: 2, color: "from-rose-600 to-purple-600" },
 ]
 

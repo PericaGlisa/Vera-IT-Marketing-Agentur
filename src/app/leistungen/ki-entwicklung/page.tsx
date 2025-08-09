@@ -71,7 +71,7 @@ export default function AIDevPage() {
             <Brain className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-4 sm:mb-6">
-            <span className="gradient-text">AI Development</span>
+            <span className="gradient-text">KI-Entwicklung</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-6 sm:mb-8 leading-relaxed">
             Intelligente Lösungen für die Zukunft Ihres Unternehmens. Wir entwickeln maßgeschneiderte KI-Anwendungen,

@@ -10,18 +10,19 @@ import { Input } from "@/components/ui/Input"
 import { Textarea } from "@/components/ui/Textarea"
 
 const services = [
-  "AI Development",
-  "Web Development",
-  "SaaS Development",
-  "Mobile Apps",
-  "UI/UX Design",
-  "Digital Marketing",
-  "Brand Design",
-  "Video Production",
-  "E-Commerce Development",
-  "Cloud Solutions",
-  "Cybersecurity",
-  "Data Analytics",
+  "KI-Entwicklung",
+  "Web-Entwicklung",
+  "SaaS-Entwicklung",
+  "Mobile Anwendungen",
+    "Interface Design",
+    "Digitales Marketing",
+    "Markendesign",
+  "Video-Produktion",
+  "E-Commerce Entwicklung",
+  "Cloud-Lösungen",
+  "Cybersicherheit",
+  "Datenanalyse",
+  "Sonstiges",
 ]
 
 const budgetRanges = ["€5.000 - €15.000", "€15.000 - €50.000", "€50.000 - €100.000", "€100.000+"]

@@ -82,7 +82,7 @@ export function Footer() {
                         href="/leistungen/ki-entwicklung"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
-                        AI Development
+                        KI-Entwicklung
                       </Link>
                     </li>
                     <li>
@@ -90,7 +90,7 @@ export function Footer() {
                         href="/leistungen/web-entwicklung"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
-                        Web Development
+                        Web-Entwicklung
                       </Link>
                     </li>
                     <li>
@@ -98,7 +98,7 @@ export function Footer() {
                         href="/leistungen/saas-entwicklung"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
-                        SaaS Development
+                        SaaS-Entwicklung
                       </Link>
                     </li>
                     <li>
@@ -106,7 +106,7 @@ export function Footer() {
                         href="/leistungen/mobile-apps"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
-                        Mobile Apps
+                        Mobile Anwendungen
                       </Link>
                     </li>
                     <li>
@@ -114,7 +114,7 @@ export function Footer() {
                         href="/leistungen/ui-ux-design"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
-                        UI/UX Design
+                        Interface Design
                       </Link>
                     </li>
                     <li>
@@ -122,7 +122,7 @@ export function Footer() {
                         href="/leistungen/digital-marketing"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
-                        Digital Marketing
+                        Digitales Marketing
                       </Link>
                     </li>
                   </ul>
@@ -137,7 +137,7 @@ export function Footer() {
                         href="/leistungen/brand-design"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
-                        Brand Design
+                        Markendesign
                       </Link>
                     </li>
                     <li>
@@ -145,7 +145,7 @@ export function Footer() {
                         href="/leistungen/video-produktion"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
-                        Video Production
+                        Video-Produktion
                       </Link>
                     </li>
                     <li>
@@ -153,7 +153,7 @@ export function Footer() {
                         href="/leistungen/e-commerce-entwicklung"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
-                        E-Commerce Development
+                        E-Commerce Entwicklung
                       </Link>
                     </li>
                     <li>
@@ -161,7 +161,7 @@ export function Footer() {
                         href="/leistungen/cloud-loesungen"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
-                        Cloud Solutions
+                        Cloud-Lösungen
                       </Link>
                     </li>
                     <li>
@@ -169,7 +169,7 @@ export function Footer() {
                         href="/leistungen/cybersecurity"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
-                        Cybersecurity
+                        Cybersicherheit
                       </Link>
                     </li>
                     <li>
@@ -177,7 +177,7 @@ export function Footer() {
                         href="/leistungen/datenanalyse"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
-                        Data Analytics
+                        Datenanalyse
                       </Link>
                     </li>
                   </ul>

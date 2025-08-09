@@ -385,7 +385,7 @@ export default function NeueKundenForm() {
                       'Beratung zur digitalen Strategie',
                       'Automatisierung von Prozessen',
                       'Umsatzsteigerung durch digitale Kanäle',
-                      'Branding und UI/UX Design',
+                      'Branding und Interface Design',
                       'Erstellung oder Verbesserung der Website',
                       'Cloud-Migration / DevOps / Technischer Support'
                     ].map((option) => (

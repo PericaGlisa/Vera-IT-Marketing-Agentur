@@ -81,13 +81,13 @@ const openPositions = [
     ],
   },
   {
-    title: "Digital Marketing Manager",
-    department: "Digital Marketing",
+    title: "Digitales Marketing Manager",
+    department: "Digitales Marketing",
     type: "Vollzeit",
     location: "Hamburg / Remote",
     description: "Entwicklung und Umsetzung datengetriebener Marketing-Strategien für unsere Kunden.",
     requirements: [
-      "3+ Jahre Erfahrung im Digital Marketing",
+      "3+ Jahre Erfahrung im Marketing",
       "Expertise in Google Ads, Facebook Ads, SEO",
       "Analytisches Denken und Datenaffinität",
       "Kreativität und strategisches Denken",

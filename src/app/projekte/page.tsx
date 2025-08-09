@@ -10,7 +10,7 @@ import Image from "next/image"
 const projects = [
   {
     title: "E-Commerce KI-Plattform",
-    category: "AI Development",
+    category: "KI-Entwicklung",
     client: "TechMart GmbH",
     year: "2024",
     description:
@@ -44,7 +44,7 @@ const projects = [
   },
   {
     title: "Healthcare Management System",
-    category: "Web Development",
+    category: "Web-Entwicklung",
     client: "MedCare Solutions",
     year: "2023",
     description:
@@ -107,7 +107,7 @@ const projects = [
   },
 ]
 
-const categories = ["Alle", "AI Development", "Web Development", "Mobile Development", "IoT & AI"]
+const categories = ["Alle", "KI-Entwicklung", "Web-Entwicklung", "Mobile Development", "IoT & AI"]
 
 export default function ProjectsPage() {
   useEffect(() => {

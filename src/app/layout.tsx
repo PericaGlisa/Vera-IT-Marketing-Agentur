@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "Vera IT - Digitale Agentur Hamburg",
   description:
     "Führende digitale Agentur in Hamburg. KI-gestützte Lösungen, innovative Web-Entwicklung und datengetriebenes Marketing für Ihren Erfolg.",
-  keywords: "Digital Marketing, Web Development, AI Development, Hamburg, Digitale Agentur",
+  keywords: "Digitales Marketing, Web-Entwicklung, KI-Entwicklung, Hamburg, Digitale Agentur",
   icons: {
     icon: "/icon.png",
     shortcut: "/icon.png",

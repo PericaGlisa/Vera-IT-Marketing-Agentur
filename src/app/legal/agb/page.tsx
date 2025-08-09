@@ -50,14 +50,14 @@ export default function AGBPage() {
               </p>
               <h3 className="text-lg sm:text-xl font-medium text-gray-200 mb-3 mt-6">Unsere Leistungen umfassen:</h3>
               <ul className="list-disc pl-6 mt-3 text-sm sm:text-base">
-                <li>AI Development und Machine Learning Lösungen</li>
-                <li>Web Development und SaaS-Entwicklung</li>
+                <li>KI-Entwicklung und Machine Learning Lösungen</li>
+                <li>Web-Entwicklung und SaaS-Entwicklung</li>
                 <li>Mobile App Entwicklung</li>
-                <li>UI/UX Design</li>
-                <li>Digital Marketing und SEO</li>
-                <li>Brand Design und Video Production</li>
-                <li>E-Commerce Development</li>
-                <li>Cloud Solutions und Cybersecurity</li>
+                <li>Interface Design</li>
+                <li>Digitales Marketing und SEO</li>
+                <li>Markendesign und Video-Produktion</li>
+                <li>E-Commerce Entwicklung</li>
+                <li>Cloud-Lösungen und Cybersicherheit</li>
               </ul>
             </section>
 
