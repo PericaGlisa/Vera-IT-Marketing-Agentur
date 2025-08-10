@@ -1,0 +1,38 @@
+# Robots.txt for Vera IT - Digitale Agentur Hamburg
+# https://verait.de
+
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_next/
+Disallow: /api/
+
+# Allow important directories
+Allow: /leistungen/
+Allow: /services/
+Allow: /about/
+Allow: /contact/
+Allow: /portfolio/
+Allow: /blog/
+
+# Sitemap location
+Sitemap: https://verait.de/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Special instructions for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1

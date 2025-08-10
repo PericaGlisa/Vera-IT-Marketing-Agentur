@@ -1,0 +1,65 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Main background gradient matching site branding -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Secondary overlay gradient -->
+    <linearGradient id="overlayGradient" x1="20%" y1="20%" x2="80%" y2="80%">
+      <stop offset="0%" style="stop-color:#581c87;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#7c2d92;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.1" />
+    </linearGradient>
+    
+    <!-- Radial gradient for depth -->
+    <radialGradient id="radialGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#9333ea;stop-opacity:0.4" />
+      <stop offset="70%" style="stop-color:#7c3aed;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#581c87;stop-opacity:0.1" />
+    </radialGradient>
+    
+    <!-- Subtle glow effect -->
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="1200" height="630" fill="url(#mainGradient)"/>
+  
+  <!-- Secondary overlay -->
+  <rect width="1200" height="630" fill="url(#overlayGradient)"/>
+  
+  <!-- Radial depth layer -->
+  <rect width="1200" height="630" fill="url(#radialGradient)"/>
+  
+  <!-- Abstract geometric elements -->
+  <!-- Large circle top-right -->
+  <circle cx="950" cy="120" r="120" fill="white" opacity="0.08" filter="url(#softGlow)"/>
+  
+  <!-- Medium circle center-right -->
+  <circle cx="1050" cy="315" r="80" fill="white" opacity="0.06"/>
+  
+  <!-- Small circles bottom -->
+  <circle cx="1100" cy="480" r="50" fill="white" opacity="0.05"/>
+  <circle cx="950" cy="520" r="35" fill="white" opacity="0.04"/>
+  
+  <!-- Abstract curved shapes -->
+  <path d="M0,400 Q300,350 600,400 T1200,350 L1200,630 L0,630 Z" fill="url(#overlayGradient)" opacity="0.3"/>
+  
+  <!-- Subtle floating elements -->
+  <circle cx="200" cy="150" r="25" fill="white" opacity="0.03"/>
+  <circle cx="350" cy="200" r="30" fill="white" opacity="0.04"/>
+  <circle cx="500" cy="120" r="20" fill="white" opacity="0.03"/>
+  
+  <!-- Bottom accent -->
+  <rect x="0" y="580" width="1200" height="50" fill="url(#mainGradient)" opacity="0.6"/>
+</svg>

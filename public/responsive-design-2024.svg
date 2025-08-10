@@ -1,0 +1,229 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#334155;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#475569;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="mobileGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="tabletGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bgGradient)"/>
+  
+  <!-- Grid pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="400" fill="url(#grid)"/>
+  
+  <!-- Desktop Monitor -->
+  <g transform="translate(150, 180)">
+    <!-- Monitor base -->
+    <rect x="-10" y="60" width="20" height="15" fill="#4b5563" rx="3"/>
+    <rect x="-25" y="75" width="50" height="5" fill="#6b7280" rx="2"/>
+    
+    <!-- Monitor frame -->
+    <rect x="-80" y="-60" width="160" height="120" fill="#374151" rx="8" filter="url(#shadow)"/>
+    <rect x="-75" y="-55" width="150" height="110" fill="#111827" rx="6"/>
+    
+    <!-- Screen content -->
+    <rect x="-70" y="-50" width="140" height="100" fill="url(#screenGradient)" rx="4">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Desktop layout -->
+    <!-- Header -->
+    <rect x="-65" y="-45" width="130" height="8" fill="rgba(255,255,255,0.9)" rx="2"/>
+    <circle cx="-55" cy="-41" r="2" fill="#3b82f6"/>
+    <rect x="-45" y="-43" width="40" height="2" fill="#6b7280" rx="1"/>
+    <circle cx="55" cy="-41" r="2" fill="#ef4444"/>
+    
+    <!-- Navigation -->
+    <rect x="-65" y="-35" width="130" height="6" fill="rgba(255,255,255,0.8)" rx="1"/>
+    <rect x="-60" y="-33" width="15" height="2" fill="#3b82f6" rx="1"/>
+    <rect x="-40" y="-33" width="12" height="2" fill="#6b7280" rx="1"/>
+    <rect x="-25" y="-33" width="10" height="2" fill="#6b7280" rx="1"/>
+    <rect x="-10" y="-33" width="8" height="2" fill="#6b7280" rx="1"/>
+    
+    <!-- Content grid -->
+    <rect x="-60" y="-25" width="35" height="25" fill="rgba(255,255,255,0.7)" rx="2"/>
+    <rect x="-20" y="-25" width="35" height="25" fill="rgba(255,255,255,0.7)" rx="2"/>
+    <rect x="20" y="-25" width="35" height="25" rx="2" fill="rgba(255,255,255,0.7)"/>
+    
+    <rect x="-60" y="5" width="35" height="25" fill="rgba(255,255,255,0.7)" rx="2"/>
+    <rect x="-20" y="5" width="35" height="25" fill="rgba(255,255,255,0.7)" rx="2"/>
+    <rect x="20" y="5" width="35" height="25" fill="rgba(255,255,255,0.7)" rx="2"/>
+    
+    <!-- Sidebar -->
+    <rect x="-65" y="35" width="25" height="12" fill="rgba(255,255,255,0.6)" rx="1"/>
+    <rect x="-35" y="35" width="100" height="12" fill="rgba(255,255,255,0.6)" rx="1"/>
+  </g>
+  
+  <!-- Tablet -->
+  <g transform="translate(350, 200)">
+    <!-- Tablet frame -->
+    <rect x="-50" y="-70" width="100" height="140" fill="#374151" rx="12" filter="url(#shadow)"/>
+    <rect x="-45" y="-65" width="90" height="130" fill="#111827" rx="8"/>
+    
+    <!-- Screen content -->
+    <rect x="-40" y="-60" width="80" height="120" fill="url(#tabletGradient)" rx="6">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Tablet layout (adapted) -->
+    <!-- Header -->
+    <rect x="-35" y="-55" width="70" height="6" fill="rgba(255,255,255,0.9)" rx="1"/>
+    <circle cx="-28" cy="-52" r="1.5" fill="#8b5cf6"/>
+    <rect x="-22" y="-53" width="25" height="1.5" fill="#6b7280" rx="0.5"/>
+    <circle cx="28" cy="-52" r="1.5" fill="#ef4444"/>
+    
+    <!-- Navigation (stacked) -->
+    <rect x="-35" y="-45" width="70" height="4" fill="rgba(255,255,255,0.8)" rx="1"/>
+    <rect x="-30" y="-43" width="12" height="1" fill="#8b5cf6" rx="0.5"/>
+    <rect x="-15" y="-43" width="10" height="1" fill="#6b7280" rx="0.5"/>
+    <rect x="-2" y="-43" width="8" height="1" fill="#6b7280" rx="0.5"/>
+    
+    <!-- Content (2 columns) -->
+    <rect x="-35" y="-35" width="32" height="30" fill="rgba(255,255,255,0.7)" rx="2"/>
+    <rect x="0" y="-35" width="32" height="30" fill="rgba(255,255,255,0.7)" rx="2"/>
+    
+    <rect x="-35" y="0" width="32" height="30" fill="rgba(255,255,255,0.7)" rx="2"/>
+    <rect x="0" y="0" width="32" height="30" fill="rgba(255,255,255,0.7)" rx="2"/>
+    
+    <!-- Footer -->
+    <rect x="-35" y="35" width="70" height="20" fill="rgba(255,255,255,0.6)" rx="1"/>
+  </g>
+  
+  <!-- Mobile Phone -->
+  <g transform="translate(500, 200)">
+    <!-- Phone frame -->
+    <rect x="-25" y="-60" width="50" height="120" fill="#374151" rx="12" filter="url(#shadow)"/>
+    <rect x="-22" y="-55" width="44" height="110" fill="#111827" rx="8"/>
+    
+    <!-- Screen content -->
+    <rect x="-20" y="-50" width="40" height="100" fill="url(#mobileGradient)" rx="6">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Mobile layout (single column) -->
+    <!-- Header -->
+    <rect x="-18" y="-45" width="36" height="5" fill="rgba(255,255,255,0.9)" rx="1"/>
+    <circle cx="-12" cy="-42.5" r="1" fill="#10b981"/>
+    <rect x="-8" y="-43" width="12" height="1" fill="#6b7280" rx="0.5"/>
+    <circle cx="12" cy="-42.5" r="1" fill="#ef4444"/>
+    
+    <!-- Navigation (hamburger menu) -->
+    <rect x="-18" y="-37" width="36" height="3" fill="rgba(255,255,255,0.8)" rx="0.5"/>
+    <rect x="-15" y="-35.5" width="3" height="1" fill="#10b981"/>
+    <rect x="-10" y="-35.5" width="3" height="1" fill="#10b981"/>
+    <rect x="-5" y="-35.5" width="3" height="1" fill="#10b981"/>
+    
+    <!-- Content (stacked) -->
+    <rect x="-18" y="-30" width="36" height="15" fill="rgba(255,255,255,0.7)" rx="1"/>
+    <rect x="-18" y="-12" width="36" height="15" fill="rgba(255,255,255,0.7)" rx="1"/>
+    <rect x="-18" y="6" width="36" height="15" fill="rgba(255,255,255,0.7)" rx="1"/>
+    <rect x="-18" y="24" width="36" height="15" fill="rgba(255,255,255,0.7)" rx="1"/>
+    
+    <!-- Bottom navigation -->
+    <rect x="-18" y="42" width="36" height="6" fill="rgba(255,255,255,0.6)" rx="1"/>
+    <circle cx="-10" cy="45" r="1.5" fill="#10b981"/>
+    <circle cx="-2" cy="45" r="1.5" fill="#6b7280"/>
+    <circle cx="6" cy="45" r="1.5" fill="#6b7280"/>
+    <circle cx="14" cy="45" r="1.5" fill="#6b7280"/>
+    
+    <!-- Home indicator -->
+    <rect x="-8" y="52" width="16" height="2" fill="rgba(255,255,255,0.5)" rx="1"/>
+  </g>
+  
+  <!-- Responsive arrows and connections -->
+  <g opacity="0.8">
+    <!-- Desktop to Tablet -->
+    <path d="M230 180 Q290 160 300 180" fill="none" stroke="#3b82f6" stroke-width="3" marker-end="url(#arrowhead)">
+      <animate attributeName="stroke-dasharray" values="0,100;100,0" dur="3s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Tablet to Mobile -->
+    <path d="M400 200 Q450 180 475 200" fill="none" stroke="#8b5cf6" stroke-width="3" marker-end="url(#arrowhead)">
+      <animate attributeName="stroke-dasharray" values="0,100;100,0" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  
+  <!-- Breakpoint indicators -->
+  <g transform="translate(100, 320)">
+    <rect x="-15" y="-8" width="30" height="16" fill="rgba(59, 130, 246, 0.2)" stroke="#3b82f6" stroke-width="1" rx="3"/>
+    <text x="0" y="-2" text-anchor="middle" fill="#3b82f6" font-size="8" font-weight="bold">1200px+</text>
+    <text x="0" y="6" text-anchor="middle" fill="#3b82f6" font-size="6">Desktop</text>
+  </g>
+  
+  <g transform="translate(250, 320)">
+    <rect x="-15" y="-8" width="30" height="16" fill="rgba(139, 92, 246, 0.2)" stroke="#8b5cf6" stroke-width="1" rx="3"/>
+    <text x="0" y="-2" text-anchor="middle" fill="#8b5cf6" font-size="8" font-weight="bold">768px+</text>
+    <text x="0" y="6" text-anchor="middle" fill="#8b5cf6" font-size="6">Tablet</text>
+  </g>
+  
+  <g transform="translate(400, 320)">
+    <rect x="-15" y="-8" width="30" height="16" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" stroke-width="1" rx="3"/>
+    <text x="0" y="-2" text-anchor="middle" fill="#10b981" font-size="8" font-weight="bold">320px+</text>
+    <text x="0" y="6" text-anchor="middle" fill="#10b981" font-size="6">Mobile</text>
+  </g>
+  
+  <!-- CSS Grid/Flexbox indicators -->
+  <g transform="translate(80, 80)">
+    <circle cx="0" cy="0" r="18" fill="rgba(59, 130, 246, 0.2)" stroke="#3b82f6" stroke-width="2" filter="url(#glow)">
+      <animate attributeName="r" values="16;20;16" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="0" y="-8" text-anchor="middle" fill="#3b82f6" font-size="7" font-weight="bold">CSS</text>
+    <text x="0" y="0" text-anchor="middle" fill="#3b82f6" font-size="7" font-weight="bold">GRID</text>
+  </g>
+  
+  <g transform="translate(180, 80)">
+    <circle cx="0" cy="0" r="18" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" stroke-width="2" filter="url(#glow)">
+      <animate attributeName="r" values="16;20;16" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="0" y="-4" text-anchor="middle" fill="#10b981" font-size="7" font-weight="bold">FLEX</text>
+    <text x="0" y="4" text-anchor="middle" fill="#10b981" font-size="7" font-weight="bold">BOX</text>
+  </g>
+  
+  <g transform="translate(280, 80)">
+    <circle cx="0" cy="0" r="18" fill="rgba(139, 92, 246, 0.2)" stroke="#8b5cf6" stroke-width="2" filter="url(#glow)">
+      <animate attributeName="r" values="16;20;16" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <text x="0" y="-4" text-anchor="middle" fill="#8b5cf6" font-size="7" font-weight="bold">MEDIA</text>
+    <text x="0" y="4" text-anchor="middle" fill="#8b5cf6" font-size="7" font-weight="bold">QUERY</text>
+  </g>
+  
+  <!-- Title area -->
+  <rect x="50" y="350" width="500" height="40" fill="rgba(0,0,0,0.4)" rx="8"/>
+  <text x="300" y="375" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Responsive Design: Best Practices 2024</text>
+</svg>
