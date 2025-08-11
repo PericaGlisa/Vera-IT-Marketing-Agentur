@@ -95,7 +95,7 @@ export default function RootLayout({
         <StructuredData type="localBusiness" />
         <LocalBusinessSchema />
       </head>
-      <body className={`${inter.className} bg-zinc-950 text-white antialiased`}>
+      <body className={`${inter.className} bg-zinc-950 text-white antialiased`} suppressHydrationWarning={true}>
         <Navigation />
         <main className="min-h-screen">{children}</main>
         <Footer />
