@@ -6,6 +6,10 @@
   NODE_VERSION = "18"
   NPM_FLAGS = "--production=false"
 
+# Enable Next.js plugin for Netlify
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
 # Redirect all requests to Next.js for proper routing
 [[redirects]]
   from = "/*"
@@ -13,13 +17,7 @@
   status = 200
   conditions = {Role = ["admin"]}
 
-# Handle API routes
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
-
-# Handle Next.js routing
+# Handle Next.js routing - catch all for client-side routing
 [[redirects]]
   from = "/*"
   to = "/index.html"

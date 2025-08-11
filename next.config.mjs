@@ -35,9 +35,9 @@ const nextConfig = {
   swcMinify: true,
   // Compression
   compress: true,
-  // Enable static optimization for Netlify
+  // Netlify deployment configuration
   trailingSlash: false,
-  // Remove standalone output for Netlify compatibility
+  // Keep default Next.js behavior for Netlify Functions
 };
 
 export default withBundleAnalyzer(nextConfig);
