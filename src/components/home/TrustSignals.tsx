@@ -50,7 +50,7 @@ export function TrustSignals() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-4 sm:mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-4 sm:mb-6">
             Ihre <span className="gradient-text">Sicherheit</span> ist garantiert
           </h2>
           <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
@@ -63,7 +63,7 @@ export function TrustSignals() {
           {trustElements.map((element, index) => (
             <motion.div
               key={element.title}
-              className="relative bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-purple-500/50 transition-all duration-300"
+              className="relative bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-6 sm:p-8 hover:border-purple-500/50 hover:bg-zinc-800/70 transition-all duration-300 group"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -71,14 +71,14 @@ export function TrustSignals() {
               whileHover={{ scale: 1.02 }}
             >
               <div className="flex items-start space-x-4">
-                <div className={`flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-r ${element.color} flex items-center justify-center`}>
+                <div className={`flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                   <element.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg sm:text-xl font-heading font-semibold text-white mb-3">
+                  <h3 className="text-lg sm:text-xl font-heading font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-300">
                     {element.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
                     {element.description}
                   </p>
                 </div>
@@ -89,15 +89,15 @@ export function TrustSignals() {
 
         {/* Security Badges */}
         <motion.div
-          className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8 mb-12"
+          className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-6 sm:p-8 mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
         >
           <div className="text-center mb-6">
-            <h3 className="text-xl sm:text-2xl font-heading font-semibold text-white mb-2">
-              Zertifiziert & Sicher
+            <h3 className="text-xl sm:text-2xl font-heading font-bold text-white mb-2">
+              Zertifiziert & <span className="gradient-text">Sicher</span>
             </h3>
             <p className="text-gray-400 text-sm sm:text-base">
               Höchste Standards für Datenschutz und Qualität
@@ -107,16 +107,16 @@ export function TrustSignals() {
             {securityBadges.map((badge, index) => (
               <motion.div
                 key={badge.name}
-                className="text-center p-4 bg-zinc-700 rounded-xl hover:bg-zinc-600 transition-all duration-300 hover:scale-105"
+                className="text-center p-4 bg-zinc-700/50 backdrop-blur-sm rounded-xl hover:bg-zinc-600/50 hover:border-purple-500/30 border border-transparent transition-all duration-300 hover:scale-105 group"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className={`w-10 h-10 mx-auto mb-3 rounded-lg bg-gradient-to-r ${badge.color} flex items-center justify-center`}>
+                <div className="w-10 h-10 mx-auto mb-3 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <badge.icon className="w-5 h-5 text-white" />
                 </div>
-                <p className="text-white font-medium text-xs sm:text-sm">{badge.name}</p>
+                <p className="text-white font-medium text-xs sm:text-sm group-hover:text-purple-300 transition-colors duration-300">{badge.name}</p>
               </motion.div>
             ))}
           </div>
