@@ -4,6 +4,7 @@ import { useEffect } from "react"
 import { Hero } from "@/components/home/Hero"
 import { Services } from "@/components/home/Services"
 import { TrustSignals } from "@/components/home/TrustSignals"
+import { TechStack } from "@/components/home/TechStack"
 import { FormCTA } from "@/components/home/FormCTA"
 import { Stats } from "@/components/home/Stats"
 import { CTA } from "@/components/home/CTA"
@@ -61,6 +62,7 @@ export default function HomePage() {
       <StructuredData type="service" data={homepageSchema} />
       <Hero />
       <TrustSignals />
+      <TechStack />
       <Services />
       <FormCTA />
       <Stats />
