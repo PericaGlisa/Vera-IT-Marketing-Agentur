@@ -1,8 +1,0 @@
-# Netlify redirects file
-# Handle Next.js routing and API routes
-
-# API routes
-/api/* /.netlify/functions/:splat 200
-
-# Handle all other routes with Next.js
-/* /index.html 200

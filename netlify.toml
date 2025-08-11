@@ -10,18 +10,7 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# Redirect all requests to Next.js for proper routing
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  conditions = {Role = ["admin"]}
-
-# Handle Next.js routing - catch all for client-side routing
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Let Next.js handle all routing automatically
 
 # Security headers
 [[headers]]
