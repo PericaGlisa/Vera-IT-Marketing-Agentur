@@ -299,8 +299,16 @@ export function Footer() {
       </div>
       
       {/* Large VERA Branding */}
-      <div className="relative overflow-hidden py-2 sm:py-3 lg:py-4 bg-gradient-to-br from-purple-700 via-purple-800 to-indigo-700">
-        <div className="absolute inset-0 bg-gradient-to-t from-purple-900/80 via-purple-800/60 to-purple-700/40"></div>
+      <div className="relative overflow-hidden py-2 sm:py-3 lg:py-4 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-800">
+        {/* Background Effects */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/6 sm:left-1/4 w-48 h-48 sm:w-72 sm:h-72 lg:w-96 lg:h-96 bg-gradient-to-r from-indigo-500 via-purple-500 to-violet-500 rounded-full blur-3xl opacity-20 animate-pulse-slow" />
+          <div 
+            className="absolute bottom-1/4 right-1/6 sm:right-1/4 w-60 h-60 sm:w-80 sm:h-80 lg:w-96 lg:h-96 bg-gradient-to-r from-cyan-500 to-emerald-500 rounded-full blur-3xl opacity-20 animate-pulse-slow"
+            style={{ animationDelay: "2s" }}
+          />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 sm:w-48 sm:h-48 bg-gradient-to-r from-rose-500/10 to-pink-500/10 rounded-full blur-2xl animate-pulse-slow" style={{ animationDelay: "4s" }} />
+        </div>
         
         {/* Animated background particles */}
         <div className="absolute inset-0 overflow-hidden">

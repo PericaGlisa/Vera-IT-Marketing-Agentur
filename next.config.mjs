@@ -35,8 +35,9 @@ const nextConfig = {
   swcMinify: true,
   // Compression
   compress: true,
-  // Enable static optimization
-  output: 'standalone',
+  // Enable static optimization for Netlify
+  trailingSlash: false,
+  // Remove standalone output for Netlify compatibility
 };
 
 export default withBundleAnalyzer(nextConfig);
