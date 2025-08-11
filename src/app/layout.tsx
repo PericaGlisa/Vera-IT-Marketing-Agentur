@@ -42,7 +42,11 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
+<<<<<<< HEAD
         url: '/og-image.svg',
+=======
+        url: '/og-image.png',
+>>>>>>> 84be55a7b472db71175fae2d3da2c475e84c6e32
         width: 1200,
         height: 630,
         alt: 'Vera IT - Führende Digitale Agentur Hamburg | KI & Web-Entwicklung',
@@ -53,7 +57,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Vera IT - Führende Digitale Agentur Hamburg",
     description: "🚀 KI-Entwicklung, Web-Entwicklung & Digitales Marketing in Hamburg. ✅ 25+ erfolgreiche Projekte",
+<<<<<<< HEAD
     images: ['/og-image.svg'],
+=======
+    images: ['/og-image.png'],
+>>>>>>> 84be55a7b472db71175fae2d3da2c475e84c6e32
     alt: 'VERA IT - Professional IT Services & Solutions',
   },
   robots: {

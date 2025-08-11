@@ -1,7 +1,11 @@
 "use client"
 
 import { motion } from "framer-motion"
+<<<<<<< HEAD
 import { ArrowRight, Calendar } from "lucide-react"
+=======
+import { ArrowRight, Play } from "lucide-react"
+>>>>>>> 84be55a7b472db71175fae2d3da2c475e84c6e32
 import Link from "next/link"
 import { Button } from "@/components/ui/Button"
 import { TypedText } from "@/components/ui/TypedText"
@@ -78,7 +82,11 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
+<<<<<<< HEAD
             Steigern Sie Ihren Umsatz um 40% und automatisieren Sie Prozesse durch maßgeschneiderte digitale Lösungen von Hamburgs führender Digitalen Agentur.
+=======
+            Steigern Sie Ihren Umsatz um 40% und automatisieren Sie Prozesse durch maßgeschneiderte digitale Lösungen von Hamburgs führender Tech-Agentur.
+>>>>>>> 84be55a7b472db71175fae2d3da2c475e84c6e32
           </motion.p>
 
           <motion.div
@@ -90,22 +98,38 @@ export function Hero() {
             <div className="flex flex-col items-center w-full sm:w-auto">
               <Link href="/neue-kunden-form" className="w-full sm:w-auto">
                 <Button size="lg" className="group w-full sm:w-auto min-w-[160px] sm:min-w-[200px]">
+<<<<<<< HEAD
                   Projekt starten
+=======
+                  Kostenlose Beratung buchen
+>>>>>>> 84be55a7b472db71175fae2d3da2c475e84c6e32
                   <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
               <p className="text-xs text-gray-500 mt-2 text-center">
+<<<<<<< HEAD
                 Unverbindlich • Kostenlose Erstberatung
+=======
+                Unverbindlich • 15 Min Erstberatung
+>>>>>>> 84be55a7b472db71175fae2d3da2c475e84c6e32
               </p>
             </div>
 
             <div className="flex flex-col items-center w-full sm:w-auto">
               <Button variant="outline" size="lg" className="group bg-transparent w-full sm:w-auto min-w-[160px] sm:min-w-[180px]">
+<<<<<<< HEAD
                 <Calendar className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
                 Beratungstermin buchen
               </Button>
               <p className="text-xs text-gray-500 mt-2 text-center">
                 15 Min • Kostenlos
+=======
+                <Play className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
+                Erfolgsgeschichten ansehen
+              </Button>
+              <p className="text-xs text-gray-500 mt-2 text-center">
+                Echte Projekte • Messbare Erfolge
+>>>>>>> 84be55a7b472db71175fae2d3da2c475e84c6e32
               </p>
             </div>
           </motion.div>
