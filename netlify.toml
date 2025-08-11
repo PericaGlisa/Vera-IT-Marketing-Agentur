@@ -6,6 +6,11 @@
   NODE_VERSION = "18"
   NPM_FLAGS = "--production=false"
 
+# Disable Edge Functions
+[functions]
+  external_node_modules = ["sharp"]
+  node_bundler = "esbuild"
+
 # Enable Next.js plugin for Netlify
 [[plugins]]
   package = "@netlify/plugin-nextjs"
