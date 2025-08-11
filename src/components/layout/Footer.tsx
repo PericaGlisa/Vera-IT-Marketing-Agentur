@@ -268,18 +268,12 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-700 mt-8 sm:mt-12 pt-6 sm:pt-8 flex flex-col-reverse sm:flex-row justify-between items-center space-y-reverse space-y-4 sm:space-y-0">
-<<<<<<< HEAD
           <div className="flex items-center justify-center sm:justify-start space-x-2 text-gray-400 text-sm">
             <span>© 2025 Vera IT. Mit ❤ in Hamburg gemacht</span>
             <div className="flex items-center space-x-2">
                 <img src="/de-flag.svg" alt="German Flag" className="w-6 h-4 rounded-sm" />
               </div>
           </div>
-=======
-          <p className="text-gray-400 text-sm text-center sm:text-left">
-            © 2025 Vera IT. Mit ❤ in Hamburg gemacht
-          </p>
->>>>>>> 84be55a7b472db71175fae2d3da2c475e84c6e32
           <div className="flex flex-wrap justify-center sm:justify-end space-x-4 sm:space-x-6">
             <Link href="/rechtliches/datenschutz" className="text-gray-400 hover:text-white text-sm transition-colors">
               Datenschutz

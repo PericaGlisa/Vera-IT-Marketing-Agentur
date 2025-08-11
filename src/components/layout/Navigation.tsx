@@ -157,11 +157,7 @@ export function Navigation() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
           {/* Logo */}
-<<<<<<< HEAD
           <Link href="/" className="flex items-center space-x-2 flex-shrink-0 z-50 group" onClick={() => setMobileServicesOpen(false)}>
-=======
-          <Link href="/" className="flex items-center space-x-2 flex-shrink-0 z-50 group">
->>>>>>> 84be55a7b472db71175fae2d3da2c475e84c6e32
             <div className="relative">
               {/* Outer glow effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-indigo-600/30 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
@@ -373,14 +369,10 @@ export function Navigation() {
                   <Link
                     href="/"
                     className="block text-gray-300 hover:text-white transition-colors py-3 text-lg font-medium border-b border-gray-800"
-<<<<<<< HEAD
                     onClick={() => {
                       setIsOpen(false)
                       setMobileServicesOpen(false)
                     }}
-=======
-                    onClick={() => setIsOpen(false)}
->>>>>>> 84be55a7b472db71175fae2d3da2c475e84c6e32
                   >
                     Startseite
                   </Link>
@@ -418,14 +410,10 @@ export function Navigation() {
                                 <Link
                                   href={service.href}
                                   className="flex items-center space-x-3 pl-4 py-2 text-gray-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-all duration-200"
-<<<<<<< HEAD
                                   onClick={() => {
                                     setIsOpen(false)
                                     setMobileServicesOpen(false)
                                   }}
-=======
-                                  onClick={() => setIsOpen(false)}
->>>>>>> 84be55a7b472db71175fae2d3da2c475e84c6e32
                                 >
                                   <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
                                     <service.icon className="w-4 h-4 text-white" />
@@ -446,56 +434,40 @@ export function Navigation() {
                   <Link
                     href="/ueber-uns"
                     className="block text-gray-300 hover:text-white transition-colors py-3 text-lg font-medium border-b border-gray-800"
-<<<<<<< HEAD
                     onClick={() => {
                       setIsOpen(false)
                       setMobileServicesOpen(false)
                     }}
-=======
-                    onClick={() => setIsOpen(false)}
->>>>>>> 84be55a7b472db71175fae2d3da2c475e84c6e32
                   >
                     Über Uns
                   </Link>
                   <Link
                     href="/projekte"
                     className="block text-gray-300 hover:text-white transition-colors py-3 text-lg font-medium border-b border-gray-800"
-<<<<<<< HEAD
                     onClick={() => {
                       setIsOpen(false)
                       setMobileServicesOpen(false)
                     }}
-=======
-                    onClick={() => setIsOpen(false)}
->>>>>>> 84be55a7b472db71175fae2d3da2c475e84c6e32
                   >
                     Projekte
                   </Link>
                   <Link
                     href="/blog"
                     className="block text-gray-300 hover:text-white transition-colors py-3 text-lg font-medium border-b border-gray-800"
-<<<<<<< HEAD
                     onClick={() => {
                       setIsOpen(false)
                       setMobileServicesOpen(false)
                     }}
-=======
-                    onClick={() => setIsOpen(false)}
->>>>>>> 84be55a7b472db71175fae2d3da2c475e84c6e32
                   >
                     Blog
                   </Link>
                   <Link
                     href="/kontakt"
                     className="block text-gray-300 hover:text-white transition-colors py-3 text-lg font-medium border-b border-gray-800"
-<<<<<<< HEAD
                     onClick={() => {
                       setIsOpen(false)
                       setMobileServicesOpen(false)
                     }}
-=======
-                    onClick={() => setIsOpen(false)}
->>>>>>> 84be55a7b472db71175fae2d3da2c475e84c6e32
                   >
                     Kontakt
                   </Link>
@@ -506,14 +478,10 @@ export function Navigation() {
                   <Link
                     href="/neue-kunden-form"
                     className="block primary-gradient text-white px-6 py-4 rounded-lg font-medium text-center text-lg hover:shadow-lg transition-all duration-300"
-<<<<<<< HEAD
                     onClick={() => {
                       setIsOpen(false)
                       setMobileServicesOpen(false)
                     }}
-=======
-                    onClick={() => setIsOpen(false)}
->>>>>>> 84be55a7b472db71175fae2d3da2c475e84c6e32
                   >
                     Projekt starten
                   </Link>
