@@ -295,9 +295,6 @@ export function Navigation() {
             <Link href="/ueber-uns" className="text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
               Über Uns
             </Link>
-            <Link href="/unsere-geschichte" className="text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
-              Unsere Geschichte
-            </Link>
             <Link href="/projekte" className="text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
               Projekte
             </Link>
@@ -461,16 +458,6 @@ export function Navigation() {
                     }}
                   >
                     Über Uns
-                  </Link>
-                  <Link
-                    href="/unsere-geschichte"
-                    className="block text-gray-300 hover:text-white transition-colors py-3 text-lg font-medium border-b border-gray-800"
-                    onClick={() => {
-                      setIsOpen(false)
-                      setMobileServicesOpen(false)
-                    }}
-                  >
-                    Unsere Geschichte
                   </Link>
                   <Link
                     href="/projekte"

@@ -202,14 +202,6 @@ export function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="/unsere-geschichte"
-                        className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
-                      >
-                        Unsere Geschichte
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
                         href="/team"
                         className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
                       >
