@@ -156,7 +156,7 @@ export default function ProjectsPage() {
             <p className="text-gray-400 text-sm sm:text-base">Zufriedene Kunden</p>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-rose-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
               <Calendar className="w-8 h-8 text-white" />
             </div>
             <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">3+</div>

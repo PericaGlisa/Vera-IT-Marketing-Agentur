@@ -170,7 +170,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
             >
               <div className="flex items-start gap-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-2xl">👩‍💼</span>
                 </div>
                 <div>
@@ -223,7 +223,7 @@ export default function AboutPage() {
             <h3 className="text-xl font-semibold text-white mb-4 text-center">Was uns antreibt</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <span className="text-xl">☕</span>
                 </div>
                 <h4 className="text-white font-medium mb-2">Kaffee & Code</h4>
@@ -237,7 +237,7 @@ export default function AboutPage() {
                 <p className="text-gray-400 text-sm">100% Ökostrom, papierloses Büro und CO2-neutrale Server-Infrastruktur.</p>
               </div>
               <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <span className="text-xl">🎯</span>
                 </div>
                 <h4 className="text-white font-medium mb-2">Lernen</h4>

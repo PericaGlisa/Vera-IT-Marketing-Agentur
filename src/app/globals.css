@@ -89,7 +89,7 @@
   }
 
   .accent-gradient {
-    @apply bg-gradient-to-r from-orange-500 to-rose-500;
+    @apply bg-gradient-to-r from-cyan-500 to-emerald-500;
   }
 
   .gradient-border {

@@ -84,8 +84,8 @@ const departments = [
   { name: "Führung", count: 2, color: "from-purple-600 to-indigo-600" },
   { name: "KI & Machine Learning", count: 1, color: "from-indigo-600 to-cyan-600" },
   { name: "Entwicklung", count: 2, color: "from-cyan-600 to-emerald-600" },
-  { name: "Design & UX", count: 1, color: "from-emerald-600 to-orange-600" },
-  { name: "Digitales Marketing", count: 1, color: "from-orange-600 to-rose-600" },
+  { name: "Design & UX", count: 1, color: "from-indigo-600 to-purple-600" },
+    { name: "Digitales Marketing", count: 1, color: "from-purple-600 to-violet-600" },
   { name: "Projektmanagement", count: 1, color: "from-rose-600 to-purple-600" },
 ]
 
@@ -216,7 +216,7 @@ export default function TeamPage() {
               viewport={{ once: true }}
               whileHover={{ scale: 1.02 }}
             >
-              <div className="w-16 h-16 bg-gradient-to-r from-emerald-600 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🎯</span>
               </div>
               <h3 className="text-lg font-semibold text-white mb-3">Qualitätsfokus</h3>
@@ -240,7 +240,7 @@ export default function TeamPage() {
             {teamMembers.map((member, index) => (
               <motion.div
                 key={member.name}
-                className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 hover:border-orange-500/50 transition-all duration-300 group"
+                className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -248,7 +248,7 @@ export default function TeamPage() {
                 whileHover={{ scale: 1.02 }}
               >
                 <div className="relative mb-6">
-                  <div className="w-24 h-24 mx-auto rounded-full overflow-hidden bg-gradient-to-r from-orange-500 to-red-500 p-1">
+                  <div className="w-24 h-24 mx-auto rounded-full overflow-hidden bg-gradient-to-r from-indigo-500 to-purple-500 p-1">
                     <div className="w-full h-full rounded-full bg-zinc-800 flex items-center justify-center">
                       <Image
                         src={member.image}
@@ -275,7 +275,7 @@ export default function TeamPage() {
                   {member.social.linkedin && (
                     <a
                       href={member.social.linkedin}
-                      className="w-8 h-8 bg-zinc-700 rounded-lg flex items-center justify-center hover:bg-orange-500 transition-colors duration-300 group"
+                      className="w-8 h-8 bg-zinc-700 rounded-lg flex items-center justify-center hover:bg-purple-500 transition-colors duration-300 group"
                       aria-label={`${member.name} LinkedIn`}
                     >
                       <Linkedin className="w-4 h-4 text-gray-400 group-hover:text-white" />
@@ -284,7 +284,7 @@ export default function TeamPage() {
                   {member.social.twitter && (
                     <a
                       href={member.social.twitter}
-                      className="w-8 h-8 bg-zinc-700 rounded-lg flex items-center justify-center hover:bg-orange-500 transition-colors duration-300 group"
+                      className="w-8 h-8 bg-zinc-700 rounded-lg flex items-center justify-center hover:bg-purple-500 transition-colors duration-300 group"
                       aria-label={`${member.name} Twitter`}
                     >
                       <Twitter className="w-4 h-4 text-gray-400 group-hover:text-white" />
@@ -293,7 +293,7 @@ export default function TeamPage() {
                   {member.social.github && (
                     <a
                       href={member.social.github}
-                      className="w-8 h-8 bg-zinc-700 rounded-lg flex items-center justify-center hover:bg-orange-500 transition-colors duration-300 group"
+                      className="w-8 h-8 bg-zinc-700 rounded-lg flex items-center justify-center hover:bg-purple-500 transition-colors duration-300 group"
                       aria-label={`${member.name} GitHub`}
                     >
                       <Github className="w-4 h-4 text-gray-400 group-hover:text-white" />
@@ -302,7 +302,7 @@ export default function TeamPage() {
                   {member.social.email && (
                     <a
                       href={`mailto:${member.social.email}`}
-                      className="w-8 h-8 bg-zinc-700 rounded-lg flex items-center justify-center hover:bg-orange-500 transition-colors duration-300 group"
+                      className="w-8 h-8 bg-zinc-700 rounded-lg flex items-center justify-center hover:bg-purple-500 transition-colors duration-300 group"
                       aria-label={`Email ${member.name}`}
                     >
                       <Mail className="w-4 h-4 text-gray-400 group-hover:text-white" />
@@ -325,13 +325,13 @@ export default function TeamPage() {
           <h2 className="text-2xl sm:text-3xl font-heading font-bold text-center mb-8 sm:mb-12">Fun Facts über unser Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <motion.div
-              className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-orange-500/50 transition-all duration-300"
+              className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-purple-500/50 transition-all duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🌍</span>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">6 Länder</h3>
@@ -339,7 +339,7 @@ export default function TeamPage() {
             </motion.div>
 
             <motion.div
-              className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-orange-500/50 transition-all duration-300"
+              className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-purple-500/50 transition-all duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -353,13 +353,13 @@ export default function TeamPage() {
             </motion.div>
 
             <motion.div
-              className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-orange-500/50 transition-all duration-300"
+              className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-purple-500/50 transition-all duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🎮</span>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Gaming Corner</h3>
@@ -384,7 +384,7 @@ export default function TeamPage() {
 
         {/* Join Team CTA */}
         <motion.div
-          className="text-center bg-gradient-to-r from-orange-600 via-red-600 to-amber-600 rounded-2xl p-8 sm:p-12"
+          className="text-center bg-gradient-to-r from-indigo-600 via-purple-600 to-violet-600 rounded-2xl p-8 sm:p-12"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}

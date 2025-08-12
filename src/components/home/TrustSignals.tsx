@@ -27,7 +27,7 @@ const trustElements = [
     icon: CheckCircle,
     title: "Kostenlose Nachbesserungen",
     description: "Bis zu 3 Monate kostenlose Anpassungen nach Projektabschluss inklusive.",
-    color: "from-orange-500 to-red-500"
+    color: "from-indigo-500 to-purple-500"
   }
 ]
 
@@ -35,7 +35,7 @@ const securityBadges = [
   { name: "DSGVO Konform", icon: Lock, color: "from-blue-500 to-cyan-500" },
   { name: "ISO 27001", icon: ShieldCheck, color: "from-purple-500 to-indigo-500" },
   { name: "SSL Verschlüsselt", icon: Key, color: "from-green-500 to-emerald-500" },
-  { name: "24/7 Support", icon: Headphones, color: "from-orange-500 to-red-500" }
+  { name: "24/7 Support", icon: Headphones, color: "from-indigo-500 to-purple-500" }
 ]
 
 export function TrustSignals() {

@@ -84,8 +84,8 @@ const departments = [
   { name: "Leadership", count: 2, color: "from-purple-600 to-indigo-600" },
   { name: "AI & Machine Learning", count: 1, color: "from-indigo-600 to-cyan-600" },
   { name: "Development", count: 2, color: "from-cyan-600 to-emerald-600" },
-  { name: "Design & UX", count: 1, color: "from-emerald-600 to-orange-600" },
-  { name: "Digitales Marketing", count: 1, color: "from-orange-600 to-rose-600" },
+  { name: "Design & UX", count: 1, color: "from-indigo-600 to-purple-600" },
+    { name: "Digitales Marketing", count: 1, color: "from-purple-600 to-violet-600" },
   { name: "Project Management", count: 1, color: "from-rose-600 to-purple-600" },
 ]
 
@@ -216,7 +216,7 @@ export default function TeamPage() {
               viewport={{ once: true }}
               whileHover={{ scale: 1.02 }}
             >
-              <div className="w-16 h-16 bg-gradient-to-r from-emerald-600 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🎯</span>
               </div>
               <h3 className="text-lg font-semibold text-white mb-3">Qualitätsfokus</h3>

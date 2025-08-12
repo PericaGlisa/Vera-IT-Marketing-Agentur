@@ -36,7 +36,7 @@ const dockItems = [
     name: "Kontakt",
     href: "/kontakt",
     icon: Mail,
-    color: "from-rose-500 to-orange-500",
+    color: "from-indigo-500 to-purple-500",
   },
   {
     name: "Beratungstermin buchen",

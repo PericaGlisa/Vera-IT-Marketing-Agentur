@@ -43,14 +43,14 @@ const services = [
     icon: Smartphone,
     title: "Mobile Anwendungen",
     description: "Native und Cross-Platform Mobile Apps für iOS und Android mit erstklassiger User Experience.",
-    gradient: "from-emerald-600 to-orange-600",
+    gradient: "from-indigo-600 to-purple-600",
     href: "/leistungen/mobile-apps",
   },
   {
     icon: Palette,
     title: "Interface Design",
     description: "Benutzerorientiertes Design, das konvertiert. Von Wireframes bis zu interaktiven Prototypen.",
-    gradient: "from-orange-600 to-rose-600",
+    gradient: "from-purple-600 to-violet-600",
     href: "/leistungen/ui-ux-design",
   },
   {
@@ -71,7 +71,7 @@ const services = [
     icon: Video,
     title: "Video-Produktion",
     description: "Professionelle Video-Produktion für Marketing, Schulungen und Unternehmenskommunikation.",
-    gradient: "from-pink-600 to-red-600",
+    gradient: "from-violet-600 to-indigo-600",
     href: "/leistungen/video-produktion",
   },
   {
@@ -92,7 +92,7 @@ const services = [
     icon: Shield,
     title: "Cybersicherheit",
     description: "Umfassender Schutz vor Cyberbedrohungen mit modernen Sicherheitslösungen und Compliance.",
-    gradient: "from-red-600 to-orange-600",
+    gradient: "from-cyan-600 to-emerald-600",
     href: "/leistungen/cybersecurity",
   },
   {
