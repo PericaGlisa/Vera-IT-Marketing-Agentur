@@ -191,7 +191,7 @@ export default function MobileAppsPage() {
                   className="w-full border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white bg-transparent"
                   asChild
                 >
-                  <Link href="/kontakt">Beratung anfragen</Link>
+                  <Link href="/beratung">Beratung anfragen</Link>
                 </Button>
               </motion.div>
             ))}

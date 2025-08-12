@@ -139,8 +139,8 @@ export default function ECommerceDevelopmentPage() {
             Leistungsstarke Online-Shops, die verkaufen. Wir entwickeln skalierbare E-Commerce-Lösungen mit optimaler
             User Experience und maximaler Conversion-Rate.
           </p>
-          <Button size="lg" className="w-full sm:w-auto" onClick={() => window.location.href = '/neue-kunden-form'}>
-            E-Commerce Projekt starten
+          <Button size="lg" className="w-full sm:w-auto" asChild>
+            <Link href="/neue-kunden-form">E-Commerce Projekt starten</Link>
           </Button>
         </motion.div>
 
@@ -216,9 +216,9 @@ export default function ECommerceDevelopmentPage() {
                 <Button
                   variant="outline"
                   className="w-full border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white bg-transparent"
-                  onClick={() => window.location.href = '/contact'}
+                  asChild
                 >
-                  Beratung anfragen
+                  <Link href="/beratung">Beratung anfragen</Link>
                 </Button>
               </motion.div>
             ))}
@@ -266,7 +266,9 @@ export default function ECommerceDevelopmentPage() {
                     ))}
                   </ul>
                 </div>
-                <Button className="w-full bg-zinc-700 hover:bg-zinc-600" onClick={() => window.location.href = '/contact'}>Service anfragen</Button>
+                <Button className="w-full bg-zinc-700 hover:bg-zinc-600" asChild>
+                  <Link href="/beratung">Service anfragen</Link>
+                </Button>
               </motion.div>
             ))}
           </div>
@@ -287,8 +289,8 @@ export default function ECommerceDevelopmentPage() {
             Lassen Sie uns gemeinsam einen E-Commerce-Shop entwickeln, der Ihre Kunden begeistert und Ihren Umsatz
             steigert.
           </p>
-          <Button variant="secondary" size="lg" className="bg-white text-blue-600 hover:bg-white/90 w-full sm:w-auto" onClick={() => window.location.href = '/neue-kunden-form'}>
-            E-Commerce Beratung buchen
+          <Button variant="secondary" size="lg" className="bg-white text-blue-600 hover:bg-white/90 w-full sm:w-auto" asChild>
+            <Link href="/beratung">E-Commerce Beratung buchen</Link>
           </Button>
         </motion.div>
       </div>

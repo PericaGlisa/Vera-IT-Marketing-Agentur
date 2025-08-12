@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X, ChevronDown } from "lucide-react"
+import { ChevronDown, Menu, X } from 'lucide-react'
 import {
   Brain,
   Code,
@@ -332,12 +332,30 @@ export function Navigation() {
                 {/* Inner glass reflection */}
                 <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent rounded-lg opacity-60"></div>
                 
-                {/* Menu Icon */}
-                <div className="relative">
-                  <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.3 }}>
-                    {isOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6 text-white drop-shadow-lg" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6 text-white drop-shadow-lg" />}
-                  </motion.div>
-                </div>
+                {/* Animated Menu Icon */}
+                <motion.div
+                  initial={false}
+                  animate={{ rotate: isOpen ? 180 : 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                >
+                  {isOpen ? (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <X className="w-5 h-5 text-white" />
+                    </motion.div>
+                  ) : (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <Menu className="w-5 h-5 text-white" />
+                    </motion.div>
+                  )}
+                </motion.div>
               </div>
             </div>
           </button>

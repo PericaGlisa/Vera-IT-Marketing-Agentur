@@ -100,10 +100,12 @@ export function Hero() {
             </div>
 
             <div className="flex flex-col items-center w-full sm:w-auto">
-              <Button variant="outline" size="lg" className="group bg-transparent w-full sm:w-auto min-w-[160px] sm:min-w-[180px]">
-                <Calendar className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
-                Beratungstermin buchen
-              </Button>
+              <Link href="/beratung" className="w-full sm:w-auto">
+                <Button variant="outline" size="lg" className="group bg-transparent w-full sm:w-auto min-w-[160px] sm:min-w-[180px]">
+                  <Calendar className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
+                  Beratungstermin buchen
+                </Button>
+              </Link>
               <p className="text-xs text-gray-500 mt-2 text-center">
                 15 Min • Kostenlos
               </p>

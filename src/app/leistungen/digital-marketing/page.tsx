@@ -6,7 +6,6 @@ import { TrendingUp, Search, Target, BarChart3, Mail, Share2 } from "lucide-reac
 import { Button } from "@/components/ui/Button"
 import Link from "next/link"
 import StructuredData from "@/components/seo/StructuredData"
-import Breadcrumbs from "@/components/seo/Breadcrumbs"
 
 const features = [
   {
@@ -106,16 +105,12 @@ export default function DigitalMarketingPage() {
     serviceType: "Digital Marketing Services"
   }
 
-  const breadcrumbItems = [
-    { label: "Leistungen", href: "/leistungen" },
-    { label: "Digitales Marketing" }
-  ]
+
 
   return (
     <div className="pt-20 sm:pt-24 lg:pt-28 pb-12 sm:pb-16 bg-zinc-950">
       <StructuredData type="service" data={digitalMarketingSchema} />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <Breadcrumbs items={breadcrumbItems} />
         {/* Hero Section */}
         <motion.div
           className="text-center mb-16 sm:mb-20"

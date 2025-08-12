@@ -219,7 +219,7 @@ export default function BrandDesignPage() {
                   }`}
                   asChild
                 >
-                  <Link href="/kontakt">Beratung anfragen</Link>
+                  <Link href="/beratung">Beratung anfragen</Link>
                 </Button>
               </motion.div>
             ))}
@@ -268,7 +268,7 @@ export default function BrandDesignPage() {
             bleibt.
           </p>
           <Button variant="secondary" size="lg" className="bg-white text-pink-600 hover:bg-white/90 w-full sm:w-auto" asChild>
-            <Link href="/neue-kunden-form">Brand-Beratung buchen</Link>
+            <Link href="/beratung">Brand-Beratung buchen</Link>
           </Button>
         </motion.div>
       </div>

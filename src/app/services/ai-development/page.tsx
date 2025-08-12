@@ -78,7 +78,7 @@ export default function AIDevPage() {
             die Ihre Geschäftsprozesse revolutionieren.
           </p>
           <Button size="lg" className="w-full sm:w-auto" asChild>
-            <Link href="/neue-kunden-form">Kostenlose Beratung anfragen</Link>
+            <Link href="/beratung">Kostenlose Beratung anfragen</Link>
           </Button>
         </motion.div>
 

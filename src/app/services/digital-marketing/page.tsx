@@ -119,7 +119,7 @@ export default function DigitalMarketingPage() {
             erreichen, Leads zu generieren und nachhaltiges Wachstum zu erzielen.
           </p>
           <Button size="lg" className="w-full sm:w-auto" asChild>
-            <Link href="/kontakt">Marketing-Strategie entwickeln</Link>
+            <Link href="/beratung">Marketing-Strategie entwickeln</Link>
           </Button>
         </motion.div>
 
@@ -208,7 +208,7 @@ export default function DigitalMarketingPage() {
                   }`}
                   asChild
                 >
-                  <Link href="/kontakt">Beratung anfragen</Link>
+                  <Link href="/beratung">Beratung anfragen</Link>
                 </Button>
               </motion.div>
             ))}
@@ -256,7 +256,7 @@ export default function DigitalMarketingPage() {
             Lassen Sie uns gemeinsam eine Marketing-Strategie entwickeln, die messbare Ergebnisse liefert.
           </p>
           <Button variant="secondary" size="lg" className="bg-white text-purple-600 hover:bg-white/90 w-full sm:w-auto" asChild>
-            <Link href="/neue-kunden-form">Kostenlose Marketing-Analyse</Link>
+            <Link href="/beratung">Kostenlose Marketing-Analyse</Link>
           </Button>
         </motion.div>
       </div>

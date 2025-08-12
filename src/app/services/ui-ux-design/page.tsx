@@ -189,7 +189,7 @@ export default function UIUXDesignPage() {
                   className="w-full border-rose-500 text-rose-500 hover:bg-rose-500 hover:text-white bg-transparent"
                   asChild
                 >
-                  <Link href="/kontakt">Beratung anfragen</Link>
+                  <Link href="/beratung">Beratung anfragen</Link>
                 </Button>
               </motion.div>
             ))}
@@ -237,7 +237,7 @@ export default function UIUXDesignPage() {
             Lassen Sie uns gemeinsam ein Design schaffen, das Ihre Nutzer begeistert und Ihr Business voranbringt.
           </p>
           <Button variant="secondary" size="lg" className="bg-white text-rose-600 hover:bg-white/90 w-full sm:w-auto" asChild>
-            <Link href="/neue-kunden-form">Design-Beratung buchen</Link>
+            <Link href="/beratung">Design-Beratung buchen</Link>
           </Button>
         </motion.div>
       </div>

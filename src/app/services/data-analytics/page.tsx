@@ -156,7 +156,7 @@ export default function DataAnalyticsPage() {
             zu erschließen und datengetriebene Entscheidungen zu treffen.
           </p>
           <Button size="lg" className="w-full sm:w-auto" asChild>
-            <Link href="/kontakt">Datenanalyse Beratung</Link>
+            <Link href="/beratung">Datenanalyse Beratung</Link>
           </Button>
         </motion.div>
 
@@ -291,7 +291,7 @@ export default function DataAnalyticsPage() {
                   </ul>
                 </div>
                 <Button className="w-full bg-zinc-700 hover:bg-zinc-600" asChild>
-                  <Link href="/kontakt">Beratung anfragen</Link>
+                  <Link href="/beratung">Beratung anfragen</Link>
                 </Button>
               </motion.div>
             ))}
@@ -340,7 +340,7 @@ export default function DataAnalyticsPage() {
             bringen.
           </p>
           <Button variant="secondary" size="lg" className="bg-white text-purple-600 hover:bg-white/90 w-full sm:w-auto" asChild>
-            <Link href="/neue-kunden-form">Kostenlose Datenanalyse</Link>
+            <Link href="/beratung">Kostenlose Datenanalyse</Link>
           </Button>
         </motion.div>
       </div>

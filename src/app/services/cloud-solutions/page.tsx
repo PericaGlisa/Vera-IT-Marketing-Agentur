@@ -142,7 +142,7 @@ export default function CloudSolutionsPage() {
             optimal zu nutzen - von der Migration bis zum laufenden Betrieb.
           </p>
           <Button size="lg" className="w-full sm:w-auto" asChild>
-            <Link href="/kontakt">Cloud-Beratung starten</Link>
+            <Link href="/beratung">Cloud-Beratung starten</Link>
           </Button>
         </motion.div>
 
@@ -272,7 +272,7 @@ export default function CloudSolutionsPage() {
                   </ul>
                 </div>
                 <Button className="w-full bg-zinc-700 hover:bg-zinc-600" asChild>
-                  <Link href="/kontakt">Beratung anfragen</Link>
+                  <Link href="/beratung">Beratung anfragen</Link>
                 </Button>
               </motion.div>
             ))}
@@ -294,7 +294,7 @@ export default function CloudSolutionsPage() {
             Lassen Sie uns gemeinsam Ihre Cloud-Strategie entwickeln und Ihr Unternehmen in die digitale Zukunft führen.
           </p>
           <Button variant="secondary" size="lg" className="bg-white text-indigo-600 hover:bg-white/90 w-full sm:w-auto" asChild>
-            <Link href="/neue-kunden-form">Cloud-Assessment buchen</Link>
+            <Link href="/beratung">Cloud-Assessment buchen</Link>
           </Button>
         </motion.div>
       </div>

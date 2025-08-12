@@ -62,14 +62,16 @@ export function CTA() {
                 </Button>
               </Link>
 
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-purple-600 bg-transparent w-full sm:w-auto min-w-[160px] sm:min-w-[180px]"
-              >
-                <Calendar className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
-                Beratungstermin buchen
-              </Button>
+              <Link href="/beratung" className="w-full sm:w-auto">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-white hover:text-purple-600 bg-transparent w-full sm:w-auto min-w-[160px] sm:min-w-[180px]"
+                >
+                  <Calendar className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
+                  Beratungstermin buchen
+                </Button>
+              </Link>
             </motion.div>
           </div>
         </motion.div>

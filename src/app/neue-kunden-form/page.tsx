@@ -167,8 +167,8 @@ export default function NeueKundenForm() {
         <div className="mb-8 sm:mb-12">
           <div className="text-center mb-4 sm:mb-6">
             <div className="flex items-center justify-center mb-4">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl flex items-center justify-center">
-                <FileText className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl flex items-center justify-center">
+                <FileText className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
               </div>
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold">

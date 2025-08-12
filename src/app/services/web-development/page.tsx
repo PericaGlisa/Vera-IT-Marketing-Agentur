@@ -103,7 +103,7 @@ export default function WebDevelopmentPage() {
             Moderne, performante Websites und Web-Anwendungen, die Ihre Nutzer begeistern. Von Corporate Websites bis zu
             komplexen SaaS-Plattformen - wir entwickeln digitale Lösungen, die funktionieren.
           </p>
-          <Link href="/kontakt">
+          <Link href="/beratung">
             <Button size="lg" className="w-full sm:w-auto">
               Kostenloses Beratungsgespräch
             </Button>
@@ -167,7 +167,7 @@ export default function WebDevelopmentPage() {
                   <span className="text-cyan-400 font-bold text-lg">{service.price}</span>
                 </div>
                 <p className="text-gray-400 leading-relaxed mb-6">{service.description}</p>
-                <Link href="/neue-kunden-form">
+                <Link href="/beratung">
                   <Button
                     variant="outline"
                     className="w-full border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white bg-transparent"

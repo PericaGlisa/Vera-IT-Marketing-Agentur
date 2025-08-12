@@ -3,6 +3,7 @@
 import { useEffect } from "react"
 import { motion } from "framer-motion"
 import { ShoppingCart, CreditCard, Package, BarChart3, Shield, Smartphone } from "lucide-react"
+import Link from "next/link"
 import { Button } from "@/components/ui/Button"
 
 const features = [
@@ -287,8 +288,8 @@ export default function ECommerceDevelopmentPage() {
             Lassen Sie uns gemeinsam einen E-Commerce-Shop entwickeln, der Ihre Kunden begeistert und Ihren Umsatz
             steigert.
           </p>
-          <Button variant="secondary" size="lg" className="bg-white text-blue-600 hover:bg-white/90 w-full sm:w-auto" onClick={() => window.location.href = '/neue-kunden-form'}>
-            E-Commerce Beratung buchen
+          <Button variant="secondary" size="lg" className="bg-white text-blue-600 hover:bg-white/90 w-full sm:w-auto" asChild>
+            <Link href="/beratung">E-Commerce Beratung buchen</Link>
           </Button>
         </motion.div>
       </div>

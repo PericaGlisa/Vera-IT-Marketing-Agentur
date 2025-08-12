@@ -185,7 +185,7 @@ export default function SaaSDevelopmentPage() {
                   className="w-full border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-white bg-transparent"
                   asChild
                 >
-                  <Link href="/kontakt">Beratung anfragen</Link>
+                  <Link href="/beratung">Beratung anfragen</Link>
                 </Button>
               </motion.div>
             ))}
@@ -238,7 +238,7 @@ export default function SaaSDevelopmentPage() {
             className="bg-white text-emerald-600 hover:bg-white/90 w-full sm:w-auto"
             asChild
           >
-            <Link href="/neue-kunden-form">Kostenlose Beratung</Link>
+            <Link href="/beratung">Kostenlose Beratung</Link>
           </Button>
         </motion.div>
       </div>

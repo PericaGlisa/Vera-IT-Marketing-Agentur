@@ -248,7 +248,7 @@ export default function VideoProductionPage() {
           <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
             Lassen Sie uns gemeinsam Videos produzieren, die Ihre Botschaft kraftvoll und einprägsam vermitteln.
           </p>
-          <Link href="/neue-kunden-form">
+          <Link href="/beratung">
             <Button variant="secondary" size="lg" className="bg-white text-red-600 hover:bg-white/90 w-full sm:w-auto">
               Video-Beratung buchen
             </Button>
