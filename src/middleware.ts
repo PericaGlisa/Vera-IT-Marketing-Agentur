@@ -18,12 +18,12 @@ export function middleware(request: NextRequest) {
   // Content Security Policy
   const csp = [
     "default-src 'self'",
-    "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com",
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-    "font-src 'self' https://fonts.gstatic.com",
+    "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://embed.cal.com https://cal.com",
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://embed.cal.com https://cal.com",
+    "font-src 'self' https://fonts.gstatic.com https://embed.cal.com https://cal.com",
     "img-src 'self' data: https: blob:",
-    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com",
-    "frame-src 'self' https://www.youtube.com https://player.vimeo.com https://www.google.com https://maps.google.com",
+    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://embed.cal.com https://cal.com https://api.cal.com",
+    "frame-src 'self' https://www.youtube.com https://player.vimeo.com https://www.google.com https://maps.google.com https://embed.cal.com https://cal.com",
     "object-src 'none'",
     "base-uri 'self'",
     "form-action 'self'",
