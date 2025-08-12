@@ -9,6 +9,7 @@ import CookieConsentBanner from "@/components/cookie-consent/CookieConsentBanner
 import Analytics from "@/components/analytics/Analytics"
 import StructuredData from "@/components/seo/StructuredData"
 import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema"
+import PerformanceMonitor from "@/components/performance/PerformanceMonitor"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -102,6 +103,7 @@ export default function RootLayout({
         <FloatingDock />
         <CookieConsentBanner />
         <Analytics />
+        <PerformanceMonitor />
       </body>
     </html>
   )

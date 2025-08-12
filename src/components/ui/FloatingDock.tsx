@@ -10,6 +10,7 @@ import {
   Mail,
   Plus,
   ArrowUp,
+  Calendar,
 } from "lucide-react"
 
 const dockItems = [
@@ -36,6 +37,12 @@ const dockItems = [
     href: "/kontakt",
     icon: Mail,
     color: "from-rose-500 to-orange-500",
+  },
+  {
+    name: "Beratungstermin buchen",
+    href: "/beratung",
+    icon: Calendar,
+    color: "from-green-500 to-emerald-500",
   },
   {
     name: "Nach oben",
