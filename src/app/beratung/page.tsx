@@ -10,16 +10,23 @@ import { Button } from '@/components/ui/Button';
 export default function BeratungPage() {
   useEffect(() => {
     (async function () {
-      const cal = await getCalApi({ namespace: '15min' });
-      cal('ui', {
-        theme: 'dark',
-        cssVarsPerTheme: {
-          light: { 'cal-brand': '#8b5cf6' },
-          dark: { 'cal-brand': '#8b5cf6' }
-        },
-        hideEventTypeDetails: false,
-        layout: 'month_view'
-      });
+      try {
+        console.log('Loading Cal.com API...');
+        const cal = await getCalApi({ namespace: '15min' });
+        console.log('Cal.com API loaded successfully:', cal);
+        cal('ui', {
+          theme: 'dark',
+          cssVarsPerTheme: {
+            light: { 'cal-brand': '#8b5cf6' },
+            dark: { 'cal-brand': '#8b5cf6' }
+          },
+          hideEventTypeDetails: false,
+          layout: 'month_view'
+        });
+        console.log('Cal.com UI configured');
+      } catch (error) {
+        console.error('Error loading Cal.com:', error);
+      }
     })();
   }, []);
 
@@ -124,8 +131,18 @@ export default function BeratungPage() {
                 <Cal 
                   namespace="15min"
                   calLink="verait/15min"
-                  style={{ width: '100%', height: '600px', overflow: 'scroll' }}
-                  config={{ layout: 'month_view', theme: 'dark' }}
+                  className="cal-embed"
+                  style={{ width: '100%', height: '600px', overflow: 'visible' }}
+                  config={{ 
+                    layout: 'month_view', 
+                    theme: 'dark',
+                    hideEventTypeDetails: false,
+                    styles: {
+                      branding: {
+                        brandColor: '#8b5cf6'
+                      }
+                    }
+                  }}
                 />
               </div>
             </div>

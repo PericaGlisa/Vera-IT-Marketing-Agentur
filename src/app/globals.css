@@ -141,3 +141,32 @@
   scrollbar-width: thin;
   scrollbar-color: #8b5cf6 #111111;
 }
+
+/* Cal.com embed styles */
+.cal-embed {
+  width: 100% !important;
+  height: 600px !important;
+  min-height: 600px !important;
+  border: none !important;
+  background: transparent !important;
+  z-index: 1 !important;
+  position: relative !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Ensure Cal.com iframe is visible */
+iframe[src*="cal.com"],
+iframe[src*="embed.cal.com"] {
+  width: 100% !important;
+  height: 600px !important;
+  min-height: 600px !important;
+  border: none !important;
+  background: transparent !important;
+  z-index: 1 !important;
+  position: relative !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
