@@ -11,33 +11,31 @@ const values = [
     icon: Target,
     title: "Innovation",
     description:
-      "Wir setzen auf modernste Technologien und innovative Ansätze, um Ihren digitalen Erfolg zu gewährleisten.",
+      "Wir jagen immer dem nächsten großen Ding hinterher! Von KI, die sogar die Tech-Zauberer im Miniatur Wunderland beeindrucken würde, bis hin zu hochmodernen Lösungen, die Grenzen verschieben.",
   },
   {
     icon: Users,
     title: "Partnerschaft",
     description:
-      "Wir arbeiten eng mit unseren Kunden zusammen und verstehen uns als langfristige Partner für Ihren Erfolg.",
+      "Wir arbeiten nicht nur mit euch – wir werden Teil eurer Crew! Wie echte Hamburger glauben wir an Loyalität, Vertrauen und gemeinsames Segeln durch digitale Stürme.",
   },
   {
     icon: Award,
     title: "Qualität",
-    description: "Höchste Qualitätsstandards und kontinuierliche Verbesserung stehen im Mittelpunkt unserer Arbeit.",
+    description: "Unsere Standards sind höher als die Elbphilharmonie! Wir sind Perfektionisten, die sich nicht mit 'gut genug' zufriedengeben, wenn wir etwas Außergewöhnliches liefern können.",
   },
   {
     icon: Globe,
     title: "Nachhaltigkeit",
-    description: "Wir entwickeln nachhaltige digitale Lösungen, die langfristig Wert schaffen und die Umwelt schonen.",
+    description: "Grüne Technik ist in unserer DNA! Wir schaffen digitale Lösungen, die länger halten als Hamburgs maritimes Erbe und einen positiven Fußabdruck auf unserem Planeten hinterlassen.",
   },
 ]
 
 const milestones = [
-  { year: "2021", title: "Gründung", description: "Vera IT wird in Hamburg gegründet" },
-  { year: "2022", title: "Erste Erfolge", description: "10+ erfolgreiche Projekte abgeschlossen" },
-  { year: "2022", title: "Team-Expansion", description: "Wachstum auf 8 Experten" },
-  { year: "2023", title: "KI-Spezialisierung", description: "Fokus auf KI-Entwicklung" },
-  { year: "2023", title: "Marktführer", description: "20+ Projekte, 8+ Teammitglieder" },
-  { year: "2024", title: "Internationale Expansion", description: "25+ Projekte in ganz Europa" },
+  { year: "2021", title: "Die Gründung", description: "Vera IT in einem gemütlichen Büro nahe der Alster gegründet – nur ich, mein Laptop und viel zu viel Kaffee!" },
+  { year: "2022", title: "Erstes Team", description: "10+ erfolgreiche Projekte abgeschlossen und auf 8 großartige Teammitglieder erweitert. Wir sind offiziell eine richtige Hamburger Tech-Truppe!" },
+  { year: "2023", title: "KI-Pioniere", description: "Voll auf KI-Entwicklung gesetzt – 20+ Projekte später sind wir die KI-Nerds der Hanseatic League of Tech!" },
+  { year: "2024", title: "Europäisches Abenteuer", description: "25+ Projekte quer durch Europa! Von Hamburgs Hafen bis zum Rest des Kontinents – wir verbreiten die digitale Liebe!" },
 ]
 
 export default function AboutPage() {
@@ -70,8 +68,9 @@ export default function AboutPage() {
             Über <span className="gradient-text">Vera IT</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Seit 2021 transformieren wir Unternehmen durch innovative digitale Lösungen. Unser Team aus 8+ Experten
-            entwickelt maßgeschneiderte KI-Anwendungen, moderne Websites und datengetriebene Marketing-Strategien.
+            Moin! Seit 2021 brauen wir digitale Magie hier in Hamburgs historischer Speicherstadt. 
+            Unser Team aus 8+ Tech-Enthusiasten entwickelt maßgeschneiderte KI-Lösungen, schicke Websites und datengetriebene Marketing-Strategien, 
+            die selbst den erfahrensten Hamburger stolz machen würden. Wir sind nicht nur eine weitere Agentur – wir sind eure digitalen Nachbarn!
           </p>
         </motion.div>
 
@@ -86,13 +85,14 @@ export default function AboutPage() {
           >
             <h2 className="text-2xl sm:text-3xl font-heading font-bold mb-4 sm:mb-6">Unsere Mission</h2>
             <p className="text-gray-400 leading-relaxed mb-4">
-              Wir machen digitale Transformation für Unternehmen jeder Größe zugänglich. Durch den Einsatz modernster
-              Technologien wie Künstlicher Intelligenz, Cloud Computing und datengetriebener Analysen helfen wir unseren
-              Kunden, ihre Geschäftsziele zu erreichen.
+              Schaut mal, wir haben uns zur Mission gemacht, digitale Transformation so zugänglich zu machen wie ein Fischbrötchen am Hafen! 
+              Ob ihr ein Startup im trendigen Schanzenviertel seid oder ein etabliertes Unternehmen in der Nähe vom Rathaus – wir nutzen modernste 
+              KI, Cloud-Tech und Datenanalyse, um euch beim Erreichen eurer Ziele zu helfen. Kein Corporate-Blabla – nur echte Lösungen, die funktionieren.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              Unser Fokus liegt darauf, komplexe technische Lösungen verständlich und nutzbar zu machen, damit
-              Unternehmen ihre Effizienz steigern und neue Märkte erschließen können.
+              Wir sind besessen davon, komplexe Technik in etwas zu verwandeln, das ihr tatsächlich verstehen und nutzen könnt. Denkt an uns als eure 
+              digitalen Übersetzer – wir sprechen fließend Code, damit ihr das nicht müsst. Unser Ziel? Euer Business effizienter zu machen 
+              als Hamburgs legendäre Hafenoperationen!
             </p>
           </motion.div>
 
@@ -105,13 +105,14 @@ export default function AboutPage() {
           >
             <h2 className="text-2xl sm:text-3xl font-heading font-bold mb-4 sm:mb-6">Unsere Vision</h2>
             <p className="text-gray-400 leading-relaxed mb-4">
-              Wir streben danach, die führende digitale Agentur in Europa zu werden, die Unternehmen dabei
-              hilft, das volle Potenzial der digitalen Transformation auszuschöpfen.
+              Wir träumen groß hier in der Hansestadt! Unsere Vision ist es, Europas erste Anlaufstelle für digitale Agenturen zu werden und 
+              unseren Hamburger Geist über den ganzen Kontinent zu verbreiten. Genau wie die Elbe unsere Stadt mit der Welt verbindet, 
+              verbinden wir Unternehmen mit ihrem digitalen Potenzial. Wir bauen nicht nur Websites; wir bauen die Zukunft!
             </p>
             <p className="text-gray-400 leading-relaxed">
-              Bis 2030 wollen wir 100+ Unternehmen dabei unterstützt haben, ihre digitalen Ziele zu erreichen und dabei
-              nachhaltige, innovative Lösungen zu schaffen, die einen positiven Einfluss auf Gesellschaft und Umwelt
-              haben.
+              Bis 2030 wollen wir 100+ Unternehmen dabei geholfen haben, ihren digitalen Sweet Spot zu finden. Und wir machen es auf Hamburger Art – 
+              nachhaltig, innovativ und mit einem positiven Impact, der unsere wunderschöne Hansestadt stolz machen würde. 
+              Denkt an grüne Technologie trifft maritime Tradition!
             </p>
           </motion.div>
         </div>
@@ -124,7 +125,7 @@ export default function AboutPage() {
           transition={{ duration: isMobile ? 0.4 : 0.6 }}
           viewport={{ once: true, margin: isMobile ? "-20px" : "-50px" }}
         >
-          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-center mb-6 sm:mb-8 lg:mb-12">Unsere Werte</h2>
+          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-center mb-8 sm:mb-12">Wofür wir stehen</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {values.map((value, index) => (
               <motion.div
@@ -150,102 +151,7 @@ export default function AboutPage() {
           </div>
         </motion.div>
 
-        {/* Founder Stories */}
-        <motion.div
-          className="mb-12 sm:mb-16 lg:mb-20"
-          initial={{ opacity: 0, y: isMobile ? 15 : 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: isMobile ? 0.4 : 0.6 }}
-          viewport={{ once: true, margin: isMobile ? "-20px" : "-50px" }}
-        >
-          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-center mb-6 sm:mb-8 lg:mb-12">Die Geschichte hinter Vera IT</h2>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12">
-            {/* Founder Story 1 */}
-            <motion.div
-              className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8"
-              initial={{ opacity: 0, x: isMobile ? 0 : -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl">👩‍💼</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-1">Dr. Sarah Weber</h3>
-                  <p className="text-orange-400 text-sm">CEO & Gründerin</p>
-                </div>
-              </div>
-              <blockquote className="text-gray-300 italic mb-4 leading-relaxed">
-                "Nach 15 Jahren in der Tech-Branche wollte ich etwas Eigenes schaffen. Vera IT entstand aus der Frustration heraus, dass viele Unternehmen bei der Digitalisierung allein gelassen werden. Wir wollten eine Agentur sein, die nicht nur Code schreibt, sondern echte Partnerschaften eingeht."
-              </blockquote>
-              <p className="text-gray-400 text-sm">
-                Sarah gründete Vera IT 2021 in ihrem Hamburger Homeoffice. Heute leitet sie ein Team von 8+ Experten und hat über 25 erfolgreiche Projekte realisiert.
-              </p>
-            </motion.div>
 
-            {/* Behind the Scenes */}
-            <motion.div
-              className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8"
-              initial={{ opacity: 0, x: isMobile ? 0 : 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl">🏠</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-1">Hinter den Kulissen</h3>
-                  <p className="text-green-400 text-sm">Unser Arbeitsalltag</p>
-                </div>
-              </div>
-              <p className="text-gray-300 mb-4 leading-relaxed">
-                Unser Team arbeitet hybrid - teils remote, teils in unserem gemütlichen Büro in Hamburg-Altona. Jeden Freitag gibt es unser legendäres "Pizza & Code Review" Meeting, wo wir bei italienischem Essen die Woche reflektieren.
-              </p>
-              <p className="text-gray-400 text-sm">
-                Wir glauben an Work-Life-Balance: Flexible Arbeitszeiten, Hunde im Büro willkommen, und jeden Monat ein Team-Event - vom Escape Room bis zur Hafenrundfahrt.
-              </p>
-            </motion.div>
-          </div>
-
-          {/* Company Culture */}
-          <motion.div
-            className="bg-gradient-to-r from-stone-800 to-neutral-800 border border-gray-600 rounded-2xl p-6 sm:p-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-xl font-semibold text-white mb-4 text-center">Was uns antreibt</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <span className="text-xl">☕</span>
-                </div>
-                <h4 className="text-white font-medium mb-2">Kaffee & Code</h4>
-                <p className="text-gray-400 text-sm">Unser Büro verbraucht 47 kg Kaffee pro Jahr - Qualität braucht Koffein!</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <span className="text-xl">🌱</span>
-                </div>
-                <h4 className="text-white font-medium mb-2">Nachhaltigkeit</h4>
-                <p className="text-gray-400 text-sm">100% Ökostrom, papierloses Büro und CO2-neutrale Server-Infrastruktur.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <span className="text-xl">🎯</span>
-                </div>
-                <h4 className="text-white font-medium mb-2">Lernen</h4>
-                <p className="text-gray-400 text-sm">Jeder im Team hat 2 Tage pro Monat für Weiterbildung und neue Technologien.</p>
-              </div>
-            </div>
-          </motion.div>
-        </motion.div>
 
         {/* Timeline */}
         <motion.div
@@ -255,7 +161,7 @@ export default function AboutPage() {
           transition={{ duration: isMobile ? 0.4 : 0.6 }}
           viewport={{ once: true, margin: isMobile ? "-20px" : "-50px" }}
         >
-          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-center mb-6 sm:mb-8 lg:mb-12">Unsere Meilensteine</h2>
+          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-center mb-8 sm:mb-12">Unsere Reise bisher</h2>
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-500 via-purple-500 to-violet-500 transform sm:-translate-x-0.5"></div>
@@ -313,11 +219,11 @@ export default function AboutPage() {
           viewport={{ once: true }}
         >
           <h2 className="text-2xl sm:text-3xl font-heading font-bold text-white mb-4 sm:mb-6">
-            Werden Sie Teil unserer Erfolgsgeschichte
+            Bereit für unser digitales Abenteuer?
           </h2>
           <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
-            Lassen Sie uns gemeinsam Ihr nächstes digitales Projekt realisieren und Ihr Unternehmen in die Zukunft
-            führen.
+            Lasst uns einen Kaffee trinken (oder ein Astra, wenn das euer Ding ist) und über euer nächstes digitales Projekt quatschen! 
+            Wir sind hier, um eure wildesten Tech-Träume Realität werden zu lassen – auf Hamburger Art!
           </p>
           <Link href="/kontakt">
             <Button variant="secondary" size="lg" className="bg-white text-purple-600 hover:bg-white/90 w-full sm:w-auto">
