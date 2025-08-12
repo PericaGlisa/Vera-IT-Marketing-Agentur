@@ -35,9 +35,9 @@ const config: Config = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
-          purple: "#8b5cf6",
-          indigo: "#6366f1",
-          violet: "#a855f7",
+          terracotta: "#c4715a",
+          warmOrange: "#d97706",
+          amber: "#f59e0b",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -54,10 +54,10 @@ const config: Config = {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
-          cyan: "#06b6d4",
-          emerald: "#10b981",
-          orange: "#f59e0b",
-          rose: "#f43f5e",
+          sage: "#869686",
+          warmGreen: "#16a34a",
+          warmGray: "#78716c",
+          stone: "#57534e",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -81,9 +81,9 @@ const config: Config = {
         sans: ["Inter", "system-ui", "sans-serif"],
       },
       backgroundImage: {
-        "primary-gradient": "linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%)",
-        "secondary-gradient": "linear-gradient(135deg, #06b6d4 0%, #10b981 100%)",
-        "accent-gradient": "linear-gradient(135deg, #f59e0b 0%, #f43f5e 100%)",
+        "primary-gradient": "linear-gradient(135deg, #ea580c 0%, #c4715a 50%, #d97706 100%)",
+        "secondary-gradient": "linear-gradient(135deg, #16a34a 0%, #059669 100%)",
+        "accent-gradient": "linear-gradient(135deg, #78716c 0%, #57534e 100%)",
       },
       animation: {
         float: "float 6s ease-in-out infinite",

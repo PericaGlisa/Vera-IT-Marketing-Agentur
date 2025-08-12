@@ -114,9 +114,9 @@ export function TechStack() {
       
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/6 sm:left-1/4 w-48 h-48 sm:w-72 sm:h-72 lg:w-96 lg:h-96 bg-gradient-to-r from-indigo-500 via-purple-500 to-violet-500 rounded-full blur-3xl opacity-20 animate-pulse-slow" />
+        <div className="absolute top-1/4 left-1/6 sm:left-1/4 w-48 h-48 sm:w-72 sm:h-72 lg:w-96 lg:h-96 bg-gradient-to-r from-orange-500 via-red-500 to-amber-500 rounded-full blur-3xl opacity-20 animate-pulse-slow" />
         <div 
-          className="absolute bottom-1/4 right-1/6 sm:right-1/4 w-60 h-60 sm:w-80 sm:h-80 lg:w-96 lg:h-96 bg-gradient-to-r from-cyan-500 to-emerald-500 rounded-full blur-3xl opacity-20 animate-pulse-slow"
+          className="absolute bottom-1/4 right-1/6 sm:right-1/4 w-60 h-60 sm:w-80 sm:h-80 lg:w-96 lg:h-96 bg-gradient-to-r from-green-500 to-teal-500 rounded-full blur-3xl opacity-20 animate-pulse-slow"
           style={{ animationDelay: "2s" }}
         />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 sm:w-48 sm:h-48 bg-gradient-to-r from-rose-500/10 to-pink-500/10 rounded-full blur-2xl animate-pulse-slow" style={{ animationDelay: "4s" }} />
@@ -160,24 +160,24 @@ export function TechStack() {
                 whileHover={{ scale: 1.02, rotateY: 2 }}
                 className="group"
               >
-                <div className="relative p-4 sm:p-6 bg-zinc-800 border border-gray-700 rounded-2xl hover:border-purple-500/50 transition-all duration-300 h-full text-center">
+                <div className="relative p-4 sm:p-6 bg-zinc-800 border border-gray-700 rounded-2xl hover:border-orange-500/50 transition-all duration-300 h-full text-center">
                   {/* Tech Icon */}
                   <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
                     {tech.icon}
                   </div>
                   
                   {/* Tech Name */}
-                  <h3 className="text-base sm:text-lg font-heading font-semibold text-white mb-2 sm:mb-3 group-hover:text-purple-500 transition-colors">
+                  <h3 className="text-base sm:text-lg font-heading font-semibold text-white mb-2 sm:mb-3 group-hover:text-orange-500 transition-colors">
                     {tech.name}
                   </h3>
                   
                   {/* Category Badge */}
-                  <span className="inline-block px-2 sm:px-3 py-1 text-xs font-medium bg-gradient-to-r from-purple-500/20 to-indigo-500/20 text-purple-300 rounded-full border border-purple-500/30">
+                  <span className="inline-block px-2 sm:px-3 py-1 text-xs font-medium bg-gradient-to-r from-orange-500/20 to-red-500/20 text-orange-300 rounded-full border border-orange-500/30">
                     {tech.category}
                   </span>
                   
                   {/* Hover Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/0 to-indigo-600/0 group-hover:from-purple-600/5 group-hover:to-indigo-600/5 rounded-2xl transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-orange-600/0 to-red-600/0 group-hover:from-orange-600/5 group-hover:to-red-600/5 rounded-2xl transition-opacity duration-300" />
                 </div>
               </motion.div>
             ))}
@@ -191,7 +191,7 @@ export function TechStack() {
                 onClick={() => setCurrentIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentIndex
-                    ? "bg-purple-500 scale-125"
+                    ? "bg-orange-500 scale-125"
                     : "bg-zinc-600 hover:bg-zinc-500"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
