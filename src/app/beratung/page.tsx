@@ -128,6 +128,9 @@ export default function BeratungPage() {
               
               {/* Cal.com Embed */}
               <div className="bg-zinc-900/50 rounded-xl p-4 min-h-[600px]">
+                {/* Temporary test with a known working Cal.com link */}
+
+                
                 <Cal 
                   namespace="15min"
                   calLink="verait/15min"
