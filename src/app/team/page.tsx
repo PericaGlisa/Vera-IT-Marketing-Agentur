@@ -227,9 +227,164 @@ export default function TeamPage() {
           </div>
         </motion.div>
 
+        {/* Team Members */}
+        <motion.div
+          className="mb-16 sm:mb-20"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-center mb-8 sm:mb-12">Lernen Sie unser Team kennen</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {teamMembers.map((member, index) => (
+              <motion.div
+                key={member.name}
+                className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 hover:border-orange-500/50 transition-all duration-300 group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="relative mb-6">
+                  <div className="w-24 h-24 mx-auto rounded-full overflow-hidden bg-gradient-to-r from-orange-500 to-red-500 p-1">
+                    <div className="w-full h-full rounded-full bg-zinc-800 flex items-center justify-center">
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={88}
+                        height={88}
+                        className="rounded-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="text-center mb-4">
+                  <h3 className="text-lg font-semibold text-white mb-1">{member.name}</h3>
+                  <p className="text-orange-400 text-sm font-medium mb-1">{member.position}</p>
+                  <p className="text-gray-500 text-xs">{member.department}</p>
+                </div>
+                
+                <p className="text-gray-400 text-sm leading-relaxed mb-6 text-center">
+                  {member.bio}
+                </p>
+                
+                <div className="flex justify-center space-x-3">
+                  {member.social.linkedin && (
+                    <a
+                      href={member.social.linkedin}
+                      className="w-8 h-8 bg-zinc-700 rounded-lg flex items-center justify-center hover:bg-orange-500 transition-colors duration-300 group"
+                      aria-label={`${member.name} LinkedIn`}
+                    >
+                      <Linkedin className="w-4 h-4 text-gray-400 group-hover:text-white" />
+                    </a>
+                  )}
+                  {member.social.twitter && (
+                    <a
+                      href={member.social.twitter}
+                      className="w-8 h-8 bg-zinc-700 rounded-lg flex items-center justify-center hover:bg-orange-500 transition-colors duration-300 group"
+                      aria-label={`${member.name} Twitter`}
+                    >
+                      <Twitter className="w-4 h-4 text-gray-400 group-hover:text-white" />
+                    </a>
+                  )}
+                  {member.social.github && (
+                    <a
+                      href={member.social.github}
+                      className="w-8 h-8 bg-zinc-700 rounded-lg flex items-center justify-center hover:bg-orange-500 transition-colors duration-300 group"
+                      aria-label={`${member.name} GitHub`}
+                    >
+                      <Github className="w-4 h-4 text-gray-400 group-hover:text-white" />
+                    </a>
+                  )}
+                  {member.social.email && (
+                    <a
+                      href={`mailto:${member.social.email}`}
+                      className="w-8 h-8 bg-zinc-700 rounded-lg flex items-center justify-center hover:bg-orange-500 transition-colors duration-300 group"
+                      aria-label={`Email ${member.name}`}
+                    >
+                      <Mail className="w-4 h-4 text-gray-400 group-hover:text-white" />
+                    </a>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Team Culture & Fun Facts */}
+        <motion.div
+          className="mb-16 sm:mb-20"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-center mb-8 sm:mb-12">Fun Facts über unser Team</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <motion.div
+              className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-orange-500/50 transition-all duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🌍</span>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">6 Länder</h3>
+              <p className="text-gray-400 text-sm">Unser Team kommt aus Deutschland, Polen, China, USA, Kanada und Großbritannien</p>
+            </motion.div>
+
+            <motion.div
+              className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-orange-500/50 transition-all duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🐕</span>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">3 Bürohunde</h3>
+              <p className="text-gray-400 text-sm">Max, Luna und Charlie sorgen für gute Stimmung und Stressabbau</p>
+            </motion.div>
+
+            <motion.div
+              className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-orange-500/50 transition-all duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🎮</span>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Gaming Corner</h3>
+              <p className="text-gray-400 text-sm">PlayStation 5 und Retro-Arcade für kreative Pausen und Team-Battles</p>
+            </motion.div>
+
+            <motion.div
+              className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 text-center hover:border-orange-500/50 transition-all duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-rose-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🍕</span>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Pizza Freitag</h3>
+              <p className="text-gray-400 text-sm">Jeden Freitag bestellen wir gemeinsam Pizza und machen Code Review</p>
+            </motion.div>
+          </div>
+        </motion.div>
+
         {/* Join Team CTA */}
         <motion.div
-          className="text-center bg-gradient-to-r from-purple-600 via-indigo-600 to-violet-600 rounded-2xl p-8 sm:p-12"
+          className="text-center bg-gradient-to-r from-orange-600 via-red-600 to-amber-600 rounded-2xl p-8 sm:p-12"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}

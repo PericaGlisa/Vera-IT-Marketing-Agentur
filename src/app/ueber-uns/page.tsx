@@ -150,6 +150,103 @@ export default function AboutPage() {
           </div>
         </motion.div>
 
+        {/* Founder Stories */}
+        <motion.div
+          className="mb-12 sm:mb-16 lg:mb-20"
+          initial={{ opacity: 0, y: isMobile ? 15 : 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: isMobile ? 0.4 : 0.6 }}
+          viewport={{ once: true, margin: isMobile ? "-20px" : "-50px" }}
+        >
+          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-center mb-6 sm:mb-8 lg:mb-12">Die Geschichte hinter Vera IT</h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12">
+            {/* Founder Story 1 */}
+            <motion.div
+              className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8"
+              initial={{ opacity: 0, x: isMobile ? 0 : -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-2xl">👩‍💼</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-1">Dr. Sarah Weber</h3>
+                  <p className="text-orange-400 text-sm">CEO & Gründerin</p>
+                </div>
+              </div>
+              <blockquote className="text-gray-300 italic mb-4 leading-relaxed">
+                "Nach 15 Jahren in der Tech-Branche wollte ich etwas Eigenes schaffen. Vera IT entstand aus der Frustration heraus, dass viele Unternehmen bei der Digitalisierung allein gelassen werden. Wir wollten eine Agentur sein, die nicht nur Code schreibt, sondern echte Partnerschaften eingeht."
+              </blockquote>
+              <p className="text-gray-400 text-sm">
+                Sarah gründete Vera IT 2021 in ihrem Hamburger Homeoffice. Heute leitet sie ein Team von 8+ Experten und hat über 25 erfolgreiche Projekte realisiert.
+              </p>
+            </motion.div>
+
+            {/* Behind the Scenes */}
+            <motion.div
+              className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8"
+              initial={{ opacity: 0, x: isMobile ? 0 : 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-2xl">🏠</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-1">Hinter den Kulissen</h3>
+                  <p className="text-green-400 text-sm">Unser Arbeitsalltag</p>
+                </div>
+              </div>
+              <p className="text-gray-300 mb-4 leading-relaxed">
+                Unser Team arbeitet hybrid - teils remote, teils in unserem gemütlichen Büro in Hamburg-Altona. Jeden Freitag gibt es unser legendäres "Pizza & Code Review" Meeting, wo wir bei italienischem Essen die Woche reflektieren.
+              </p>
+              <p className="text-gray-400 text-sm">
+                Wir glauben an Work-Life-Balance: Flexible Arbeitszeiten, Hunde im Büro willkommen, und jeden Monat ein Team-Event - vom Escape Room bis zur Hafenrundfahrt.
+              </p>
+            </motion.div>
+          </div>
+
+          {/* Company Culture */}
+          <motion.div
+            className="bg-gradient-to-r from-stone-800 to-neutral-800 border border-gray-600 rounded-2xl p-6 sm:p-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-xl font-semibold text-white mb-4 text-center">Was uns antreibt</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <span className="text-xl">☕</span>
+                </div>
+                <h4 className="text-white font-medium mb-2">Kaffee & Code</h4>
+                <p className="text-gray-400 text-sm">Unser Büro verbraucht 47 kg Kaffee pro Jahr - Qualität braucht Koffein!</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <span className="text-xl">🌱</span>
+                </div>
+                <h4 className="text-white font-medium mb-2">Nachhaltigkeit</h4>
+                <p className="text-gray-400 text-sm">100% Ökostrom, papierloses Büro und CO2-neutrale Server-Infrastruktur.</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <span className="text-xl">🎯</span>
+                </div>
+                <h4 className="text-white font-medium mb-2">Lernen</h4>
+                <p className="text-gray-400 text-sm">Jeder im Team hat 2 Tage pro Monat für Weiterbildung und neue Technologien.</p>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+
         {/* Timeline */}
         <motion.div
           className="mb-12 sm:mb-16 lg:mb-20"
@@ -158,7 +255,7 @@ export default function AboutPage() {
           transition={{ duration: isMobile ? 0.4 : 0.6 }}
           viewport={{ once: true, margin: isMobile ? "-20px" : "-50px" }}
         >
-          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-center mb-6 sm:mb-8 lg:mb-12">Unsere Geschichte</h2>
+          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-center mb-6 sm:mb-8 lg:mb-12">Unsere Meilensteine</h2>
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-500 via-purple-500 to-violet-500 transform sm:-translate-x-0.5"></div>
