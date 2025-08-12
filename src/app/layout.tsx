@@ -11,7 +11,11 @@ import StructuredData from "@/components/seo/StructuredData"
 import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema"
 import PerformanceMonitor from "@/components/performance/PerformanceMonitor"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ 
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  display: "swap"
+})
 
 export const metadata: Metadata = {
   title: "Vera IT - Führende Digitale Agentur Hamburg | KI & Web-Entwicklung",
