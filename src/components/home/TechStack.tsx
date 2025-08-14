@@ -1,216 +1,161 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { useEffect, useState } from "react"
-import { ParticleBackground } from "@/components/ui/ParticleBackground"
+import { useState } from "react"
 
-const techStack = [
+const techCategories = [
   {
-    name: "React",
-    icon: "⚛️",
-    category: "Frontend"
+    title: "Frontend",
+    color: "from-blue-500 to-cyan-500",
+    technologies: [
+      { name: "React", icon: "⚛️", description: "UI Library" },
+      { name: "Next.js", icon: "▲", description: "React Framework" },
+      { name: "TypeScript", icon: "📘", description: "Type Safety" },
+      { name: "Tailwind CSS", icon: "🎨", description: "Styling" }
+    ]
   },
   {
-    name: "Next.js",
-    icon: "▲",
-    category: "Framework"
+    title: "Backend",
+    color: "from-green-500 to-emerald-500",
+    technologies: [
+      { name: "Node.js", icon: "🟢", description: "Runtime" },
+      { name: "Python", icon: "🐍", description: "AI/ML" },
+      { name: "Express", icon: "🚀", description: "Web Framework" },
+      { name: "FastAPI", icon: "⚡", description: "Python API" }
+    ]
   },
   {
-    name: "TypeScript",
-    icon: "📘",
-    category: "Language"
+    title: "Database",
+    color: "from-purple-500 to-violet-500",
+    technologies: [
+      { name: "PostgreSQL", icon: "🐘", description: "Relational DB" },
+      { name: "MongoDB", icon: "🍃", description: "NoSQL DB" },
+      { name: "Redis", icon: "🔴", description: "Cache" },
+      { name: "Prisma", icon: "💎", description: "ORM" }
+    ]
   },
   {
-    name: "Node.js",
-    icon: "🟢",
-    category: "Backend"
-  },
-  {
-    name: "Python",
-    icon: "🐍",
-    category: "AI/ML"
-  },
-  {
-    name: "AWS",
-    icon: "☁️",
-    category: "Cloud"
-  },
-  {
-    name: "Docker",
-    icon: "🐳",
-    category: "DevOps"
-  },
-  {
-    name: "PostgreSQL",
-    icon: "🐘",
-    category: "Database"
-  },
-  {
-    name: "MongoDB",
-    icon: "🍃",
-    category: "Database"
-  },
-  {
-    name: "TensorFlow",
-    icon: "🧠",
-    category: "AI/ML"
-  },
-  {
-    name: "Kubernetes",
-    icon: "⚙️",
-    category: "DevOps"
-  },
-  {
-    name: "GraphQL",
-    icon: "📊",
-    category: "API"
-  },
-  {
-    name: "Vue.js",
-    icon: "💚",
-    category: "Frontend"
-  },
-  {
-    name: "Flutter",
-    icon: "📱",
-    category: "Mobile"
-  },
-  {
-    name: "Redis",
-    icon: "🔴",
-    category: "Cache"
-  },
-  {
-    name: "Figma",
-    icon: "🎨",
-    category: "Design"
+    title: "Cloud & DevOps",
+    color: "from-orange-500 to-red-500",
+    technologies: [
+      { name: "AWS", icon: "☁️", description: "Cloud Platform" },
+      { name: "Docker", icon: "🐳", description: "Containerization" },
+      { name: "Kubernetes", icon: "⚙️", description: "Orchestration" },
+      { name: "GitHub Actions", icon: "🔄", description: "CI/CD" }
+    ]
   }
 ]
 
 export function TechStack() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [isHovered, setIsHovered] = useState(false)
-
-  // Auto-scroll functionality
-  useEffect(() => {
-    if (!isHovered) {
-      const interval = setInterval(() => {
-        setCurrentIndex((prev) => (prev + 1) % Math.ceil(techStack.length / 4))
-      }, 3000)
-      return () => clearInterval(interval)
-    }
-  }, [isHovered])
-
-  const visibleTechs = []
-  for (let i = 0; i < 4; i++) {
-    const index = (currentIndex * 4 + i) % techStack.length
-    visibleTechs.push(techStack[index])
-  }
+  const [hoveredCategory, setHoveredCategory] = useState<number | null>(null)
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-800 relative overflow-hidden">
-      {/* Particle Background */}
-      <ParticleBackground />
-      
+    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-800 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/6 sm:left-1/4 w-48 h-48 sm:w-72 sm:h-72 lg:w-96 lg:h-96 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-full blur-3xl opacity-20 animate-pulse-slow" />
-        <div 
-          className="absolute bottom-1/4 right-1/6 sm:right-1/4 w-60 h-60 sm:w-80 sm:h-80 lg:w-96 lg:h-96 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full blur-3xl opacity-20 animate-pulse-slow"
-          style={{ animationDelay: "2s" }}
-        />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 sm:w-48 sm:h-48 bg-gradient-to-r from-indigo-500/10 to-violet-500/10 rounded-full blur-2xl animate-pulse-slow" style={{ animationDelay: "4s" }} />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-cyan-600/20 to-emerald-600/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-4 sm:mb-6">
-            Unsere <span className="gradient-text">Tech-Stack</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
+            Unsere{" "}
+            <span className="bg-gradient-to-r from-purple-400 via-violet-400 to-indigo-400 bg-clip-text text-transparent">
+              Tech-Stack
+            </span>
           </h2>
-          <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Modernste Technologien für innovative und zukunftssichere Lösungen, die Ihr Unternehmen voranbringen.
+          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
+            Modernste Technologien für innovative Lösungen
           </p>
         </motion.div>
 
-        {/* Tech Carousel */}
+        {/* Tech Categories Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          {techCategories.map((category, categoryIndex) => (
+            <motion.div
+              key={category.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
+              onMouseEnter={() => setHoveredCategory(categoryIndex)}
+              onMouseLeave={() => setHoveredCategory(null)}
+              className="group relative"
+            >
+              {/* Category Card */}
+              <div className="relative bg-zinc-800/50 backdrop-blur-xl border border-zinc-700/50 rounded-2xl p-6 h-full transition-all duration-500 group-hover:bg-zinc-800/70 group-hover:border-zinc-600/50 group-hover:shadow-2xl group-hover:shadow-purple-500/10">
+                {/* Gradient Overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500`} />
+                
+                {/* Category Header */}
+                <div className="relative z-10 mb-6">
+                  <h3 className={`text-xl font-bold text-white mb-2 group-hover:bg-gradient-to-r group-hover:${category.color} group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300`}>
+                    {category.title}
+                  </h3>
+                  <div className={`h-1 w-12 bg-gradient-to-r ${category.color} rounded-full transition-all duration-300 group-hover:w-20`} />
+                </div>
+
+                {/* Technologies */}
+                <div className="relative z-10 space-y-3">
+                  {category.technologies.map((tech, techIndex) => (
+                    <motion.div
+                      key={tech.name}
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: (categoryIndex * 0.1) + (techIndex * 0.05) }}
+                      className="flex items-center space-x-3 p-2 rounded-lg transition-all duration-300 hover:bg-zinc-700/30"
+                    >
+                      <span className="text-2xl">{tech.icon}</span>
+                      <div className="flex-1">
+                        <div className="text-white font-medium text-sm">{tech.name}</div>
+                        <div className="text-gray-400 text-xs">{tech.description}</div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* Hover Effect Border */}
+                <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-gradient-to-r group-hover:from-purple-500/50 group-hover:to-violet-500/50 transition-all duration-500" />
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Bottom Stats */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
-            {visibleTechs.map((tech, index) => (
-              <motion.div
-                key={`${tech.name}-${currentIndex}-${index}`}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.02, rotateY: 2 }}
-                className="group"
-              >
-                <div className="relative p-4 sm:p-6 bg-zinc-800 border border-gray-700 rounded-2xl hover:border-blue-500/50 transition-all duration-300 h-full text-center">
-                  {/* Tech Icon */}
-                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {tech.icon}
-                  </div>
-                  
-                  {/* Tech Name */}
-                  <h3 className="text-base sm:text-lg font-heading font-semibold text-white mb-2 sm:mb-3 group-hover:text-blue-400 transition-colors">
-                    {tech.name}
-                  </h3>
-                  
-                  {/* Category Badge */}
-                  <span className="inline-block px-2 sm:px-3 py-1 text-xs font-medium bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 rounded-full border border-blue-500/30">
-                    {tech.category}
-                  </span>
-                  
-                  {/* Hover Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 to-purple-600/0 group-hover:from-blue-600/5 group-hover:to-purple-600/5 rounded-2xl transition-opacity duration-300" />
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Navigation Dots */}
-          <div className="flex justify-center mt-6 sm:mt-8 space-x-2">
-            {Array.from({ length: Math.ceil(techStack.length / 4) }).map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex
-                    ? "bg-blue-500 scale-125"
-                    : "bg-zinc-600 hover:bg-zinc-500"
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Bottom Text */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-6 sm:mt-8"
+          className="mt-12 sm:mt-16 text-center"
         >
-          <p className="text-sm sm:text-base text-gray-400">
-            Und viele weitere Technologien für maßgeschneiderte Lösungen
-          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+            <div className="text-center">
+              <div className="text-2xl sm:text-3xl font-bold text-white mb-2">16+</div>
+              <div className="text-gray-400 text-sm">Technologien</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl sm:text-3xl font-bold text-white mb-2">4</div>
+              <div className="text-gray-400 text-sm">Kategorien</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl sm:text-3xl font-bold text-white mb-2">100%</div>
+              <div className="text-gray-400 text-sm">Modern</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl sm:text-3xl font-bold text-white mb-2">24/7</div>
+              <div className="text-gray-400 text-sm">Support</div>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

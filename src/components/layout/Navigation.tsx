@@ -192,7 +192,7 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-            <Link href="/" className="text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
+            <Link href="/" className="flex items-center text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
               Startseite
             </Link>
 
@@ -292,16 +292,16 @@ export function Navigation() {
               </AnimatePresence>
             </div>
 
-            <Link href="/ueber-uns" className="text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
+            <Link href="/ueber-uns" className="flex items-center text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
               Über Uns
             </Link>
-            <Link href="/projekte" className="text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
+            <Link href="/projekte" className="flex items-center text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
               Projekte
             </Link>
-            <Link href="/blog" className="text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
+            <Link href="/blog" className="flex items-center text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
               Blog
             </Link>
-            <Link href="/kontakt" className="text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
+            <Link href="/kontakt" className="flex items-center text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
               Kontakt
             </Link>
           </div>

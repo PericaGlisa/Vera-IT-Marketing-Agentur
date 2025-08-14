@@ -275,23 +275,22 @@ export function Footer() {
               </div>
           </div>
           <div className="flex flex-wrap justify-center sm:justify-end space-x-4 sm:space-x-6">
-            <Link href="/rechtliches/datenschutz" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link href="/rechtliches/datenschutz" className="flex items-center text-gray-400 hover:text-white text-sm transition-colors">
               Datenschutz
             </Link>
-            <Link href="/rechtliches/impressum" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link href="/rechtliches/impressum" className="flex items-center text-gray-400 hover:text-white text-sm transition-colors">
               Impressum
             </Link>
-            <Link href="/rechtliches/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link href="/rechtliches/cookies" className="flex items-center text-gray-400 hover:text-white text-sm transition-colors">
               Cookie-Richtlinie
             </Link>
             <button 
               onClick={() => setShowCookieSettings(true)}
-              className="flex items-center gap-1 text-gray-400 hover:text-white text-sm transition-colors"
+              className="flex items-center text-gray-400 hover:text-white text-sm transition-colors"
             >
-              <Settings className="w-3 h-3" />
               Cookie-Einstellungen
             </button>
-            <Link href="/rechtliches/agb" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link href="/rechtliches/agb" className="flex items-center text-gray-400 hover:text-white text-sm transition-colors">
               AGB
             </Link>
           </div>
