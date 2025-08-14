@@ -36,11 +36,32 @@
 
   html {
     scroll-behavior: smooth;
+    /* Mobile performance optimizations */
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
   }
 
   /* Ensure pages start at the top */
   body {
     scroll-padding-top: 5rem; /* Account for fixed navigation */
+    /* Mobile optimizations */
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
+    /* Prevent layout shifts */
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  /* Optimize touch interactions */
+  * {
+    touch-action: manipulation;
+  }
+
+  /* Improve mobile scrolling */
+  @supports (height: 100dvh) {
+    body {
+      min-height: 100dvh;
+    }
   }
 
   /* Add proper spacing above main headings */

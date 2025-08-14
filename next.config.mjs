@@ -101,7 +101,12 @@ const nextConfig = {
     optimizePackageImports: ['framer-motion', 'lucide-react', '@radix-ui/react-accordion', '@radix-ui/react-dialog'],
     optimizeCss: true,
     scrollRestoration: true,
-    webVitalsAttribution: ['CLS', 'LCP'],
+    webVitalsAttribution: ['CLS', 'LCP', 'FID', 'FCP', 'TTFB']
+  },
+  // Mobile performance optimizations
+  // Removed framer-motion from serverExternalPackages to avoid conflict with optimizePackageImports
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
   },
   // Output optimization
   output: 'standalone',

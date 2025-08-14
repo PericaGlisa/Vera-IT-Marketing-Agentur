@@ -10,6 +10,9 @@ import Analytics from "@/components/analytics/Analytics"
 import StructuredData from "@/components/seo/StructuredData"
 import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema"
 import PerformanceMonitor from "@/components/performance/PerformanceMonitor"
+import ResourcePreloader from "@/components/performance/ResourcePreloader"
+import CriticalCSS from "@/components/performance/CriticalCSS"
+import MobileAnimationOptimizer from "@/components/performance/MobileAnimationOptimizer"
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -101,6 +104,9 @@ export default function RootLayout({
         <LocalBusinessSchema />
       </head>
       <body className={`${inter.className} bg-zinc-950 text-white antialiased`} suppressHydrationWarning={true}>
+        <CriticalCSS />
+        <MobileAnimationOptimizer />
+        <ResourcePreloader />
         <Navigation />
         <main className="min-h-screen">{children}</main>
         <Footer />

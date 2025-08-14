@@ -12,8 +12,21 @@ export function middleware(request: NextRequest) {
   response.headers.set('X-Content-Type-Options', 'nosniff')
   response.headers.set('Referrer-Policy', 'origin-when-cross-origin')
   
-  // Performance headers
+  // Performance headers for mobile optimization
   response.headers.set('X-DNS-Prefetch-Control', 'on')
+  response.headers.set('X-Preload', 'fonts')
+  response.headers.set('Link', '</fonts/inter.woff2>; rel=preload; as=font; type=font/woff2; crossorigin')
+  
+  // Mobile-specific performance headers
+  const userAgent = request.headers.get('user-agent') || ''
+  const isMobile = /Mobile|Android|iPhone|iPad/i.test(userAgent)
+  
+  if (isMobile) {
+    response.headers.set('X-Mobile-Optimized', 'true')
+    response.headers.set('Vary', 'User-Agent')
+    // Aggressive caching for mobile
+    response.headers.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400')
+  }
   
   // Content Security Policy
   const csp = [
@@ -87,7 +100,6 @@ export function middleware(request: NextRequest) {
   response.headers.set('X-User-City', city)
   
   // Bot detection and handling
-  const userAgent = request.headers.get('user-agent') || ''
   const isBot = /bot|crawler|spider|crawling/i.test(userAgent)
   
   if (isBot) {

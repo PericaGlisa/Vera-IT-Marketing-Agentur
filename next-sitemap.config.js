@@ -43,9 +43,7 @@ module.exports = {
         disallow: ['/admin/', '/private/', '/_next/', '/api/']
       }
     ],
-    additionalSitemaps: [
-      'https://verait.de/sitemap.xml'
-    ]
+    additionalSitemaps: []
   },
   transform: async (config, path) => {
     // Custom priority and changefreq based on path

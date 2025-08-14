@@ -1,15 +1,38 @@
 "use client"
 
 import { useEffect } from "react"
+import dynamic from "next/dynamic"
 import { Hero } from "@/components/home/Hero"
-import { Services } from "@/components/home/Services"
-import { TrustSignals } from "@/components/home/TrustSignals"
-import { TechStack } from "@/components/home/TechStack"
-import { FormCTA } from "@/components/home/FormCTA"
-import { Stats } from "@/components/home/Stats"
-import { CTA } from "@/components/home/CTA"
 import StructuredData from "@/components/seo/StructuredData"
-import FAQ from "@/components/seo/FAQ"
+
+// Lazy load non-critical components
+const Services = dynamic(() => import("@/components/home/Services").then(mod => ({ default: mod.Services })), {
+  loading: () => <div className="h-96 animate-pulse bg-zinc-800/50 rounded-lg" />
+})
+
+const TrustSignals = dynamic(() => import("@/components/home/TrustSignals").then(mod => ({ default: mod.TrustSignals })), {
+  loading: () => <div className="h-64 animate-pulse bg-zinc-800/50 rounded-lg" />
+})
+
+const TechStack = dynamic(() => import("@/components/home/TechStack").then(mod => ({ default: mod.TechStack })), {
+  loading: () => <div className="h-80 animate-pulse bg-zinc-800/50 rounded-lg" />
+})
+
+const FormCTA = dynamic(() => import("@/components/home/FormCTA").then(mod => ({ default: mod.FormCTA })), {
+  loading: () => <div className="h-96 animate-pulse bg-zinc-800/50 rounded-lg" />
+})
+
+const Stats = dynamic(() => import("@/components/home/Stats").then(mod => ({ default: mod.Stats })), {
+  loading: () => <div className="h-48 animate-pulse bg-zinc-800/50 rounded-lg" />
+})
+
+const CTA = dynamic(() => import("@/components/home/CTA").then(mod => ({ default: mod.CTA })), {
+  loading: () => <div className="h-64 animate-pulse bg-zinc-800/50 rounded-lg" />
+})
+
+const FAQ = dynamic(() => import("@/components/seo/FAQ"), {
+  loading: () => <div className="h-96 animate-pulse bg-zinc-800/50 rounded-lg" />
+})
 
 export default function HomePage() {
   useEffect(() => {

@@ -3,9 +3,15 @@
 import { motion } from "framer-motion"
 import { ArrowRight, Calendar } from "lucide-react"
 import Link from "next/link"
+import dynamic from "next/dynamic"
 import { Button } from "@/components/ui/Button"
 import { TypedText } from "@/components/ui/TypedText"
-import { ParticleBackground } from "@/components/ui/ParticleBackground"
+
+// Lazy load heavy components
+const ParticleBackground = dynamic(() => import("@/components/ui/ParticleBackground").then(mod => ({ default: mod.ParticleBackground })), {
+  ssr: false,
+  loading: () => null
+})
 
 export function Hero() {
   return (
