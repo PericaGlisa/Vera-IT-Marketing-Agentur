@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 10 10 10;
+    --foreground: 255 255 255;
+    --card: 23 23 23;
+    --card-foreground: 255 255 255;
+    --popover: 23 23 23;
+    --popover-foreground: 255 255 255;
+    --primary: 139 92 246;
+    --primary-foreground: 255 255 255;
+    --secondary: 38 38 38;
+    --secondary-foreground: 255 255 255;
+    --muted: 26 26 26;
+    --muted-foreground: 156 163 175;
+    --accent: 38 38 38;
+    --accent-foreground: 255 255 255;
+    --destructive: 244 63 94;
+    --destructive-foreground: 255 255 255;
+    --border: 55 65 81;
+    --input: 17 17 17;
+    --ring: 139 92 246;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-gray-700;
+  }
+
+  body {
+    @apply bg-zinc-950 text-white antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Mobile performance optimizations */
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Ensure pages start at the top */
+  body {
+    scroll-padding-top: 5rem; /* Account for fixed navigation */
+    /* Mobile optimizations */
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
+    /* Mobile menu scroll improvements */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* Prevent layout shifts */
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  /* Optimize touch interactions */
+  * {
+    touch-action: manipulation;
+  }
+
+  /* Improve mobile scrolling */
+  @supports (height: 100dvh) {
+    body {
+      min-height: 100dvh;
+    }
+  }
+
+  /* Add proper spacing above main headings */
+  main h1:first-child,
+  main .container > h1:first-child,
+  main .container > div > h1:first-child {
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 640px) {
+    body {
+      scroll-padding-top: 6rem;
+    }
+    
+    main h1:first-child,
+    main .container > h1:first-child,
+    main .container > div > h1:first-child {
+      margin-top: 3rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    body {
+      scroll-padding-top: 7rem;
+    }
+    
+    main h1:first-child,
+    main .container > h1:first-child,
+    main .container > div > h1:first-child {
+      margin-top: 4rem;
+    }
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-violet-500 bg-clip-text text-transparent;
+  }
+
+  .primary-gradient {
+    @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-violet-500;
+  }
+
+  .secondary-gradient {
+    @apply bg-gradient-to-r from-cyan-500 to-emerald-500;
+  }
+
+  .accent-gradient {
+    @apply bg-gradient-to-r from-cyan-500 to-emerald-500;
+  }
+
+  .gradient-border {
+    @apply relative;
+  }
+
+  .gradient-border::before {
+    content: "";
+    @apply absolute inset-0 rounded-lg p-[1px] bg-gradient-to-r from-indigo-500 via-purple-500 to-violet-500;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+
+  .glass-effect {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #8b5cf6, #a855f7);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #7c3aed, #9333ea);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #8b5cf6 #111111;
+}
+
+/* Cal.com embed styles */
+.cal-embed {
+  width: 100% !important;
+  height: 600px !important;
+  min-height: 600px !important;
+  border: none !important;
+  background: transparent !important;
+  z-index: 1 !important;
+  position: relative !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Ensure Cal.com iframe is visible */
+iframe[src*="cal.com"],
+iframe[src*="embed.cal.com"] {
+  width: 100% !important;
+  height: 600px !important;
+  min-height: 600px !important;
+  border: none !important;
+}
+
+/* Mobile menu scroll improvements */
+.mobile-menu-scroll {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  scroll-behavior: smooth;
+  /* Improve touch scrolling on iOS */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  /* Prevent bounce scrolling */
+  overscroll-behavior-y: contain;
+}
