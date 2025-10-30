@@ -216,14 +216,7 @@ export function Footer() {
                         Karriere
                       </Link>
                     </li>
-                    <li>
-                      <Link
-                        href="/projekte"
-                        className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
-                      >
-                        Projekte
-                      </Link>
-                    </li>
+
 
                     <li>
                       <Link

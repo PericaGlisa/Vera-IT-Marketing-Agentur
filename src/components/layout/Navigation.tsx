@@ -299,12 +299,9 @@ export function Navigation() {
             </div>
 
             <Link href="/ueber-uns" className="flex items-center text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
-              Über Uns
-            </Link>
-            <Link href="/projekte" className="flex items-center text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
-              Projekte
-            </Link>
-            <Link href="/kontakt" className="flex items-center text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
+                Über Uns
+              </Link>
+              <Link href="/kontakt" className="flex items-center text-gray-300 hover:text-white transition-colors text-sm xl:text-base">
               Kontakt
             </Link>
           </div>
@@ -465,16 +462,7 @@ export function Navigation() {
                   >
                     Über Uns
                   </Link>
-                  <Link
-                    href="/projekte"
-                    className="block text-gray-300 hover:text-white transition-colors py-3 text-lg font-medium border-b border-gray-800"
-                    onClick={() => {
-                      setIsOpen(false)
-                      setMobileServicesOpen(false)
-                    }}
-                  >
-                    Projekte
-                  </Link>
+
                   <Link
                     href="/kontakt"
                     className="block text-gray-300 hover:text-white transition-colors py-3 text-lg font-medium border-b border-gray-800"

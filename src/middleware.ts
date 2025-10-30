@@ -61,7 +61,6 @@ export function middleware(request: NextRequest) {
     '/about': '/ueber-uns',
     '/contact': '/kontakt',
     '/careers': '/karriere',
-    '/projects': '/projekte',
     '/legal': '/rechtliches',
   }
   
