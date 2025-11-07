@@ -1,0 +1,62 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="overlayGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#581c87;stop-opacity:0.6" />
+      <stop offset="50%" style="stop-color:#7c2d92;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.2" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  <rect width="1200" height="630" fill="url(#overlayGradient)"/>
+  
+  <!-- Main Content Container -->
+  <g transform="translate(100, 150)">
+    <!-- VERA Logo Text -->
+    <text x="0" y="120" font-family="Inter, Arial, sans-serif" font-size="140" font-weight="900" fill="white" filter="url(#glow)" letter-spacing="-8px">
+      VERA
+    </text>
+    
+    <!-- IT Text -->
+    <text x="420" y="120" font-family="Inter, Arial, sans-serif" font-size="80" font-weight="700" fill="#e0e7ff" opacity="0.9">
+      IT
+    </text>
+    
+    <!-- Tagline -->
+    <text x="0" y="180" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="600" fill="white" opacity="0.95">
+      Führende Digitale Agentur Hamburg
+    </text>
+    
+    <!-- Services -->
+    <text x="0" y="220" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="400" fill="#e0e7ff" opacity="0.8">
+      KI-Entwicklung • Web-Entwicklung • Digitales Marketing
+    </text>
+    
+    <!-- Website URL -->
+    <text x="0" y="280" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500" fill="#c4b5fd" opacity="0.9">
+      verait.de
+    </text>
+  </g>
+  
+  <!-- Decorative Elements -->
+  <circle cx="950" cy="150" r="80" fill="white" opacity="0.1"/>
+  <circle cx="1050" cy="250" r="60" fill="white" opacity="0.08"/>
+  <circle cx="1100" cy="400" r="40" fill="white" opacity="0.06"/>
+  
+  <!-- Bottom accent line -->
+  <rect x="0" y="600" width="1200" height="30" fill="url(#bgGradient)" opacity="0.8"/>
+</svg>

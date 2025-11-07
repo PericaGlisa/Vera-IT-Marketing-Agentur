@@ -1,0 +1,95 @@
+{
+  "name": "Vera IT - Digitale Agentur Hamburg",
+  "short_name": "Vera IT",
+  "description": "Führende digitale Agentur in Hamburg für KI-Entwicklung, Web-Entwicklung, Mobile Apps und Digitales Marketing",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#9333ea",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "de",
+  "dir": "ltr",
+  "categories": ["business", "productivity", "technology"],
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Vera IT Homepage"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Beratungstermin buchen",
+      "short_name": "Beratung",
+      "description": "Kostenlosen Beratungstermin buchen",
+      "url": "/beratung",
+      "icons": [
+        {
+          "src": "/icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Unsere Leistungen",
+      "short_name": "Services",
+      "description": "Digitale Services und Lösungen",
+      "url": "/leistungen",
+      "icons": [
+        {
+          "src": "/icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Projekte",
+      "short_name": "Portfolio",
+      "description": "Erfolgreiche Projekte und Referenzen",
+      "url": "/projekte",
+      "icons": [
+        {
+          "src": "/icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Kontakt",
+      "short_name": "Kontakt",
+      "description": "Kontaktieren Sie uns",
+      "url": "/kontakt",
+      "icons": [
+        {
+          "src": "/icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  }
+}
