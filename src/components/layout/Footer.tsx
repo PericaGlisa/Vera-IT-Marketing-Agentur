@@ -70,192 +70,177 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Menu Categories - Responsive Grid */}
+          {/* Menu Categories - 2x2 Grid */}
           <div className="lg:col-span-2">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-              {/* Services */}
-              <div className="space-y-4">
-                <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Leistungen</h3>
-                <ul className="space-y-2">
-                  <li>
-                    <Link
-                      href="/leistungen/ki-entwicklung"
-                      className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
-                    >
-                      KI-Entwicklung
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/leistungen/web-entwicklung"
-                      className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
-                    >
-                      Web-Entwicklung
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/leistungen/saas-entwicklung"
-                      className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
-                    >
-                      SaaS-Entwicklung
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/leistungen/mobile-apps"
-                      className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
-                    >
-                      Mobile Anwendungen
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/leistungen/ui-ux-design"
-                      className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
-                    >
-                      Interface Design
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/leistungen/digital-marketing"
-                      className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
-                    >
-                      Digitales Marketing
-                    </Link>
-                  </li>
-                </ul>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+              {/* Top Row */}
+              <div className="grid grid-cols-2 gap-4 sm:gap-6 sm:gap-8 sm:col-span-2">
+                {/* Services */}
+                <div className="space-y-4">
+                  <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Leistungen</h3>
+                  <ul className="space-y-2">
+                    <li>
+                      <Link
+                        href="/leistungen/ki-entwicklung"
+                        className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
+                      >
+                        KI-Entwicklung
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/leistungen/web-entwicklung"
+                        className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
+                      >
+                        Web-Entwicklung
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/leistungen/saas-entwicklung"
+                        className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
+                      >
+                        SaaS-Entwicklung
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/leistungen/mobile-apps"
+                        className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
+                      >
+                        Mobile Anwendungen
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/leistungen/ui-ux-design"
+                        className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
+                      >
+                        Interface Design
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/leistungen/digital-marketing"
+                        className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
+                      >
+                        Digitales Marketing
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Additional Services */}
+                <div className="space-y-4">
+                  <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Weitere Services</h3>
+                  <ul className="space-y-2">
+                    <li>
+                      <Link
+                        href="/leistungen/brand-design"
+                        className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
+                      >
+                        Markendesign
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/leistungen/video-produktion"
+                        className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
+                      >
+                        Video-Produktion
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/leistungen/e-commerce-entwicklung"
+                        className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
+                      >
+                        E-Commerce Entwicklung
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/leistungen/cloud-loesungen"
+                        className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
+                      >
+                        Cloud-Lösungen
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/leistungen/konsalting"
+                        className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
+                      >
+                        Beratung & Strategie
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/leistungen/datenanalyse"
+                        className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
+                      >
+                        Datenanalyse
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </div>
 
-              {/* Additional Services */}
-              <div className="space-y-4">
-                <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Weitere Services</h3>
-                <ul className="space-y-2">
-                  <li>
-                    <Link
-                      href="/leistungen/brand-design"
-                      className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
-                    >
-                      Markendesign
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/leistungen/video-produktion"
-                      className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
-                    >
-                      Video-Produktion
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/leistungen/e-commerce-entwicklung"
-                      className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
-                    >
-                      E-Commerce Entwicklung
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/leistungen/cloud-loesungen"
-                      className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
-                    >
-                      Cloud-Lösungen
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/leistungen/konsalting"
-                      className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
-                    >
-                      Beratung & Strategie
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/leistungen/datenanalyse"
-                      className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
-                    >
-                      Datenanalyse
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+              {/* Bottom Row */}
+              <div className="grid grid-cols-2 gap-4 sm:gap-6 sm:gap-8 sm:col-span-2">
+                {/* Company */}
+                <div className="space-y-4">
+                  <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Unternehmen</h3>
+                  <ul className="space-y-2">
+                    <li>
+                      <Link
+                        href="/ueber-uns"
+                        className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
+                      >
+                        Über Uns
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/team"
+                        className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
+                      >
+                        Unser Team
+                      </Link>
+                    </li>
 
-              {/* Company */}
-              <div className="space-y-4">
-                <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Unternehmen</h3>
-                <ul className="space-y-2">
-                  <li>
-                    <Link
-                      href="/ueber-uns"
-                      className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
-                    >
-                      Über Uns
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/team"
-                      className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
-                    >
-                      Unser Team
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/kontakt"
-                      className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
-                    >
-                      Kontakt
-                    </Link>
-                  </li>
-                </ul>
-              </div>
 
-              {/* Contact */}
+                    <li>
+                      <Link
+                        href="/kontakt"
+                        className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
+                      >
+                        Kontakt
+                      </Link>
+                    </li>
+
+                  </ul>
+                </div>
+
+                {/* Contact */}
                 <div className="space-y-4">
                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Kontakt</h3>
-                  <div className="space-y-4">
-                    {/* Address */}
-                    <div className="flex items-start space-x-3 group hover:bg-gray-800/30 p-2 rounded-lg transition-colors duration-200">
-                      <MapPin className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5 group-hover:text-purple-400 transition-colors" />
-                      <div className="min-w-0">
-                        <span className="text-gray-400 text-sm sm:text-base group-hover:text-white transition-colors block">
-                          Rehrstieg 16d
-                        </span>
-                        <span className="text-gray-400 text-sm sm:text-base group-hover:text-white transition-colors block">
-                          21147 Hamburg
-                        </span>
-                      </div>
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <MapPin className="w-5 h-5 text-purple-500 flex-shrink-0" />
+                      <span className="text-gray-400 text-sm sm:text-base">Rehrstieg 16d, 21147 Hamburg</span>
                     </div>
-                    
-                    {/* Email */}
-                    <div className="flex items-center space-x-3 group hover:bg-gray-800/30 p-2 rounded-lg transition-colors duration-200">
-                      <Mail className="w-5 h-5 text-purple-500 flex-shrink-0 group-hover:text-purple-400 transition-colors" />
-                      <a 
-                        href="mailto:info@verait.de" 
-                        className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base flex items-center break-all"
-                        title="E-Mail senden"
-                      >
-                        info@verait.de
-                      </a>
+                    <div className="flex items-center space-x-3">
+                      <Mail className="w-5 h-5 text-purple-500 flex-shrink-0" />
+                      <a href="mailto:info@verait.de" className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base flex items-center">info@verait.de</a>
                     </div>
-                    
-                    {/* Phone */}
-                    <div className="flex items-center space-x-3 group hover:bg-gray-800/30 p-2 rounded-lg transition-colors duration-200">
-                      <Phone className="w-5 h-5 text-purple-500 flex-shrink-0 group-hover:text-purple-400 transition-colors" />
-                      <a 
-                        href="tel:+4915563740470" 
-                        className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base flex items-center whitespace-nowrap"
-                        title="Anrufen"
-                      >
-                        +49 15563 740470
-                      </a>
+                    <div className="flex items-center space-x-3">
+                      <Phone className="w-5 h-5 text-purple-500 flex-shrink-0" />
+                      <a href="tel:+4915563740470" className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base flex items-center">+49 15563 740470</a>
                     </div>
                   </div>
                 </div>
+              </div>
             </div>
           </div>
         </div>
