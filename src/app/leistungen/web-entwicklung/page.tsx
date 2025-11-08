@@ -156,19 +156,19 @@ export default function WebDevelopmentPage() {
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
-                className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-cyan-500/50 transition-all duration-300"
+                className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-cyan-500/50 transition-all duration-300 flex flex-col"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl sm:text-2xl font-semibold text-white">{service.title}</h3>
-                  <PriceLabel price={service.price} className="text-cyan-400 font-semibold text-xs xs:text-sm sm:text-base md:text-lg" />
-                </div>
+                <PriceLabel price={service.price} className="text-teal-400 font-bold text-xs xs:text-sm sm:text-base md:text-lg" />
+                  <div className="flex items-center gap-3 mb-3">
+                    <h3 className="text-xl sm:text-2xl font-semibold text-white">{service.title}</h3>
+                  </div>
                 <p className="text-gray-400 leading-relaxed mb-6">{service.description}</p>
-                <Link href="/neue-kunden-form">
+                <Link href="/neue-kunden-form" className="mt-auto">
                   <Button
                     variant="outline"
                     className="w-full border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white bg-transparent"

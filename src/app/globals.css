@@ -191,14 +191,20 @@ iframe[src*="embed.cal.com"] {
   height: 600px !important;
   min-height: 600px !important;
   border: none !important;
-}
-
 /* Mobile menu scroll improvements */
 .mobile-menu-scroll {
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
   scroll-behavior: smooth;
-  /* Improve touch scrolling on iOS */
+}
+
+/* Grid pattern for background effects */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+} /* Improve touch scrolling on iOS */
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   /* Prevent bounce scrolling */

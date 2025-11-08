@@ -161,19 +161,17 @@ export default function MobileAppsPage() {
             {appTypes.map((type, index) => (
               <motion.div
                 key={type.title}
-                className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-orange-500/50 transition-all duration-300"
+                className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-orange-500/50 transition-all duration-300 flex flex-col"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <span className="text-3xl">{type.icon}</span>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-white">{type.title}</h3>
-                  </div>
-                  <PriceLabel price={type.price} className="text-orange-400 font-semibold text-xs xs:text-sm sm:text-base md:text-lg" />
+                <PriceLabel price={type.price} className="text-rose-400 font-bold text-xs xs:text-sm sm:text-base md:text-lg" />
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-3xl">{type.icon}</span>
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white">{type.title}</h3>
                 </div>
                 <p className="text-gray-400 leading-relaxed mb-4">{type.description}</p>
                 <div className="mb-6">
@@ -189,7 +187,7 @@ export default function MobileAppsPage() {
                 </div>
                 <Button
                   variant="outline"
-                  className="w-full border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white bg-transparent"
+                  className="w-full border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white bg-transparent mt-auto"
                   asChild
                 >
                   <Link href="/kontakt">Beratung anfragen</Link>

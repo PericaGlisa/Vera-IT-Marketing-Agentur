@@ -177,7 +177,7 @@ export default function DigitalMarketingPage() {
             {packages.map((pkg, index) => (
               <motion.div
                 key={pkg.title}
-                className={`bg-zinc-800 border rounded-2xl p-6 sm:p-8 transition-all duration-300 relative ${
+                className={`bg-zinc-800 border rounded-2xl p-6 sm:p-8 transition-all duration-300 relative flex flex-col ${
                   pkg.highlight
                     ? "border-purple-500 scale-105 shadow-2xl shadow-purple-500/20"
                     : "border-gray-700 hover:border-purple-500/50"
@@ -196,12 +196,12 @@ export default function DigitalMarketingPage() {
                   </div>
                 )}
                 <div className="text-center mb-6">
+                  <PriceLabel price={pkg.price} className="text-emerald-400 font-bold text-xs xs:text-sm sm:text-base md:text-lg" />
                   <h3 className="text-2xl font-semibold text-white mb-2">{pkg.title}</h3>
                   <p className="text-gray-400 text-sm mb-4">{pkg.description}</p>
-                  <div className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-semibold gradient-text mb-2"><PriceLabel price={pkg.price} /></div>
                   <p className="text-gray-500 text-sm">{pkg.duration}</p>
                 </div>
-                <div className="mb-6">
+                <div className="mb-6 flex-grow">
                   <ul className="space-y-3">
                     {pkg.services.map((service, serviceIndex) => (
                       <li key={serviceIndex} className="text-gray-300 flex items-start gap-2">
@@ -212,7 +212,7 @@ export default function DigitalMarketingPage() {
                   </ul>
                 </div>
                 <Button
-                  className={`w-full ${
+                  className={`w-full mt-auto ${
                     pkg.highlight
                       ? "bg-gradient-to-r from-rose-600 to-purple-600 hover:shadow-lg"
                       : "bg-zinc-700 hover:bg-zinc-600"

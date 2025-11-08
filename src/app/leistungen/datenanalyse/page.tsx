@@ -252,35 +252,19 @@ export default function DataAnalyticsPage() {
             {analyticsServices.map((service, index) => (
               <motion.div
                 key={service.title}
-                className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-purple-500/50 transition-all duration-300"
+                className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-purple-500/50 transition-all duration-300 flex flex-col"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="mb-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-xl sm:text-2xl font-semibold text-white">{service.title}</h3>
-                    <PriceLabel price={service.price} />
-                  </div>
-                  <p className="text-gray-400 leading-relaxed mb-4">{service.description}</p>
-                  <div className="flex justify-between text-sm mb-4">
-                    <span className="text-gray-500">⏱️ {service.duration}</span>
-                    <span
-                      className={`px-2 py-1 rounded text-xs font-medium ${
-                        service.complexity === "Sehr Hoch"
-                          ? "bg-red-500/20 text-red-400"
-                          : service.complexity === "Hoch"
-                            ? "bg-orange-500/20 text-orange-400"
-                            : "bg-yellow-500/20 text-yellow-400"
-                      }`}
-                    >
-                      {service.complexity}
-                    </span>
-                  </div>
+                <PriceLabel price={service.price} className="text-purple-400 font-bold text-xs xs:text-sm sm:text-base md:text-lg" />
+                <div className="flex items-center gap-3 mb-3">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white">{service.title}</h3>
                 </div>
-                <div className="mb-6">
+                <p className="text-gray-400 leading-relaxed mb-4">{service.description}</p>
+                <div className="mb-6 flex-grow">
                   <h4 className="text-white font-semibold mb-3">Leistungen:</h4>
                   <ul className="space-y-2">
                     {service.deliverables.map((deliverable, deliverableIndex) => (
@@ -291,7 +275,7 @@ export default function DataAnalyticsPage() {
                     ))}
                   </ul>
                 </div>
-                <Button className="w-full bg-zinc-700 hover:bg-zinc-600" asChild>
+                <Button className="w-full bg-zinc-700 hover:bg-zinc-600 mt-auto" asChild>
                   <Link href="/kontakt">Beratung anfragen</Link>
                 </Button>
               </motion.div>

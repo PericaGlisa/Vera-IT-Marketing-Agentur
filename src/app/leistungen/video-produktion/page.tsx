@@ -167,24 +167,19 @@ export default function VideoProductionPage() {
             {videoTypes.map((type, index) => (
               <motion.div
                 key={type.title}
-                className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-red-500/50 transition-all duration-300"
+                className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-red-500/50 transition-all duration-300 flex flex-col"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center gap-3">
+                <PriceLabel price={type.price} className="text-red-400 font-bold text-xs xs:text-sm sm:text-base md:text-lg" />
+                <div className="flex items-center gap-3 mb-3">
                     <span className="text-3xl">{type.icon}</span>
                     <h3 className="text-xl sm:text-2xl font-semibold text-white">{type.title}</h3>
                   </div>
-                  <PriceLabel price={type.price} className="text-red-400 font-semibold text-xs xs:text-sm sm:text-base md:text-lg" />
-                </div>
                 <p className="text-gray-400 leading-relaxed mb-4">{type.description}</p>
-                <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-                  <span>⏱️ {type.duration}</span>
-                </div>
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-2">Beispiele:</h4>
                   <ul className="space-y-1">
@@ -196,7 +191,7 @@ export default function VideoProductionPage() {
                     ))}
                   </ul>
                 </div>
-                <Link href="/kontakt">
+                <Link href="/kontakt" className="mt-auto">
                   <Button
                     variant="outline"
                     className="w-full border-red-500 text-red-500 hover:bg-red-500 hover:text-white bg-transparent"

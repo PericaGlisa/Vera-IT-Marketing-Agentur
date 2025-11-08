@@ -191,37 +191,30 @@ export default function ECommerceDevelopmentPage() {
             {platforms.map((platform, index) => (
               <motion.div
                 key={platform.name}
-                className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-blue-500/50 transition-all duration-300"
+                className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-blue-500/50 transition-all duration-300 flex flex-col"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="flex justify-between items-start mb-4">
+                <PriceLabel price={platform.price} className="text-orange-400 font-bold text-xs xs:text-sm sm:text-base md:text-lg" />
+                <div className="flex items-center gap-3 mb-3">
                   <h3 className="text-xl sm:text-2xl font-semibold text-white">{platform.name}</h3>
-                  <PriceLabel price={platform.price} />
                 </div>
                 <p className="text-gray-400 leading-relaxed mb-4">{platform.description}</p>
-                <div className="mb-4">
-                  <p className="text-sm text-green-400 mb-3">Ideal für: {platform.bestFor}</p>
-                  <h4 className="text-white font-semibold mb-2">Features:</h4>
-                  <ul className="space-y-1">
+                <div className="mb-6">
+                  <h4 className="text-white font-semibold mb-3">Leistungen:</h4>
+                  <ul className="space-y-2">
                     {platform.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="text-gray-400 text-sm flex items-start gap-2">
-                        <span className="text-blue-500 mt-1">•</span>
+                      <li key={featureIndex} className="text-gray-300 text-sm flex items-start gap-2">
+                        <span className="text-blue-500 mt-1">✓</span>
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <Button
-                  variant="outline"
-                  className="w-full border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white bg-transparent"
-                  onClick={() => window.location.href = '/contact'}
-                >
-                  Beratung anfragen
-                </Button>
+                <Button className="w-full bg-zinc-700 hover:bg-zinc-600 mt-auto" onClick={() => window.location.href = '/contact'}>Service anfragen</Button>
               </motion.div>
             ))}
           </div>
@@ -238,37 +231,43 @@ export default function ECommerceDevelopmentPage() {
           <h2 className="text-2xl sm:text-3xl font-heading font-bold text-center mb-8 sm:mb-12">
             Unsere E-Commerce Services
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {ecommerceServices.map((service, index) => (
               <motion.div
                 key={service.title}
-                className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-blue-500/50 transition-all duration-300"
+                className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-blue-500/50 transition-all duration-300 flex flex-col"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="mb-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-xl sm:text-2xl font-semibold text-white">{service.title}</h3>
-                    <PriceLabel price={service.price} />
-                  </div>
-                  <p className="text-gray-400 leading-relaxed mb-4">{service.description}</p>
-                  <div className="text-sm text-gray-500 mb-4">⏱️ {service.duration}</div>
+                <PriceLabel price={service.price} className="text-blue-400 font-bold text-xs xs:text-sm sm:text-base md:text-lg" />
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white">{service.title}</h3>
                 </div>
-                <div className="mb-6">
-                  <h4 className="text-white font-semibold mb-3">Leistungen:</h4>
-                  <ul className="space-y-2">
+                <p className="text-gray-400 leading-relaxed mb-4">{service.description}</p>
+                <div className="mb-4">
+                  <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                    <span>⏱️ {service.duration}</span>
+                  </div>
+                  <h4 className="text-white font-semibold mb-2">Deliverables:</h4>
+                  <ul className="space-y-1">
                     {service.deliverables.map((deliverable, deliverableIndex) => (
-                      <li key={deliverableIndex} className="text-gray-300 text-sm flex items-start gap-2">
-                        <span className="text-blue-500 mt-1">✓</span>
+                      <li key={deliverableIndex} className="text-gray-400 text-sm flex items-start gap-2">
+                        <span className="text-blue-500 mt-1">•</span>
                         {deliverable}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <Button className="w-full bg-zinc-700 hover:bg-zinc-600" onClick={() => window.location.href = '/contact'}>Service anfragen</Button>
+                <Button
+                  variant="outline"
+                  className="w-full border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white bg-transparent mt-auto"
+                  asChild
+                >
+                  <Link href="/kontakt">Beratung anfragen</Link>
+                </Button>
               </motion.div>
             ))}
           </div>

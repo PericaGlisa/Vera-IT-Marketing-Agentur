@@ -175,7 +175,7 @@ export default function BrandDesignPage() {
             {brandServices.map((service, index) => (
               <motion.div
                 key={service.title}
-                className={`bg-zinc-800 border rounded-2xl p-6 sm:p-8 transition-all duration-300 relative ${
+                className={`bg-zinc-800 border rounded-2xl p-6 sm:p-8 transition-all duration-300 relative flex flex-col ${
                   service.popular
                     ? "border-pink-500 scale-105 shadow-2xl shadow-pink-500/20"
                     : "border-gray-700 hover:border-pink-500/50"
@@ -193,15 +193,13 @@ export default function BrandDesignPage() {
                     </span>
                   </div>
                 )}
-                <div className="mb-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-xl sm:text-2xl font-semibold text-white">{service.title}</h3>
-                    <PriceLabel price={service.price} className="text-pink-400 font-semibold text-xs xs:text-sm sm:text-base md:text-lg" />
-                  </div>
-                  <p className="text-gray-400 leading-relaxed mb-4">{service.description}</p>
-                  <div className="text-sm text-gray-500 mb-4">⏱️ {service.duration}</div>
+                <PriceLabel price={service.price} className="text-pink-400 font-bold text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl" />
+                <div className="flex items-center gap-3 mb-3">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white">{service.title}</h3>
                 </div>
-                <div className="mb-6">
+                <p className="text-gray-400 leading-relaxed mb-4">{service.description}</p>
+                <div className="text-sm text-gray-500 mb-4">⏱️ {service.duration}</div>
+                <div className="mb-6 flex-grow">
                   <h4 className="text-white font-semibold mb-3">Leistungen:</h4>
                   <ul className="space-y-2">
                     {service.deliverables.map((deliverable, deliverableIndex) => (
@@ -213,7 +211,7 @@ export default function BrandDesignPage() {
                   </ul>
                 </div>
                 <Button
-                  className={`w-full ${
+                  className={`w-full mt-auto ${
                     service.popular
                       ? "bg-gradient-to-r from-purple-600 to-pink-600 hover:shadow-lg"
                       : "bg-zinc-700 hover:bg-zinc-600"

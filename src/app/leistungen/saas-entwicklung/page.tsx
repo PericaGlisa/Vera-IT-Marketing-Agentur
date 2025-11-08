@@ -158,17 +158,17 @@ export default function SaaSDevelopmentPage() {
             {saasTypes.map((type, index) => (
               <motion.div
                 key={type.title}
-                className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-emerald-500/50 transition-all duration-300"
+                className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-emerald-500/50 transition-all duration-300 flex flex-col"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl sm:text-2xl font-semibold text-white">{type.title}</h3>
-                  <PriceLabel price={type.price} className="text-emerald-400 font-semibold text-xs xs:text-sm sm:text-base md:text-lg" />
-                </div>
+                <PriceLabel price={type.price} className="text-cyan-400 font-bold text-xs xs:text-sm sm:text-base md:text-lg" />
+                <div className="flex items-center gap-3 mb-3">
+                    <h3 className="text-xl sm:text-2xl font-semibold text-white">{type.title}</h3>
+                  </div>
                 <p className="text-gray-400 leading-relaxed mb-4">{type.description}</p>
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-2">Beispiel-Features:</h4>
@@ -183,7 +183,7 @@ export default function SaaSDevelopmentPage() {
                 </div>
                 <Button
                   variant="outline"
-                  className="w-full border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-white bg-transparent"
+                  className="w-full border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-white bg-transparent mt-auto"
                   asChild
                 >
                   <Link href="/kontakt">Beratung anfragen</Link>

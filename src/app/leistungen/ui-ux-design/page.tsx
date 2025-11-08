@@ -159,19 +159,19 @@ export default function UIUXDesignPage() {
             {designServices.map((service, index) => (
               <motion.div
                 key={service.title}
-                className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-rose-500/50 transition-all duration-300"
+                className="bg-zinc-800 border border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-rose-500/50 transition-all duration-300 flex flex-col"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="flex justify-between items-start mb-4">
+                <PriceLabel price={service.price} className="text-violet-400 font-bold text-xs xs:text-sm sm:text-base md:text-lg" />
+                <div className="flex items-center gap-3 mb-3">
                   <h3 className="text-xl sm:text-2xl font-semibold text-white">{service.title}</h3>
-                  <PriceLabel price={service.price} className="text-rose-400 font-semibold text-xs xs:text-sm sm:text-base md:text-lg" />
                 </div>
                 <p className="text-gray-400 leading-relaxed mb-4">{service.description}</p>
-                <div className="mb-4">
+                <div className="mb-6">
                   <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
                     <span>⏱️ {service.duration}</span>
                   </div>
@@ -187,7 +187,7 @@ export default function UIUXDesignPage() {
                 </div>
                 <Button
                   variant="outline"
-                  className="w-full border-rose-500 text-rose-500 hover:bg-rose-500 hover:text-white bg-transparent"
+                  className="w-full border-rose-500 text-rose-500 hover:bg-rose-500 hover:text-white bg-transparent mt-auto"
                   asChild
                 >
                   <Link href="/kontakt">Beratung anfragen</Link>
