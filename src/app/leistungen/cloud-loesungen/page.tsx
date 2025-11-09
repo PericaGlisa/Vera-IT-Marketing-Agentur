@@ -254,7 +254,7 @@ export default function CloudSolutionsPage() {
                 whileHover={{ scale: 1.02 }}
               >
                 <div className="mb-6 flex-grow">
-                  <PriceLabel price={service.price} className="text-indigo-400 font-bold text-xs xs:text-sm sm:text-base md:text-lg" />
+                  <PriceLabel price={service.price} className="text-indigo-400 font-bold text-xs xs:text-sm sm:text-base md:text-lg mb-4" />
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="text-xl sm:text-2xl font-semibold text-white pt-2">{service.title}</h3>
                   </div>

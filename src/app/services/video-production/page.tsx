@@ -179,7 +179,7 @@ export default function VideoProductionPage() {
                     <span className="text-3xl">{type.icon}</span>
                     <h3 className="text-xl sm:text-2xl font-semibold text-white">{type.title}</h3>
                   </div>
-                  <PriceLabel price={type.price} className="text-xs xs:text-sm sm:text-base md:text-lg" />
+                  <PriceLabel price={type.price} className="text-xs xs:text-sm sm:text-base md:text-lg mb-4" />
                 </div>
                 <p className="text-gray-400 leading-relaxed mb-4">{type.description}</p>
                 <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">

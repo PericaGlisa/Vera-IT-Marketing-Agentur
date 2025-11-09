@@ -167,7 +167,7 @@ export default function SaaSDevelopmentPage() {
               >
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-xl sm:text-2xl font-semibold text-white">{type.title}</h3>
-                  <PriceLabel price={type.price} className="text-emerald-400 font-semibold text-xs xs:text-sm sm:text-base md:text-lg" />
+                  <PriceLabel price={type.price} className="text-emerald-400 font-semibold text-xs xs:text-sm sm:text-base md:text-lg mb-4" />
                 </div>
                 <p className="text-gray-400 leading-relaxed mb-4">{type.description}</p>
                 <div className="mb-6">

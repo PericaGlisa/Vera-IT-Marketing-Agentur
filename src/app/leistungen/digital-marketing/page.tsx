@@ -196,7 +196,7 @@ export default function DigitalMarketingPage() {
                   </div>
                 )}
                 <div className="text-center mb-6">
-                  <PriceLabel price={pkg.price} className="text-emerald-400 font-bold text-xs xs:text-sm sm:text-base md:text-lg" />
+                  <PriceLabel price={pkg.price} className="text-emerald-400 font-bold text-xs xs:text-sm sm:text-base md:text-lg mb-4" />
                   <h3 className="text-2xl font-semibold text-white mb-2">{pkg.title}</h3>
                   <p className="text-gray-400 text-sm mb-4">{pkg.description}</p>
                   <p className="text-gray-500 text-sm">{pkg.duration}</p>

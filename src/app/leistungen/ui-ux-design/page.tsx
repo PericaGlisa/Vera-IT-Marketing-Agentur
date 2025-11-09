@@ -166,7 +166,7 @@ export default function UIUXDesignPage() {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02 }}
               >
-                <PriceLabel price={service.price} className="text-violet-400 font-bold text-xs xs:text-sm sm:text-base md:text-lg" />
+                <PriceLabel price={service.price} className="text-violet-400 font-bold text-xs xs:text-sm sm:text-base md:text-lg mb-4" />
                 <div className="flex items-center gap-3 mb-3">
                   <h3 className="text-xl sm:text-2xl font-semibold text-white">{service.title}</h3>
                 </div>

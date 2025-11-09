@@ -200,7 +200,7 @@ export default function ECommerceDevelopmentPage() {
               >
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-xl sm:text-2xl font-semibold text-white">{platform.name}</h3>
-                  <PriceLabel price={platform.price} className="text-orange-400 font-semibold text-xs xs:text-sm sm:text-base md:text-lg" />
+                  <PriceLabel price={platform.price} className="text-orange-400 font-semibold text-xs xs:text-sm sm:text-base md:text-lg mb-4" />
                 </div>
                 <p className="text-gray-400 leading-relaxed mb-4">{platform.description}</p>
                 <div className="mb-4">
@@ -252,7 +252,7 @@ export default function ECommerceDevelopmentPage() {
                 <div className="mb-6">
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="text-xl sm:text-2xl font-semibold text-white">{service.title}</h3>
-                    <PriceLabel price={service.price} className="text-blue-400 font-semibold text-xs xs:text-sm sm:text-base md:text-lg" />
+                    <PriceLabel price={service.price} className="text-blue-400 font-semibold text-xs xs:text-sm sm:text-base md:text-lg mb-4" />
                   </div>
                   <p className="text-gray-400 leading-relaxed mb-4">{service.description}</p>
                   <div className="text-sm text-gray-500 mb-4">⏱️ {service.duration}</div>

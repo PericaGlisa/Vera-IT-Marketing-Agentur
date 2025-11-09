@@ -163,8 +163,8 @@ export default function WebDevelopmentPage() {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02 }}
               >
-                <PriceLabel price={service.price} className="text-teal-400 font-bold text-xs xs:text-sm sm:text-base md:text-lg" />
-                  <div className="flex items-center gap-3 mb-3">
+                <PriceLabel price={service.price} className="text-teal-400 font-bold text-xs xs:text-sm sm:text-base md:text-lg mb-4" />
+                <div className="flex items-center gap-3 mb-3">
                     <h3 className="text-xl sm:text-2xl font-semibold text-white">{service.title}</h3>
                   </div>
                 <p className="text-gray-400 leading-relaxed mb-6">{service.description}</p>

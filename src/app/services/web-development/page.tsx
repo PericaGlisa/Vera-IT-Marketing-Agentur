@@ -165,7 +165,7 @@ export default function WebDevelopmentPage() {
               >
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-xl sm:text-2xl font-semibold text-white">{service.title}</h3>
-                  <PriceLabel price={service.price} className="text-cyan-400 font-semibold text-xs xs:text-sm sm:text-base md:text-lg" />
+                  <PriceLabel price={service.price} className="text-cyan-400 font-semibold text-xs xs:text-sm sm:text-base md:text-lg mb-4" />
                 </div>
                 <p className="text-gray-400 leading-relaxed mb-6">{service.description}</p>
                 <Link href="/beratung">

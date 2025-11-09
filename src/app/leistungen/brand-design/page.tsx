@@ -193,7 +193,7 @@ export default function BrandDesignPage() {
                     </span>
                   </div>
                 )}
-                <PriceLabel price={service.price} className="text-pink-400 font-bold text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl" />
+                <PriceLabel price={service.price} className="text-pink-400 font-bold text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl mb-4" />
                 <div className="flex items-center gap-3 mb-3">
                   <h3 className="text-xl sm:text-2xl font-semibold text-white">{service.title}</h3>
                 </div>
